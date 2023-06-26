@@ -3,7 +3,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import Navbar from '../../components/nav/Navbar';
 // Context
 import { ToggleContext } from '../../context/ToggleContext';
-import { galleryDataArray } from '../../utils/GalleryData'
+import { galleryDataArray } from '../../utils/GalleryData';
+import GalleryItem from '../../components/gallery/GalleryItem';
 
 function GalleryPage() {
   const { setActiveNav } = useContext(ToggleContext);
@@ -27,12 +28,13 @@ function GalleryPage() {
                 </div>
                 <div className='mt-2'>
                   <h3>
-                    The collection represents the quality of work and variety in
-                    subjects.
+                    All these styles are available and the patterns are unique
+                    each time
                   </h3>
                   <h4>
-                    These beautiful pieces are all hand crafted in Cornwall, UK
+                    These beautiful pieces are all hand crafted in Devon, UK
                   </h4>
+                  <h5>All pieces come as wall art or table furniture</h5>
                 </div>
               </article>
             </section>
@@ -40,19 +42,7 @@ function GalleryPage() {
             <section className='mt-16 px-12'>
               <div className='grid lg:grid-cols-3 text-center gap-y-24'>
                 {galleryItems?.map((item, index) => {
-                  return (
-                    <div
-                      key={index}
-                      className='w-fit mx-auto px-4 py-8 grid justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]'
-                    >
-                      <div>
-                        <span>{item.name}</span>
-                      </div>
-                      <div className='grid justify-center mt-2'>
-                        <img src={item.imageUrl} alt='design' />
-                      </div>
-                    </div>
-                  );
+                  return <GalleryItem key={index} item={item} />;
                 })}
               </div>
             </section>
