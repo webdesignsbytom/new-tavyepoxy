@@ -79,41 +79,38 @@ function Navbar() {
               </li>
               <li
                 className={
-                  activeNav === '/design'
+                  activeNav === '/about'
                     ? 'text-gray-600 hover:text-gray-700 active:scale-95'
                     : 'hover:text-gray-700 active:scale-95'
                 }
               >
-                <Link className='w-full' to='/design'>
-                  Design
+                <Link className='w-full' to='/about'>
+                  About
                 </Link>
               </li>
-              {!user.email && (
-                <>
-                  <li
-                    className={
-                      activeNav === '/login'
-                        ? 'text-gray-600 hover:text-gray-700 active:scale-95'
-                        : 'hover:text-gray-700 active:scale-95'
-                    }
-                  >
-                    <Link className='w-full' to='/Login'>
-                      Login
-                    </Link>
-                  </li>
-                  <li
-                    className={
-                      activeNav === '/sign-up'
-                        ? 'text-gray-600 hover:text-gray-700 active:scale-95'
-                        : 'hover:text-gray-700 active:scale-95'
-                    }
-                  >
-                    <Link className='w-full' to='/sign-up'>
-                      Sign Up
-                    </Link>
-                  </li>
-                </>
-              )}
+              <li
+                className={
+                  activeNav === '/gallery'
+                    ? 'text-gray-600 hover:text-gray-700 active:scale-95'
+                    : 'hover:text-gray-700 active:scale-95'
+                }
+              >
+                <Link className='w-full' to='/gallery'>
+                  Gallery
+                </Link>
+              </li>
+              <li
+                className={
+                  activeNav === '/contact'
+                    ? 'text-gray-600 hover:text-gray-700 active:scale-95'
+                    : 'hover:text-gray-700 active:scale-95'
+                }
+              >
+                <Link className='w-full' to='/contact'>
+                  Contact
+                </Link>
+              </li>
+
               {(user.role === 'ADMIN' || user.role === 'DEVELOPER') && (
                 <li
                   className={
@@ -153,42 +150,38 @@ function Navbar() {
                 </li>
                 <li
                   className={
-                    activeNav === '/design'
+                    activeNav === '/about'
                       ? 'w-full no__highlights nav__bg hover:bg-green-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
                       : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-500 text-gray-800 font-semibold'
                   }
                 >
-                  <Link className='w-full' to='/design'>
-                    Design
+                  <Link className='w-full' to='/about'>
+                    About
+                  </Link>
+                </li>
+                <li
+                  className={
+                    activeNav === '/gallery'
+                      ? 'w-full no__highlights nav__bg hover:bg-green-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
+                      : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-500 text-gray-800 font-semibold'
+                  }
+                >
+                  <Link className='w-full' to='/gallery'>
+                    Gallery
+                  </Link>
+                </li>
+                <li
+                  className={
+                    activeNav === '/contact'
+                      ? 'w-full no__highlights nav__bg hover:bg-green-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
+                      : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-500 text-gray-800 font-semibold'
+                  }
+                >
+                  <Link className='w-full' to='/contact'>
+                    Contact
                   </Link>
                 </li>
 
-                {!user.email && (
-                  <>
-                    <li
-                      className={
-                        activeNav === '/login'
-                          ? 'w-full no__highlights nav__bg hover:bg-green-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
-                          : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-500 text-gray-800 font-semibold'
-                      }
-                    >
-                      <Link className='w-full' to='/Login'>
-                        Login
-                      </Link>
-                    </li>
-                    <li
-                      className={
-                        activeNav === '/sign-up'
-                          ? 'w-full no__highlights nav__bg hover:bg-green-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
-                          : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-500 text-gray-800 font-semibold'
-                      }
-                    >
-                      <Link className='w-full' to='/sign-up'>
-                        Sign Up
-                      </Link>
-                    </li>
-                  </>
-                )}
                 {(user.role === 'ADMIN' || user.role === 'DEVELOPER') && (
                   <li
                     className={
