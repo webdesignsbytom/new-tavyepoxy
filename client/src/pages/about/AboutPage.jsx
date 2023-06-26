@@ -72,9 +72,14 @@ function AboutPage() {
               </article>
             </section>
             <section>
-              <div>
-                <img src={WorkshopImage2} alt='Table' />
-              </div>
+              <section className='grid gap-4'>
+                <div>
+                  <img src={WorkshopImage3} alt='Table' />
+                </div>
+                <div>
+                  <img src={WorkshopImage2} alt='Table' />
+                </div>
+              </section>
             </section>
           </section>
         </main>
