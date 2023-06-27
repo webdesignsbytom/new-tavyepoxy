@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router-dom';
 function AboutPage() {
   const { setActiveNav } = useContext(ToggleContext);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     setActiveNav('/about');
@@ -90,6 +90,21 @@ function AboutPage() {
                     shapes.
                   </p>
                 </div>
+                <div className='mt-10'>
+                  <h4 className='font-semibold font-corgs mb-1 text-lg'>
+                    Huge variety of materials
+                  </h4>
+                  <p className='font-poppins'>
+                    I try to keep all my tables as affordable as possible, using
+                    excellent quality base materials beautiful tables can be
+                    made. If requested however, I have access to, or can aquire
+                    almost any timber or material you require. The range of
+                    colours and textures is in the thousands. Oils, dyes,
+                    pigments, metallics, neon, glowing, transparent and any
+                    feature you can think of can be inlayed to make you a truly
+                    custom and unique furniture piece.
+                  </p>
+                </div>
               </article>
             </section>
             <section>
@@ -110,17 +125,29 @@ function AboutPage() {
           <section className='grid w-1/2 gap-4 mx-auto mt-10'>
             <div className='grid grid-cols-3 gap-4 w-full mx-auto'>
               <div className='grid w-full'>
-                <button id='/gallery' onClick={navigateToPage} className='outline outline-2 outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 '>
+                <button
+                  id='/gallery'
+                  onClick={navigateToPage}
+                  className='outline outline-2 outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 '
+                >
                   Gallery
                 </button>
               </div>
               <div className='grid w-full'>
-                <button id='/materials' onClick={navigateToPage} className='outline outline-2 outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 '>
+                <button
+                  id='/materials'
+                  onClick={navigateToPage}
+                  className='outline outline-2 outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 '
+                >
                   Materials
                 </button>
               </div>
               <div className='grid w-full'>
-                <button id='/contact' onClick={navigateToPage} className='outline outline-2 outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 '>
+                <button
+                  id='/contact'
+                  onClick={navigateToPage}
+                  className='outline outline-2 outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 '
+                >
                   Contact
                 </button>
               </div>
