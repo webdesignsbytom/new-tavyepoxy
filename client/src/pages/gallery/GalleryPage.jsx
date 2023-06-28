@@ -16,7 +16,7 @@ function GalleryPage() {
   }, []);
 
   return (
-    <div className='bg-[#f6f6f4] min-h-screen'>
+    <div className='bg-gray-100 min-h-screen'>
       <section className='grid grid-rows-reg h-full'>
         <Navbar />
         <main className='grid w-full h-full mt-4'>
@@ -24,12 +24,11 @@ function GalleryPage() {
             <section className='mt-4 grid container lg:w-1/2 mx-auto'>
               <article className='text-center px-4 border-b-2 border-solid border-black pb-6'>
                 <div>
-                  <h2 className='text-xl font-corgs'>Welcome To The Gallery</h2>
+                  <h2 className='text-2xl font-corgs'>The Gallery</h2>
                 </div>
                 <div className='mt-2'>
                   <h3>
-                    All these styles are available and the patterns are unique
-                    each time
+                    A variety of colours, materials, shapes and finishes are used in the workshop.
                   </h3>
                   <h4>
                     These beautiful pieces are all hand crafted in Devon, UK
@@ -40,7 +39,7 @@ function GalleryPage() {
             </section>
             {/* GALLERY */}
             <section className='mt-16 px-12'>
-              <div className='grid lg:grid-cols-3 text-center gap-y-24'>
+              <div className='grid lg:grid-cols-4 text-center gap-y-12'>
                 {galleryItems?.map((item, index) => {
                   return <GalleryItem key={index} item={item} />;
                 })}

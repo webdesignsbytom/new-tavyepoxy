@@ -10,6 +10,7 @@ import GalleryPage from './pages/gallery/GalleryPage';
 import ContactPage from './pages/contact/ContactPage';
 import MaterialsPage from './pages/materials/MaterialsPage';
 import ForSalePage from './pages/sales/ForSalePage';
+import GalleryItemPage from './pages/gallery/GalleryItemPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path='/' index element={<HomePage />} />
       <Route path='/about' element={<AboutPage />} />
       <Route path='/gallery' element={<GalleryPage />} />
+      <Route path='/gallery/galleryItem/:item' element={<GalleryItemPage />} />
       <Route path='/contact' element={<ContactPage />} />
       <Route path='/materials' element={<MaterialsPage />} />
       <Route path='/sales' element={<ForSalePage />} />
