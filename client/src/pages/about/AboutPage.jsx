@@ -6,7 +6,7 @@ import Footer from '../../components/footer/Footer';
 import WorkshopImage1 from '../../assets/images/pages/workshop1.jpg';
 import WorkshopImage2 from '../../assets/images/pages/workshop2.jpg';
 import WorkshopImage3 from '../../assets/images/pages/workshop3.png';
-import WorkshopImage4 from '../../assets/images/gallery/table2.jpg';
+import WorkshopImage4 from '../../assets/images/gallery/table9/lego1.jpg';
 // Context
 import { ToggleContext } from '../../context/ToggleContext';
 import { useNavigate } from 'react-router-dom';
