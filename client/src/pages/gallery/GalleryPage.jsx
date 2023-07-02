@@ -24,7 +24,7 @@ function GalleryPage() {
             <section className='mt-4 grid container lg:w-1/2 mx-auto'>
               <article className='text-center px-4 border-b-2 border-solid border-black pb-6'>
                 <div>
-                  <h2 className='text-2xl font-corgs'>The Gallery</h2>
+                  <h2 className='text-2xl font-corgs font-medium'>The Gallery</h2>
                 </div>
                 <div className='mt-2'>
                   <h3>

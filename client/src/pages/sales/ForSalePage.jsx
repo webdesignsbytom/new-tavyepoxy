@@ -23,7 +23,7 @@ function ForSalePage() {
           <section>
             <article className='mt-8'>
               <div className='mb-4'>
-                <h2 className='text-xl font-corgs'>
+                <h2 className='text-2xl font-corgs font-medium'>
                   Currently Available Products
                 </h2>
               </div>

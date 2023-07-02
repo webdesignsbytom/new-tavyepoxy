@@ -24,7 +24,7 @@ function MaterialsPage() {
     setActiveNav(id);
     navigate(`${id}`);
   };
-  
+
   return (
     <div className='grid bg-gray-100 min-h-screen grid-rows-reg'>
       <Navbar />
@@ -34,10 +34,10 @@ function MaterialsPage() {
           <section>
             <article className='mt-8'>
               <div>
-                <h2 className='text-xl font-corgs'>Materials</h2>
-                <h3 className='italic'>Customise your dream piece</h3>
+                <h2 className='text-2xl font-corgs font-medium'>Materials</h2>
+                <h3 className='italic text-xl'>Customise your dream piece</h3>
               </div>
-              <div className='grid grid-cols-2 gap-8 mt-4'>
+              <div className='grid grid-cols-2 gap-8 mt-6'>
                 <section>
                   <div className='mb-2'>
                     <p>

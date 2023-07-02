@@ -32,9 +32,9 @@ function AboutPage() {
         <Navbar />
         <main className='mt-4'>
           <div className='w-1/2 mx-auto pb-8 border-b-2 border-solid border-black'>
-            <div className='my-4'>
-              <h2 className='text-xl font-corgs font-semibold'>
-                ABOUT TAVY EPOXY
+            <div className='mt-4 mb-6'>
+              <h2 className='text-2xl font-corgs font-medium'>
+                About TavyEpoxy
               </h2>
             </div>
             <div className='relative text-center shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]'>
