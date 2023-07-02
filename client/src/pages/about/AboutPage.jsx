@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 // Components
 import Navbar from '../../components/nav/Navbar';
-import Footer from '../../components/footer/Footer';
+import FooterComponent from '../../components/footer/FooterComponent';
 // Images
 import WorkshopImage1 from '../../assets/images/pages/workshop1.jpg';
 import WorkshopImage2 from '../../assets/images/pages/workshop2.jpg';
@@ -155,7 +155,7 @@ function AboutPage() {
           </section>
         </main>
       </section>
-      <Footer />
+      <FooterComponent />
     </div>
   );
 }
