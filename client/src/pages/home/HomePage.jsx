@@ -25,7 +25,7 @@ function HomePage() {
                 <h2 className='text-xl font-corgs'>Welcome to</h2>
               </div>
               <div>
-                <h1 className='font-bold text-6xl font-poppins'>TAVY EPOXY</h1>
+                <h1 className='font-extrabold text-6xl font-poppins marble-text'>TAVY EPOXY</h1>
               </div>
               <div className='mb-2'>
                 <h3 className='text-xl font-corgs'>
