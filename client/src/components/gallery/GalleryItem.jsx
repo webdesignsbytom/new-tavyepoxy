@@ -11,7 +11,7 @@ function GalleryItem({ item }) {
   return (
     <section
       onClick={navigateToPage}
-      className='w-fit cursor-pointer hover:scale-125 duration-300 mx-auto h-fit px-4 py-8 grid justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]'
+      className='w-full lg:w-fit cursor-pointer hover:scale-125 duration-300 mx-auto h-fit px-4 py-8 grid justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]'
     >
       <div className='mb-2'>
         <h6 className='font-semibold'>{item.name}</h6>

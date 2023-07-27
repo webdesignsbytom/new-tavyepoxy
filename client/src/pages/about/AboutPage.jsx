@@ -7,6 +7,8 @@ import WorkshopImage1 from '../../assets/images/pages/workshop1.jpg';
 import WorkshopImage2 from '../../assets/images/pages/workshop2.jpg';
 import WorkshopImage3 from '../../assets/images/pages/workshop3.png';
 import WorkshopImage4 from '../../assets/images/gallery/table9/lego1.jpg';
+import WorkshopImage5 from '../../assets/images/gallery/table5/counter1.jpg';
+import WorkshopImage6 from '../../assets/images/epoxy/black_marble.jpg';
 // Context
 import { ToggleContext } from '../../context/ToggleContext';
 import { useNavigate } from 'react-router-dom';
@@ -30,9 +32,9 @@ function AboutPage() {
     <div className='bg-gray-100 min-h-screen'>
       <section className='grid grid-rows-reg h-full'>
         <Navbar />
-        <main className='mt-4'>
-          <div className='w-1/2 mx-auto pb-8 border-b-2 border-solid border-black'>
-            <div className='mt-4 mb-6'>
+        <main className='lg:mt-4'>
+          <div className='lg:w-1/2 p-4 lg:p-0 mx-auto pb-8 border-b-2 border-solid border-black'>
+            <div className='mt-4 mb-6 pb-6 border-b-2 border-solid border-black'>
               <h2 className='text-2xl font-corgs font-medium'>
                 About TavyEpoxy
               </h2>
@@ -40,18 +42,18 @@ function AboutPage() {
             <div className='relative text-center shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]'>
               <img src={WorkshopImage1} alt='Workshop' />
               <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full'>
-                <h6 className='text-6xl font-extrabold w-full text__stroke'>
+                <h6 className='text-4xl lg:text-6xl font-extrabold w-full text__stroke'>
                   WELCOME TO <br /> THE WORKSHOP
                 </h6>
               </div>
             </div>
           </div>
-          <section className='grid grid-cols-2 w-1/2 gap-4 mx-auto mt-10'>
+          <section className='grid lg:grid-cols-2 px-6 lg:px-0 lg:w-1/2 gap-4 mx-auto mt-10'>
             <section>
               <article className='pr-8'>
                 <div>
                   <h3 className='font-semibold font-corgs mb-1 text-lg'>
-                    About The Artist
+                    About The Artists
                   </h3>
                   <p className='font-poppins'>
                     For years I have loved woodworking. The chance to work with
@@ -61,8 +63,29 @@ function AboutPage() {
                     unique art and masterfully crafted furniture. Over the years
                     I have sold the piece I make to clear space. Now my table
                     and art are in demand i wanted to make the craft I love my
-                    business.
+                    business. Joined now by another highly skilled artist to
+                    help with production.
                   </p>
+                </div>
+                {/* Hidden for large */}
+                <div className='lg:hidden grid pl-4'>
+                  <div className='grid grid-cols-3 h-full object-cover border-2 border-black border-solid mt-4 mx-auto'>
+                    <img
+                      src={WorkshopImage3}
+                      className='object-cover h-full w-full'
+                      alt='Table'
+                    />
+                    <img
+                      src={WorkshopImage2}
+                      className='object-cover h-full w-full'
+                      alt='Table'
+                    />
+                    <img
+                      src={WorkshopImage1}
+                      className='object-cover h-full w-full'
+                      alt='Table'
+                    />
+                  </div>
                 </div>
                 <div className='mt-10'>
                   <h4 className='font-semibold font-corgs mb-1 text-lg'>
@@ -70,7 +93,7 @@ function AboutPage() {
                   </h4>
                   <p className='font-poppins'>
                     In my workshop I hand make tables and counters using high
-                    quality timber, treated and sanded perfectly. The finsihed
+                    quality timbers. Treated and sanded perfectly. Then finished
                     with a unique and stunning epoxy resin cover. Using hundreds
                     of woodworking styles, colours, dyes and metallics these
                     pieces have layers of complexity that goes deep into the
@@ -90,6 +113,26 @@ function AboutPage() {
                     shapes.
                   </p>
                 </div>
+                {/* Hidden for large */}
+                <div className='lg:hidden grid pl-4'>
+                  <div className='grid grid-cols-3 h-full object-cover border-2 border-black border-solid mt-4 mx-auto'>
+                    <img
+                      src={WorkshopImage4}
+                      className='object-cover h-full w-full'
+                      alt='Table'
+                    />
+                    <img
+                      src={WorkshopImage5}
+                      className='object-cover h-full w-full'
+                      alt='Table'
+                    />
+                    <img
+                      src={WorkshopImage6}
+                      className='object-cover h-full w-full'
+                      alt='Table'
+                    />
+                  </div>
+                </div>
                 <div className='mt-10'>
                   <h4 className='font-semibold font-corgs mb-1 text-lg'>
                     Huge variety of materials
@@ -108,7 +151,7 @@ function AboutPage() {
               </article>
             </section>
             <section>
-              <section className='grid gap-4'>
+              <section className='hidden lg:grid gap-4'>
                 <div>
                   <img src={WorkshopImage3} alt='Table' />
                 </div>
@@ -122,13 +165,13 @@ function AboutPage() {
             </section>
           </section>
           {/* CTA */}
-          <section className='grid w-1/2 gap-4 mx-auto mt-10'>
+          <section className='grid px-4 lg:px-0 lg:w-1/2 gap-4 mx-auto mt-10'>
             <div className='grid grid-cols-3 gap-4 w-full mx-auto'>
               <div className='grid w-full'>
                 <button
                   id='/gallery'
                   onClick={navigateToPage}
-                  className='outline outline-2 outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 '
+                  className='outline outline-2 font-semibold outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 '
                 >
                   Gallery
                 </button>
@@ -137,7 +180,7 @@ function AboutPage() {
                 <button
                   id='/materials'
                   onClick={navigateToPage}
-                  className='outline outline-2 outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 '
+                  className='outline outline-2 font-semibold outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 '
                 >
                   Materials
                 </button>
@@ -146,7 +189,7 @@ function AboutPage() {
                 <button
                   id='/contact'
                   onClick={navigateToPage}
-                  className='outline outline-2 outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 '
+                  className='outline outline-2 font-semibold outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 '
                 >
                   Contact
                 </button>

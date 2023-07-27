@@ -51,6 +51,7 @@ module.exports = {
         a1a: 'auto 1fr auto',
         '1a1': '1fr auto 1fr',
         aa: 'auto auto',
+        aa1: 'auto auto 1fr',
         '3x': '3fr 1fr',
         '4x': '4fr 1fr',
         item: '50px 1fr',

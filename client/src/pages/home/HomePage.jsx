@@ -41,19 +41,20 @@ function HomePage() {
                 </h3>
               </div>
               <div className='relative shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]'>
-                <img className='w-full' src={BannerImage} alt='Banner' />
+                <img className='w-full my-4 md:my-0' src={BannerImage} alt='Banner' />
                 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full'>
-                  <h6 className='text-5xl font-bold w-full text__stroke'>Furniture ~ Art ~ Lighting</h6>
+                  <h6 className='text-5xl lg:hidden font-bold w-full text__stroke'>Furniture <br /> ~ Art ~ <br /> Lighting</h6>
+                  <h6 className='hidden lg:grid text-5xl font-bold w-full text__stroke'>Furniture ~ Art ~ Lighting</h6>
                 </div>
               </div>
               <div className='mt-4'>
                 <h4>Hand made by master builders in Devon, UK</h4>
               </div>
               <div>
-                <h5>Custom Designs available within 12 weeks</h5>
+                <h5 className='my-4 md:my-0'>Custom Designs available within 12 weeks</h5>
                 <h6>World Wide Shipping available</h6>
               </div>
-              <div className='mt-2'>
+              <div className='mt-6 md:mt-2'>
                 <button id='/gallery' onClick={navigateToPage} className='p-2 outline-2 bg-yellow-400 hover:bg-yellow-500 active:scale-95 outline-black outline rounded-xl'>See More!</button>
               </div>
             </article>

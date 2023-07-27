@@ -30,10 +30,12 @@ function MaterialsPage() {
       <Navbar />
       {/* Main */}
       <main className='grid h-full'>
-        <div className='grid w-1/2 mx-auto'>
+        <div className='grid w-full px-4 lg:px-0 lg:w-1/2 mx-auto'>
           <section>
             <article className='mt-8'>
-              <div>
+              <div
+                className='pb-6 border-b-2 border-solid border-black'
+              >
                 <h2 className='text-2xl font-corgs font-medium'>Materials</h2>
                 <h3 className='italic text-xl'>Customise your dream piece</h3>
               </div>
@@ -104,9 +106,12 @@ function MaterialsPage() {
             <div className='text-center'>
               <h4 className='text-xl font-semibold'>Contact Me Now</h4>
               <div className='grid justify-center'>
-                <button id='/contact'
-                  onClick={navigateToPage} className='outline outline-2 outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 my-2'>
-                  CONTACT
+                <button
+                  id='/contact'
+                  onClick={navigateToPage}
+                  className='outline outline-2 font-semibold outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 my-6'
+                >
+                  CONTACT TAVY EPOXY
                 </button>
               </div>
               <div className=''>
