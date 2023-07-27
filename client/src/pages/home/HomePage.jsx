@@ -26,14 +26,14 @@ function HomePage() {
       <Navbar />
       {/* Main */}
       <main className='grid h-full'>
-        <div className='grid w-1/2 mx-auto'>
-          <section className='grid w-full my-auto'>
+        <div className='grid w-full px-4 md:w-1/2 mx-auto'>
+          <section className='grid w-full my-6 md:my-auto'>
             <article className='text-center'>
               <div>
                 <h2 className='text-xl font-corgs'>Welcome to</h2>
               </div>
               <div>
-                <h1 className='font-extrabold text-6xl font-poppins marble-text'>TAVY EPOXY</h1>
+                <h1 className='my-2 md:my-0 font-extrabold text-6xl font-poppins marble-text'>TAVY EPOXY</h1>
               </div>
               <div className='mb-2'>
                 <h3 className='text-xl font-corgs'>
