@@ -55,7 +55,7 @@ function HomePage() {
                 <h6>World Wide Shipping available</h6>
               </div>
               <div className='mt-6 md:mt-2'>
-                <button id='/gallery' onClick={navigateToPage} className='p-2 outline-2 bg-yellow-400 hover:bg-yellow-500 active:scale-95 outline-black outline rounded-xl'>See More!</button>
+                <button id='/gallery' onClick={navigateToPage} className='py-2 px-6 font-semibold outline-2 bg-yellow-400 hover:bg-yellow-500 active:scale-95 outline-black outline rounded-xl'>See More!</button>
               </div>
             </article>
           </section>

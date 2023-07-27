@@ -20,7 +20,7 @@ function ForSalePage() {
       <Navbar />
       {/* Main */}
       <main className='grid h-full'>
-        <div className='grid grid-rows-aa1 w-1/2 mx-auto'>
+        <div className='grid grid-rows-aa1 w-full px-6 lg:px-0 lg:w-1/2 mx-auto'>
           <section>
             <article className='mt-8'>
               <div className='mb-4'>
@@ -51,7 +51,7 @@ function ForSalePage() {
           <SalesLinks />
           <section className='grid'>
             <div className='mt-6'>
-              <h3 className='text-xl font-semibold'>Tables and Furniture For Sale</h3>
+              <h3 className='text-xl font-semibold border-b-2 border-solid border-black pb-4'>Tables and Furniture For Sale</h3>
             </div>
           </section>
         </div>
