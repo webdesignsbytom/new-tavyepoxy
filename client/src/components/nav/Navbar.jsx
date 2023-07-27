@@ -13,6 +13,10 @@ function Navbar() {
 
   let navigate = useNavigate();
 
+  useEffect(() => {
+    toggleNavbarOpenClosed()
+  }, [])
+
   const logoutUser = (event) => {
     event.preventDefault();
     setActiveNav('/');
