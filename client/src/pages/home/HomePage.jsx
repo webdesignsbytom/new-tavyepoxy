@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 // Components
 import Navbar from '../../components/nav/Navbar';
 // Context
@@ -9,9 +10,16 @@ import BannerImage from '../../assets/images/epoxy/bg1.png';
 function HomePage() {
   const { setActiveNav } = useContext(ToggleContext);
 
+  const navigate = useNavigate();
   useEffect(() => {
     setActiveNav('/');
   }, []);
+
+  const navigateToPage = (event) => {
+    const { id } = event.target;
+    setActiveNav(id);
+    navigate(`${id}`);
+  };
 
   return (
     <div className='grid bg-gray-100 h-screen grid-rows-reg overflow-hidden max-h-screen'>
@@ -39,10 +47,14 @@ function HomePage() {
                 </div>
               </div>
               <div className='mt-4'>
-                <h4>Hand made by artisans in Devon, UK</h4>
+                <h4>Hand made by master builders in Devon, UK</h4>
               </div>
               <div>
                 <h5>Custom Designs available within 12 weeks</h5>
+                <h6>World Wide Shipping available</h6>
+              </div>
+              <div className='mt-2'>
+                <button id='/gallery' onClick={navigateToPage} className='p-2 outline-2 bg-yellow-400 hover:bg-yellow-500 active:scale-95 outline-black outline rounded-xl'>See More!</button>
               </div>
             </article>
           </section>
