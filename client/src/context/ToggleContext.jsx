@@ -11,7 +11,6 @@ const ToggleContextProvider = ({ children }) => {
     setToggleNavigation(!toggleNavigation);
   };
 
-
   return (
     <ToggleContext.Provider
       value={{
