@@ -34,7 +34,7 @@ export const galleryDataArray = [
     imageUrl: GalleryImage1,
     colours: 'Metallic black base, earth brown, silver, ivory white, copper metallic',
     pageData: {
-      subtitle: 'Natural wood vien design',
+      subtitle: 'Natural wood vein design',
       undercoat: 'Black',
       timber: 'MDF',
       legs: 'Metal pin legs',
