@@ -57,11 +57,11 @@ function MaterialsPage() {
                   </div>
                   <div className='my-2'>
                     <p>
-                      Pick from loads of premade styles. We cant recreate them
+                      Pick from a large collection of pre-made styles. We cant recreate them
                       exactly. Thats the beauty of purely unique furniture.
-                      However you can find a stlye you like and change the
+                      However you can find a style you like and change the
                       colours and suggest flow directions for the patterns. You
-                      can choose from spashes, striations, wavey, spirical and
+                      can choose from splashes, striations, wavey, spirical and
                       what ever you can think of.
                     </p>
                   </div>
@@ -72,9 +72,9 @@ function MaterialsPage() {
                 <section>
                   <div className='mb-2'>
                     <p>
-                      Hundreds of colours and paint stlyes availble. Including
+                      Hundreds of colours and paint styles available. Including
                       metallics, glow in the dark, translucent. Any colour can
-                      be ordered in if we dont have it in stock.
+                      be ordered in if we don't have it in stock.
                     </p>
                   </div>
                   <div>
@@ -83,7 +83,7 @@ function MaterialsPage() {
                   <div className='mt-2'>
                     <p>
                       All base products are made with MDF to keep the products
-                      afforable to everyone. We source commonly fitted metal
+                      affordable to everyone. We source commonly fitted metal
                       table legs or custom make wooden legs.
                     </p>
                   </div>

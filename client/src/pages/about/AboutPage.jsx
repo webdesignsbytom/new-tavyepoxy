@@ -108,7 +108,7 @@ function AboutPage() {
                     My projects have often been made for someone to show off a
                     prized possession they own. I tailor make the entire project
                     to suit the needs of the client. The colour palette can be
-                    tailoured to suit any room, product or occasion. In-lays can
+                    tailored to suit any room, product or occasion. In-lays can
                     create beautiful accents and bring to life well defined
                     shapes.
                   </p>
@@ -140,11 +140,11 @@ function AboutPage() {
                   <p className='font-poppins'>
                     I try to keep all my tables as affordable as possible, using
                     excellent quality base materials beautiful tables can be
-                    made. If requested however, I have access to, or can aquire
+                    made. If requested however, I have access to, or can acquire
                     almost any timber or material you require. The range of
                     colours and textures is in the thousands. Oils, dyes,
                     pigments, metallics, neon, glowing, transparent and any
-                    feature you can think of can be inlayed to make you a truly
+                    feature you can think of can be in-layed to make you a truly
                     custom and unique furniture piece.
                   </p>
                 </div>

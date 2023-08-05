@@ -66,7 +66,7 @@ export const galleryDataArray = [
     id: 3,
     url: 'table_3',
     name: 'Stone Wash',
-    data: 'This smaller peice is a great little coffee or side table. Its purely made of 120 year old reclaimed oak and looks beautiful as it has a blue stone wash finish. The colours naturally swirl and blend together and using pouring techniques to make it appear to be cut from a beautiful block of stone.',
+    data: 'This smaller piece is a great little coffee or side table. Its purely made of 120 year old reclaimed oak and looks beautiful as it has a blue stone wash finish. The colours naturally swirl and blend together and using pouring techniques to make it appear to be cut from a beautiful block of stone.',
     imageUrl: GalleryImage3,
     colours: 'Ocean blues, lightning blue, silver black white metallics',
     pageData: {
@@ -84,7 +84,7 @@ export const galleryDataArray = [
     id: 4,
     url: 'table_4',
     name: 'Northern Lights',
-    data: 'Deisgned to look similar to the northern lights but came away slightly different. I would love to try this style again. We get a beautiful wash of colour like lights dancing in the sky above you in the Arctic.',
+    data: 'Designed to look similar to the northern lights but came away slightly different. I would love to try this style again. We get a beautiful wash of colour like lights dancing in the sky above you in the Arctic.',
     imageUrl: GalleryImage4,
     colours: 'Black, greens, purples, blues, yellows',
     pageData: {
@@ -124,7 +124,7 @@ export const galleryDataArray = [
     imageUrl: GalleryImage6,
     colours: 'Red black white',
     pageData: {
-      subtitle: 'Vibrand and warm',
+      subtitle: 'Vibrant and warm',
       undercoat: 'Black',
       timber: 'Oak',
       legs: 'Oak cross beam legs',
@@ -165,28 +165,9 @@ export const galleryDataArray = [
       timber: 'Oak',
       legs: 'N/A',
       productionTime: '2 weeks',
-      dimensions: '2 foor x 3.5 foot',
+      dimensions: '2 foot x 3.5 foot',
       price: '£500',
       images: [],
     },
   },
-  // {
-  //   id: 1,
-  //   url: 'table_9',
-  //   name: 'Table 9',
-  //   data: 'This piece was made using 6 colours in layers and flowing the paints and mixes togethers while they set. The surface its self is beautiful aged oak.',
-  //   imageUrl: GalleryImage1,
-  //   colours: 'blues silver black white metallics',
-  //   pageData: {
-  //     subtitle: 'Subtitles are hard',
-  //     undercoat: 'Black',
-  //     timber: 'oak',
-  //     legs: 'Metal 4 post',
-
-  //     productionTime: '2 weeks',
-  //     dimensions: '2x2',
-  //     price: '£200',
-  //     images: [],
-  //   },
-  // },
 ];

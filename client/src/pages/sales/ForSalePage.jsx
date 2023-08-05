@@ -31,11 +31,11 @@ function ForSalePage() {
               </div>
               <div className='grid gap-1'>
                 <p>
-                  <span className='font-semibold'>Our new range is availble now!</span> Made to be beautiful and affordable.
+                  <span className='font-semibold'>Our new range is available now!</span> Made to be beautiful and affordable.
                 </p>
                 <p>
-                  We dont produce to any schedual unless privately hired and we
-                  dont tend to repeat stlyes. All products seen here we made
+                  We don't produce to any schedule unless privately hired and we
+                  don't tend to repeat styles. All products seen here we made
                   because we thought they looked beautiful and unique.{' '}
                 </p>
                 <p>
