@@ -4,8 +4,9 @@ import { useState } from 'react';
 export const ToggleContext = React.createContext();
 
 const ToggleContextProvider = ({ children }) => {
-  const [toggleNavigation, setToggleNavigation] = useState(true);
+  const [toggleNavigation, setToggleNavigation] = useState(false);
   const [activeNav, setActiveNav] = useState('/');
+
   console.log('QQQQQQQQQQQQQQQQQQQQQQQQQQ ', toggleNavigation);
 
   const toggleNavbarOpenClosed = () => {
@@ -19,6 +20,7 @@ const ToggleContextProvider = ({ children }) => {
         toggleNavigation,
         toggleNavbarOpenClosed,
         activeNav,
+        setToggleNavigation,
         setActiveNav,
       }}
     >

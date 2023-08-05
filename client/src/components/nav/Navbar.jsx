@@ -8,14 +8,10 @@ import LogoImage from '../../assets/images/logos/logo.jpg';
 
 function Navbar() {
   const { user, setUser } = useContext(UserContext);
-  const { toggleNavbarOpenClosed, toggleNavigation, activeNav, setActiveNav } =
+  const { toggleNavbarOpenClosed, toggleNavigation, setToggleNavigation, activeNav, setActiveNav } =
     useContext(ToggleContext);
 
   let navigate = useNavigate();
-
-  useEffect(() => {
-    toggleNavbarOpenClosed()
-  }, [])
 
   const logoutUser = (event) => {
     event.preventDefault();
@@ -26,6 +22,10 @@ function Navbar() {
 
     navigate('/', { replace: true });
   };
+
+      const tgNav = (event) => {
+        setToggleNavigation(false)
+      }
 
   return (
     <nav className='h-full wood__bg relative z-30 grid py-4 border-b-2 border-solid border-black '>
@@ -159,6 +159,7 @@ function Navbar() {
           </div>
         </section>
 
+        {/* phone nav */}
         {toggleNavigation && (
           <nav className='absolute lg:hidden w-full left-0 top-24 py-2 px-4'>
             <div className='bg-black nav__bg p-1 rounded'>
@@ -170,7 +171,7 @@ function Navbar() {
                       : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-nav-colour text-gray-800 font-semibold'
                   }
                 >
-                  <Link className='w-full' to='/'>
+                  <Link className='w-full' onClick={tgNav} to='/'>
                     Home
                   </Link>
                 </li>
@@ -181,7 +182,7 @@ function Navbar() {
                       : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-nav-colour text-gray-800 font-semibold'
                   }
                 >
-                  <Link className='w-full' to='/about'>
+                  <Link className='w-full' onClick={tgNav} to='/about'>
                     About
                   </Link>
                 </li>
@@ -192,7 +193,7 @@ function Navbar() {
                       : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-nav-colour text-gray-800 font-semibold'
                   }
                 >
-                  <Link className='w-full' to='/gallery'>
+                  <Link className='w-full' onClick={tgNav} to='/gallery'>
                     Gallery
                   </Link>
                 </li>
@@ -203,7 +204,7 @@ function Navbar() {
                       : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-nav-colour text-gray-800 font-semibold'
                   }
                 >
-                  <Link className='w-full' to='/materials'>
+                  <Link className='w-full' onClick={tgNav} to='/materials'>
                     Materials
                   </Link>
                 </li>
@@ -214,7 +215,7 @@ function Navbar() {
                       : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-nav-colour text-gray-800 font-semibold'
                   }
                 >
-                  <Link className='w-full' to='/sales'>
+                  <Link className='w-full' onClick={tgNav} to='/sales'>
                     Sales
                   </Link>
                 </li>
@@ -225,7 +226,7 @@ function Navbar() {
                       : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-nav-colour text-gray-800 font-semibold'
                   }
                 >
-                  <Link className='w-full' to='/contact'>
+                  <Link className='w-full' onClick={tgNav} to='/contact'>
                     Contact
                   </Link>
                 </li>
@@ -238,7 +239,7 @@ function Navbar() {
                         : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-nav-colour text-gray-800 font-semibold'
                     }
                   >
-                    <Link className='w-full' to='/admin'>
+                    <Link className='w-full' onClick={tgNav} to='/admin'>
                       Admin
                     </Link>
                   </li>

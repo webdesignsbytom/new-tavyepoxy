@@ -11,6 +11,7 @@ function HomePage() {
   const { setActiveNav } = useContext(ToggleContext);
 
   const navigate = useNavigate();
+  
   useEffect(() => {
     setActiveNav('/');
   }, []);
