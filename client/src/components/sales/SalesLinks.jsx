@@ -37,7 +37,7 @@ function SalesLinks() {
         <section className='grid grid-cols-3 items-center h-full w-full gap-4 mb-2 mt-4'>
           <div>
             <button
-              id='/gallery'
+              id='/contact'
               onClick={navigateToPage}
               className='py-2 w-full px-6 font-semibold outline-2 bg-yellow-400 hover:bg-yellow-500 active:scale-95 outline-black outline rounded-xl'
             >
@@ -45,14 +45,14 @@ function SalesLinks() {
             </button>
           </div>
           <div>
-            <button className='py-2 w-full px-6 font-semibold outline-2 bg-yellow-400 hover:bg-yellow-500 active:scale-95 outline-black outline rounded-xl'>
+          <a href='https://www.ebay.co.uk' className='grid text-center py-2 w-full px-6 font-semibold outline-2 bg-yellow-400 hover:bg-yellow-500 active:scale-95 outline-black outline rounded-xl'>
               eBay
-            </button>
+            </a>
           </div>
           <div>
-            <button className='py-2 w-full px-6 font-semibold outline-2 bg-yellow-400 hover:bg-yellow-500 active:scale-95 outline-black outline rounded-xl'>
+            <a href='https://www.etsy.com/tavyepoxy' className='grid text-center py-2 w-full px-6 font-semibold outline-2 bg-yellow-400 hover:bg-yellow-500 active:scale-95 outline-black outline rounded-xl'>
               Etsy
-            </button>
+            </a>
           </div>
         </section>
       </article>

@@ -70,6 +70,15 @@ select {
   font: inherit;
 }
 
+a {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+}
 /* Media Queries (MEDIUM DEVICES) */
 
 @media screen and (max-width: 1024px) {

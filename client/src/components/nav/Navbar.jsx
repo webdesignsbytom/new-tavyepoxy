@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
 import { ToggleContext } from '../../context/ToggleContext';
 // Images
-import LogoImage from '../../assets/images/logos/wdbt-black.svg';
+import LogoImage from '../../assets/images/logos/logo.jpg';
 
 function Navbar() {
   const { user, setUser } = useContext(UserContext);
@@ -28,7 +28,7 @@ function Navbar() {
   };
 
   return (
-    <nav className='h-full relative z-30 grid  bg-yellow-400 py-2 border-b-2 border-solid border-black '>
+    <nav className='h-full wood__bg relative z-30 grid py-4 border-b-2 border-solid border-black '>
       <div className='grid grid-cols-reg w-full md:w-1/2 mx-auto'>
         <section className='grid items-center justify-center pl-4'>
           <Link className='no__highlights' to='/'>
@@ -69,12 +69,12 @@ function Navbar() {
         {/* Navigation */}
         <section className='hidden lg:grid justify-end'>
           <div className='grid items-center pr-4'>
-            <ul className='grid grid-flow-col w-fit justify-end gap-4 font-semibold'>
+            <ul className='grid lg:text-lg grid-flow-col w-fit justify-end gap-4 font-bold'>
               <li
                 className={
                   activeNav === '/'
-                    ? 'text-gray-600 hover:text-gray-700 active:scale-95'
-                    : 'hover:text-gray-700 active:scale-95'
+                    ? 'text-red-500 hover:text-red-700 active:scale-95'
+                    : 'hover:text-red-700 text-red-500 active:scale-95'
                 }
               >
                 <Link className='w-full' to='/'>
@@ -84,8 +84,8 @@ function Navbar() {
               <li
                 className={
                   activeNav === '/about'
-                    ? 'text-gray-600 hover:text-gray-700 active:scale-95'
-                    : 'hover:text-gray-700 active:scale-95'
+                    ? 'text-yellow-500 hover:text-yellow-700 active:scale-95'
+                    : 'hover:text-yellow-700 text-yellow-500 active:scale-95'
                 }
               >
                 <Link className='w-full' to='/about'>
@@ -95,8 +95,8 @@ function Navbar() {
               <li
                 className={
                   activeNav === '/gallery'
-                    ? 'text-gray-600 hover:text-gray-700 active:scale-95'
-                    : 'hover:text-gray-700 active:scale-95'
+                    ? 'text-green-500 hover:text-green-700 active:scale-95'
+                    : 'hover:text-green-700 text-green-500 active:scale-95'
                 }
               >
                 <Link className='w-full' to='/gallery'>
@@ -106,8 +106,8 @@ function Navbar() {
               <li
                 className={
                   activeNav === '/materials'
-                    ? 'text-gray-600 hover:text-gray-700 active:scale-95'
-                    : 'hover:text-gray-700 active:scale-95'
+                    ? 'text-blue-600 hover:text-blue-700 active:scale-95'
+                    : 'hover:text-blue-700 text-blue-600 active:scale-95'
                 }
               >
                 <Link className='w-full' to='/materials'>
@@ -117,8 +117,8 @@ function Navbar() {
               <li
                 className={
                   activeNav === '/sales'
-                    ? 'text-gray-600 hover:text-gray-700 active:scale-95'
-                    : 'hover:text-gray-700 active:scale-95'
+                    ? 'text-purple-700 hover:text-purple-800 active:scale-95'
+                    : 'hover:text-purple-800 text-purple-700 active:scale-95'
                 }
               >
                 <Link className='w-full' to='/sales'>
@@ -128,8 +128,8 @@ function Navbar() {
               <li
                 className={
                   activeNav === '/contact'
-                    ? 'text-gray-600 hover:text-gray-700 active:scale-95'
-                    : 'hover:text-gray-700 active:scale-95'
+                    ? 'text-pink-500 hover:text-pink-700 active:scale-95'
+                    : 'hover:text-pink-700 text-pink-500 active:scale-95'
                 }
               >
                 <Link className='w-full' to='/contact'>
@@ -161,13 +161,13 @@ function Navbar() {
 
         {toggleNavigation && (
           <nav className='absolute lg:hidden w-full left-0 top-24 py-2 px-4'>
-            <div className='bg-black nav__bg p-2 rounded'>
-              <ul className='text-center grid bg-black h-fit w-full text-xl'>
+            <div className='bg-black nav__bg p-1 rounded'>
+              <ul className='text-center grid rainbow__bg h-fit w-full text-xl'>
                 <li
                   className={
                     activeNav === '/'
-                      ? 'w-full no__highlights nav__bg hover:bg-green-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
-                      : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-500 text-gray-800 font-semibold'
+                      ? 'w-full no__highlights nav__bg active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
+                      : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-nav-colour text-gray-800 font-semibold'
                   }
                 >
                   <Link className='w-full' to='/'>
@@ -177,8 +177,8 @@ function Navbar() {
                 <li
                   className={
                     activeNav === '/about'
-                      ? 'w-full no__highlights nav__bg hover:bg-green-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
-                      : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-500 text-gray-800 font-semibold'
+                      ? 'w-full no__highlights nav__bg active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
+                      : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-nav-colour text-gray-800 font-semibold'
                   }
                 >
                   <Link className='w-full' to='/about'>
@@ -188,8 +188,8 @@ function Navbar() {
                 <li
                   className={
                     activeNav === '/gallery'
-                      ? 'w-full no__highlights nav__bg hover:bg-green-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
-                      : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-500 text-gray-800 font-semibold'
+                      ? 'w-full no__highlights nav__bg active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
+                      : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-nav-colour text-gray-800 font-semibold'
                   }
                 >
                   <Link className='w-full' to='/gallery'>
@@ -199,8 +199,8 @@ function Navbar() {
                 <li
                   className={
                     activeNav === '/materials'
-                      ? 'w-full no__highlights nav__bg hover:bg-green-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
-                      : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-500 text-gray-800 font-semibold'
+                      ? 'w-full no__highlights nav__bg active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
+                      : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-nav-colour text-gray-800 font-semibold'
                   }
                 >
                   <Link className='w-full' to='/materials'>
@@ -210,8 +210,8 @@ function Navbar() {
                 <li
                   className={
                     activeNav === '/sales'
-                      ? 'w-full no__highlights nav__bg hover:bg-green-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
-                      : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-500 text-gray-800 font-semibold'
+                      ? 'w-full no__highlights nav__bg active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
+                      : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-nav-colour text-gray-800 font-semibold'
                   }
                 >
                   <Link className='w-full' to='/sales'>
@@ -221,8 +221,8 @@ function Navbar() {
                 <li
                   className={
                     activeNav === '/contact'
-                      ? 'w-full no__highlights nav__bg hover:bg-green-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
-                      : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-500 text-gray-800 font-semibold'
+                      ? 'w-full no__highlights nav__bg active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
+                      : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-nav-colour text-gray-800 font-semibold'
                   }
                 >
                   <Link className='w-full' to='/contact'>
@@ -234,8 +234,8 @@ function Navbar() {
                   <li
                     className={
                       activeNav === '/admin'
-                        ? 'w-full no__highlights nav__bg hover:bg-green-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
-                        : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-500 text-gray-800 font-semibold'
+                        ? 'w-full no__highlights nav__bg active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
+                        : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-nav-colour text-gray-800 font-semibold'
                     }
                   >
                     <Link className='w-full' to='/admin'>

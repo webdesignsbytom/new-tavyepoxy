@@ -5,7 +5,7 @@ import LogoImage from '../../assets/images/logos/logo.jpg';
 
 function FooterComponent() {
   return (
-    <footer className='h-full grid bg-yellow-400 border-t-2 border-solid border-black mt-16'>
+    <footer className='h-full wood__bg grid bg-yellow-400 border-t-2 border-solid border-black mt-16'>
       <section className='grid grid-cols-3 px-6 my-2'>
         <div className='grid grid-cols-reg gap-6 grid-rows-1'>
           <div className='grid'>
