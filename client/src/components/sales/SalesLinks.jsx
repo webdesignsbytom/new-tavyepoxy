@@ -50,7 +50,7 @@ function SalesLinks() {
             </a>
           </div>
           <div>
-            <a href='https://www.etsy.com/tavyepoxy' className='grid text-center py-2 w-full px-6 font-semibold outline-2 bg-yellow-400 hover:bg-yellow-500 active:scale-95 outline-black outline rounded-xl'>
+            <a href='https://www.etsy.com/uk/shop/TavyEpoxy' className='grid text-center py-2 w-full px-6 font-semibold outline-2 bg-yellow-400 hover:bg-yellow-500 active:scale-95 outline-black outline rounded-xl'>
               Etsy
             </a>
           </div>

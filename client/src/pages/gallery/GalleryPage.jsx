@@ -8,7 +8,7 @@ import GalleryItem from '../../components/gallery/GalleryItem';
 
 function GalleryPage() {
   const { setActiveNav } = useContext(ToggleContext);
-  const [galleryItems, setGalleryItems] = useState(galleryDataArray);
+  const [galleryItems] = useState(galleryDataArray);
   console.log('galleryItems', galleryItems);
 
   useEffect(() => {

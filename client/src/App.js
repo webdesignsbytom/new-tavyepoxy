@@ -11,12 +11,14 @@ import ContactPage from './pages/contact/ContactPage';
 import MaterialsPage from './pages/materials/MaterialsPage';
 import ForSalePage from './pages/sales/ForSalePage';
 import GalleryItemPage from './pages/gallery/GalleryItemPage';
+import DesignPage from './pages/design/DesignPage';
 
 function App() {
   return (
     <Routes>
       <Route path='/' index element={<HomePage />} />
       <Route path='/about' element={<AboutPage />} />
+      <Route path='/design' element={<DesignPage />} />
       <Route path='/gallery' element={<GalleryPage />} />
       <Route path='/gallery/galleryItem/:item' element={<GalleryItemPage />} />
       <Route path='/contact' element={<ContactPage />} />
