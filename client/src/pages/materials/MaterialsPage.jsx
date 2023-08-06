@@ -5,8 +5,8 @@ import Navbar from '../../components/nav/Navbar';
 import { ToggleContext } from '../../context/ToggleContext';
 // Images
 import MaterialsImage1 from '../../assets/images/materials/materials1.jpg';
-import TableLegsImage from '../../assets/images/materials/leg3.jpg';
-import StlyeImage from '../../assets/images/epoxy/4x.png';
+import TableLegsImage from '../../assets/images/legs/leg3.jpg';
+import StyleImage from '../../assets/images/epoxy/4x.png';
 import FooterComponent from '../../components/footer/FooterComponent';
 import { useNavigate } from 'react-router-dom';
 
@@ -66,7 +66,7 @@ function MaterialsPage() {
                     </p>
                   </div>
                   <div className='my-2'>
-                    <img src={StlyeImage} alt='styles' />
+                    <img src={StyleImage} alt='styles' />
                   </div>
                 </section>
                 <section>
