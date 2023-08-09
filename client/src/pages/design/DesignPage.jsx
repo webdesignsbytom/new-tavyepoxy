@@ -7,6 +7,7 @@ import { ToggleContext } from '../../context/ToggleContext';
 import CanvasDesignTool from '../../components/design/CanvasDesignTool';
 import LegOptionsModal from '../../components/design/LegOptionsModal';
 import EpoxyFinishOptions from '../../components/design/EpoxyFinishOptions';
+import ColourTag from '../../components/design/ColourTag';
 // Images
 
 function DesignPage() {
@@ -18,7 +19,7 @@ function DesignPage() {
     thickness: 25,
     material: 'MDF',
     finish: 'marble',
-    colours: [],
+    colours: ['Black', 'Bronze', 'Silver', 'Parchment', 'Brown'],
     legs: 'Standard fit 30cm high 2 prong hairpin legs',
     quote: 220,
   });
@@ -214,6 +215,17 @@ function DesignPage() {
                 <section>
                   <div>
                     <p>Customise Colours</p>
+                  </div>
+                  <div>
+                    <p>Selected</p>
+                    <section className='grid grid-flow-col w-full'>
+                      {tableDimensionsAndData.colours.forEach(
+                        (colour, index) => {
+                          console.log('colour 1', colour);
+                          return <ColourTag key={index} colour={colour} />;
+                        }
+                      )}
+                    </section>
                   </div>
                   <div className='grid grid-cols-rev w-full gap-4'>
                     <div className='w-full'>
