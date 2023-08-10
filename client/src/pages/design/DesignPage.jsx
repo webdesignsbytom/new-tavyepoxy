@@ -24,6 +24,8 @@ function DesignPage() {
     quote: 220,
   });
 
+  const [testf, setTestf] = useState(['one', 'two', 'three', 'four'])
+
   const [toggleCustomThickness, setToggleCustomThickness] = useState(false);
   const [toggleLegOptions, setToggleLegOptions] = useState(false);
   const [toggleFinishOptions, setToggleFinishOptions] = useState(false);
@@ -96,16 +98,18 @@ function DesignPage() {
       <Navbar />
       {/* Main */}
       <main className='grid h-full grid-rows-reg'>
-        <section className='w-2/3 mx-auto mt-8'>
-          <div className='pb-6 border-b-2 border-solid border-black'>
+        <section className='lg:w-3/4 mx-auto mt-8'>
+          <div className='pb-6 border-b-2 grid grid-cols-2 justify-between border-solid border-black'>
             <h2 className='text-2xl font-corgs font-medium'>
               Design your furniture
             </h2>
-            <h3 className='italic text-xl'>Customise your dream piece</h3>
+            <div className='grid justify-end'>
+              <h3 className='italic text-xl'>Customise your dream piece</h3>
+            </div>
           </div>
         </section>
-        <section className='w-2/3 mx-auto mt-8 mb-2'>
-          <section className='grid relative h-full grid-cols-2 gap-2'>
+        <section className='lg:w-3/4 mx-auto mt-2 mb-2'>
+          <section className='grid relative h-full md:grid-cols-2 gap-2'>
             {toggleLegOptions && (
               <LegOptionsModal closeLegOptionsModal={closeLegOptionsModal} />
             )}
@@ -121,62 +125,67 @@ function DesignPage() {
             </div>
             <div>
               <section>
-                <article>
+                <article className='text-center font-semibold'>
                   <h3>Choose your material and style</h3>
                 </article>
-                <section className='grid grid-cols-2 gap-6'>
-                  <div>
-                    <input
-                      type='number'
-                      value={tableDimensionsAndData.length}
-                      onChange={handleChange}
-                      name='length'
-                      id='length'
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type='number'
-                      value={tableDimensionsAndData.width}
-                      onChange={handleChange}
-                      name='width'
-                      id='width'
-                    />
-                  </div>
-                </section>
-                <section>
-                  <div>
-                    <p>Thickness</p>
-                  </div>
-                  <select
-                    id='thickness'
-                    name='thickness'
-                    onChange={handleChange}
-                    value={tableDimensionsAndData.thickness} // Corrected this line
-                    required
-                  >
-                    <option value='25'>25mm (Standard)</option>
-                    <option value='18'>18mm</option>
-                    <option value='35'>35mm</option>
-                    <option value='custom'>Custom</option>
-                  </select>
-                </section>
-                {toggleCustomThickness && (
-                  <section>
-                    <input
-                      type='number'
-                      value={tableDimensionsAndData.thickness}
-                      onChange={handleChange}
-                      name='thickness'
-                      id='thickness'
-                    />
+                <section className='grid grid-cols-3 gap-6 w-full outline outline-black outline-2 rounded my-2 p-1'>
+                  <section className='grid'>
+                    <div>
+                      <p>Width</p>
+                    </div>
+                    <div className='w-min grid'>
+                      <input
+                        type='number'
+                        className='w-[100px]'
+                        value={tableDimensionsAndData.length}
+                        onChange={handleChange}
+                        name='length'
+                        id='length'
+                      />
+                    </div>
                   </section>
-                )}
-                <section>
+                  <section className='grid'>
+                    <div>
+                      <p>Length</p>
+                    </div>
+                    <div className='w-full'>
+                      <input
+                        type='number'
+                        className='w-[100px]'
+                        value={tableDimensionsAndData.width}
+                        onChange={handleChange}
+                        name='width'
+                        id='width'
+                      />
+                    </div>
+                  </section>
+                  <section className='grid'>
+                    <div>
+                      <p>Thickness</p>
+                    </div>
+                    <div className='w-full'>
+                      <select
+                        id='thickness'
+                        name='thickness'
+                        onChange={handleChange}
+                        value={tableDimensionsAndData.thickness} // Corrected this line
+                        required
+                      >
+                        <option value='25'>25mm (Standard)</option>
+                        <option value='18'>18mm</option>
+                        <option value='35'>35mm</option>
+                        <option value='custom'>Custom</option>
+                      </select>
+                    </div>
+                  </section>
+                </section>
+
+                {/* Materials */}
+                <section className='grid grid-flow-col outline gap-2 outline-black outline-2 rounded p-1'>
                   <div>
-                    <h4>Materials</h4>
+                    <h4>Materials:</h4>
                   </div>
-                  <div>
+               
                     <div>
                       <select
                         id='material'
@@ -192,35 +201,64 @@ function DesignPage() {
                         <option value='Cherry'>Cherry</option>
                       </select>
                     </div>
-                  </div>
+                <div>
+                  <input type='text' placeholder='Custom...' />
+                  <button type='submit' value='colour'>+</button>
+                </div>
                 </section>
-                <section>
-                  <div>
-                    <h5>Epoxy Finish</h5>
+
+                {/* Row of selections */}
+                <section className='grid grid-cols-2 outline gap-2 outline-black outline-2 rounded p-1 my-2'>
+                  {/* Finish */}
+                  <section className='grid'>
                     <div>
-                      <div>
-                        <p>{tableDimensionsAndData.finish}</p>
-                      </div>
-                      <div>
-                        <button
-                          onClick={openFinishOptionsModal}
-                          className='py-2 px-4 bg-slate-400 font-semibold'
-                        >
-                          View Finish Options
-                        </button>
-                      </div>
+                      <h5 className='font-semibold'>Epoxy Finish</h5>
                     </div>
-                  </div>
+
+                    <div className='text-sm leading-5 h-full capitalize'>
+                      <p>{tableDimensionsAndData.finish}</p>
+                    </div>
+
+                    <div className='w-full grid items-end'>
+                      <button
+                        onClick={openFinishOptionsModal}
+                        className='py-2 px-4 w-full bg-slate-400 rounded h-fit font-semibold'
+                      >
+                        View Finish Options
+                      </button>
+                    </div>
+                  </section>
+                  {/* Legs */}
+                  <section className='grid'>
+                    <div>
+                      <h5 className='font-semibold'>Leg style</h5>
+                    </div>
+
+                    <div className='text-sm leading-5 h-full capitalize'>
+                      <p>{tableDimensionsAndData.legs}</p>
+                    </div>
+
+                    <div className='w-full grid items-end'>
+                      <button
+                        onClick={openLegOptionsModal}
+                        className='py-2 px-4 w-full bg-slate-400 rounded h-fit font-semibold'
+                      >
+                        View Leg Options
+                      </button>
+                    </div>
+                  </section>
                 </section>
-                <section>
+
+                {/* New row */}
+                {/* Colours */}
+                <section className='outline gap-2 outline-black outline-2 rounded p-1 my-2'>
                   <div>
                     <p>Customise Colours</p>
                   </div>
-                  <div>
-                    <p>Selected</p>
+                  <div className='mb-2'>
+                    <p>Selected:</p>
                     <section className='grid grid-flow-col w-full'>
-                      {tableDimensionsAndData.colours.forEach(
-                        (colour, index) => {
+                      {tableDimensionsAndData.colours.forEach((colour, index) => {
                           console.log('colour 1', colour);
                           return <ColourTag key={index} colour={colour} />;
                         }
@@ -247,25 +285,8 @@ function DesignPage() {
                     </div>
                   </div>
                 </section>
-                <section>
-                  <div>
-                    <h5>Leg style</h5>
-                    <div>
-                      <div>
-                        <p>{tableDimensionsAndData.legs}</p>
-                      </div>
-                      <div>
-                        <button
-                          onClick={openLegOptionsModal}
-                          className='py-2 px-4 bg-slate-400 font-semibold'
-                        >
-                          View Options
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                <section>
+
+                <section className='outline gap-2 outline-black outline-2 rounded p-1 my-2'>
                   <div>
                     <h6>Quoted Price</h6>
                   </div>
