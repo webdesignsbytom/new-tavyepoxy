@@ -32,7 +32,8 @@ export const galleryDataArray = [
     name: 'Wood Striation coffee table',
     data: 'This is my personal coffee table, using a beautiful style of blending thin lines to mimic the appearance of wood striations. Using naturally found colours and a blend of metallics to bring the colours to life. The stripes can be shaped to anything thickness to suit taste.',
     imageUrl: GalleryImage1,
-    colours: 'Metallic black base, earth brown, silver, ivory white, copper metallic',
+    colours:
+      'Metallic black base, earth brown, silver, ivory white, copper metallic',
     pageData: {
       subtitle: 'Natural wood vein design',
       undercoat: 'Black',
@@ -41,7 +42,11 @@ export const galleryDataArray = [
       productionTime: '2 weeks',
       dimensions: '3 foot x 1.8 foot',
       price: '£300',
-      images: [],
+      images: [
+        '../assets/images/gallery/table1/striation1.jpg',
+        '../assets/images/gallery/table1/striation1.jpg',
+        '../assets/images/gallery/table1/striation2.png',
+      ],
     },
   },
   {
@@ -59,7 +64,7 @@ export const galleryDataArray = [
       productionTime: '2 weeks',
       dimensions: '5 foot buy 1.8 feet',
       price: '£450',
-      images: [],
+      images: [GalleryImage2, Table2Image1],
     },
   },
   {
@@ -77,7 +82,7 @@ export const galleryDataArray = [
       productionTime: '2 weeks',
       dimensions: '2x2',
       price: '£350',
-      images: [],
+      images: [GalleryImage3, Table3Image1],
     },
   },
   {
@@ -95,7 +100,7 @@ export const galleryDataArray = [
       productionTime: '2 weeks',
       dimensions: '3 foot x 1.8 foot',
       price: '£425',
-      images: [],
+      images: [GalleryImage4, Table4Image1],
     },
   },
   {
@@ -113,7 +118,7 @@ export const galleryDataArray = [
       productionTime: '1 Day',
       dimensions: 'N/A',
       price: '£1200',
-      images: [],
+      images: [GalleryImage5, Table5Image1],
     },
   },
   {
@@ -131,7 +136,7 @@ export const galleryDataArray = [
       productionTime: '2 weeks',
       dimensions: '1.5 foot x 3 foot',
       price: '£380',
-      images: [],
+      images: [GalleryImage6, Table6Image1],
     },
   },
   {
@@ -140,7 +145,8 @@ export const galleryDataArray = [
     name: 'Wood Striation Computer Table',
     data: 'Made using MDF and built with two side panels that have electrical accessibility and space for extension leads to be stored. Finished with beautiful wooden vein effects that have be brought to life and looks cut from a tree.',
     imageUrl: GalleryImage7,
-    colours: 'Metallic black base, earth brown, silver, ivory white, copper metallic',
+    colours:
+      'Metallic black base, earth brown, silver, ivory white, copper metallic',
     pageData: {
       subtitle: 'PC Table with features',
       undercoat: 'Black',
@@ -149,7 +155,7 @@ export const galleryDataArray = [
       productionTime: '3 weeks',
       dimensions: '2 meters x 80cm',
       price: '£1000',
-      images: [],
+      images: [GalleryImage7, Table7Image1],
     },
   },
   {
@@ -167,7 +173,7 @@ export const galleryDataArray = [
       productionTime: '2 weeks',
       dimensions: '2 foot x 3.5 foot',
       price: '£500',
-      images: [],
+      images: [GalleryImage8, Table8Image1],
     },
   },
 ];

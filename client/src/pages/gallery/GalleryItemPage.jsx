@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 // Components
 import Navbar from '../../components/nav/Navbar';
@@ -6,6 +6,15 @@ import Navbar from '../../components/nav/Navbar';
 function GalleryItemPage() {
   const location = useLocation();
   const item = location.state;
+
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    console.log('item.pageData.images', item.pageData.images);
+    setImages(item.pageData.images);
+  }, []);
+
+  console.log('images', images);
   return (
     <div className='grid bg-gray-100 lg:h-screen grid-rows-reg lg:overflow-hidden lg:max-h-screen'>
       <Navbar />
@@ -66,12 +75,16 @@ function GalleryItemPage() {
               </div>
 
               {/* Buttons */}
-              <section className='grid grid-flow-col gap-4 my-4 px-2'>
+              <section className='grid grid-flow-col gap-4 my-4 px-2 text-xl'>
                 <div>
-                  <button className='outline outline-2 font-semibold outline-black rounded-xl py-2 w-full px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 '>Prev</button>
+                  <button className='outline outline-2 outline-black rounded-xl py-2 w-full px-4 active:scale-95 no__highlights white__marble__bg font-bold hover:opacity-70'>
+                    Prev Image
+                  </button>
                 </div>
                 <div>
-                  <button className='outline outline-2 font-semibold outline-black rounded-xl py-2 w-full px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 '>Next</button>
+                  <button className='outline outline-2 outline-black rounded-xl py-2 w-full px-4 active:scale-95 no__highlights black__marble__bg font-bold text-white hover:opacity-70'>
+                    Next Image
+                  </button>
                 </div>
               </section>
             </section>
