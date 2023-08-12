@@ -29,7 +29,7 @@ function Navbar() {
 
   return (
     <nav className='h-full wood__bg relative z-30 grid py-4 border-b-2 border-solid border-black '>
-      <div className='grid grid-cols-reg w-full md:w-1/2 mx-auto'>
+      <div className='grid grid-cols-reg w-full lg:w-1/2 mx-auto'>
         <section className='grid items-center justify-center pl-4'>
           <Link className='no__highlights' to='/'>
             <img

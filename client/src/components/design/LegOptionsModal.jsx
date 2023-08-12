@@ -44,7 +44,7 @@ function LegOptionsModal({ closeLegOptionsModal }) {
         <section>
           <section className='text-center mb-5'>
             <p>
-              You are welcome to go online and find any legs you fish fitted on
+              You are welcome to go online and find any legs you wish fitted on
               your custom table.
             </p>
           </section>

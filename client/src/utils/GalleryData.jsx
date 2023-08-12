@@ -42,11 +42,7 @@ export const galleryDataArray = [
       productionTime: '2 weeks',
       dimensions: '3 foot x 1.8 foot',
       price: '£300',
-      images: [
-        '../assets/images/gallery/table1/striation1.jpg',
-        '../assets/images/gallery/table1/striation1.jpg',
-        '../assets/images/gallery/table1/striation2.png',
-      ],
+      images: [Table1Image1, Table1Image2, Table1Image3],
     },
   },
   {

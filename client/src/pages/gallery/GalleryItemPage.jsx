@@ -8,11 +8,20 @@ function GalleryItemPage() {
   const item = location.state;
 
   const [images, setImages] = useState([]);
+  const [imagesNum, setImagesNum] = useState(0);
 
   useEffect(() => {
     console.log('item.pageData.images', item.pageData.images);
     setImages(item.pageData.images);
   }, []);
+console.log('imagesNum', imagesNum);
+  const selectNextImg = () => {
+    setImagesNum(imagesNum => imagesNum + 1);
+  }
+
+  const selectPrevImg = () => {
+    setImagesNum(imagesNum => imagesNum - 1);
+  }
 
   console.log('images', images);
   return (
@@ -71,18 +80,18 @@ function GalleryItemPage() {
             {/* Right */}
             <section className='shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] p-4'>
               <div className='outline outline-black outline-2'>
-                <img className='' src={item.imageUrl} alt='design' />
+                <img className='' src={item.pageData.images[imagesNum]} alt='design' />
               </div>
 
               {/* Buttons */}
               <section className='grid grid-flow-col gap-4 my-4 px-2 text-xl'>
                 <div>
-                  <button className='outline outline-2 outline-black rounded-xl py-2 w-full px-4 active:scale-95 no__highlights white__marble__bg font-bold hover:opacity-70'>
+                  <button onClick={selectPrevImg} className='outline outline-2 outline-black rounded-xl py-2 w-full px-4 active:scale-95 no__highlights white__marble__bg font-bold hover:opacity-70'>
                     Prev Image
                   </button>
                 </div>
                 <div>
-                  <button className='outline outline-2 outline-black rounded-xl py-2 w-full px-4 active:scale-95 no__highlights black__marble__bg font-bold text-white hover:opacity-70'>
+                  <button onClick={selectNextImg} className='outline outline-2 outline-black rounded-xl py-2 w-full px-4 active:scale-95 no__highlights black__marble__bg font-bold text-white hover:opacity-70'>
                     Next Image
                   </button>
                 </div>
