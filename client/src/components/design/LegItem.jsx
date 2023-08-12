@@ -1,12 +1,16 @@
 import React from 'react'
 
 function LegItem({ data }) {
+  console.log('Data', data);
   return (
-    <div>LegItem
+    <article>
+      <div>
+        <p>{data.name}</p>
+      </div>
         <div>
             <img className='w-[200px]' src={data.imageUrl} alt={data.id} />
         </div>
-    </div>
+    </article>
   )
 }
 

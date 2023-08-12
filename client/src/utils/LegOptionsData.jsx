@@ -7,6 +7,7 @@ import XFrame from '../assets/images/legs/x_frame.jpg';
 export const LegData = [
   {
     id: 'standard_hairpin',
+    name: 'Standard hairpin',
     imageUrl: StandardHairpin,
     height: 300,
     cost: 0,
@@ -14,6 +15,7 @@ export const LegData = [
   },
   {
     id: 'hairpin_three_prong',
+    name: 'Hairpin three prong',
     imageUrl: Hairpin,
     height: 400,
     cost: 20,
@@ -21,6 +23,7 @@ export const LegData = [
   },
   {
     id: 'square_frame',
+    name: 'Square frame',
     imageUrl: SquareFrame,
     height: 400,
     cost: 70,
@@ -28,6 +31,7 @@ export const LegData = [
   },
   {
     id: 'a_frame',
+    name: 'A frame',
     imageUrl: AFrame,
     height: 300,
     cost: 70,
@@ -35,6 +39,7 @@ export const LegData = [
   },
   {
     id: 'x_frame',
+    name: 'X frame',
     imageUrl: XFrame,
     height: 400,
     cost: 70,

@@ -29,7 +29,7 @@ console.log('imagesNum', imagesNum);
       <Navbar />
       {/* Main */}
       <main className='grid h-full mb-2'>
-        <div className='grid w-full lg:w-1/2 mx-auto grid-rows-reg'>
+        <div className='grid w-full lg:w-3/4 mx-auto grid-rows-reg'>
           <section className='my-4'>
             <div className='text-center border-b-2 border-black border-solid pb-2 mx-4'>
               <h1 className='text-2xl font-corgs'>{item.name}</h1>

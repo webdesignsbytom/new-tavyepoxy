@@ -11,11 +11,11 @@ function LegOptionsModal({ closeLegOptionsModal }) {
       <article className='grid grid-rows-a1a'>
         <section>
           <div className='text-center'>
-            <h6>Leg Options</h6>
+            <h6 className='font-semibold'>Leg Options</h6>
           </div>
         </section>
-        <section>
-          <section className='grid md:grid-flow-col'>
+        <section className='mt-4'>
+          <section className='grid grid-cols-2 lg:grid-flow-col'>
             {legDataArray.map((data, index) => {
               return <LegItem key={index} data={data} />;
             })}
@@ -50,7 +50,7 @@ function LegOptionsModal({ closeLegOptionsModal }) {
           </section>
           <div className='grid justify-center'>
             <button
-              className='outline outline-black outline-2 rounded font-semibold px-4 py-2 bg-yellow-500'
+              className='outline white__marble__bg outline-black outline-2 rounded font-bold px-4 py-2 hover:opacity-70'
               onClick={closeLegOptionsModal}
             >
               CLOSE

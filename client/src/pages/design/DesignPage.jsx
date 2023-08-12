@@ -94,7 +94,7 @@ function DesignPage() {
 
   console.log('colourAddedByUser', colourAddedByUser);
   return (
-    <div className='grid bg-gray-100 h-screen grid-rows-reg overflow-hidden max-h-screen'>
+    <div className='grid bg-gray-100 h-screen grid-rows-reg lg:overflow-hidden lg:max-h-screen'>
       <Navbar />
       {/* Main */}
       <main className='grid h-full grid-rows-reg'>
