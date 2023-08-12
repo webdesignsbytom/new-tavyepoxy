@@ -2,6 +2,18 @@
   background-image: url('https://www.transparenttextures.com/patterns/black-paper.png');
 }
 
+.white__marble__bg {
+  background-image: url('../assets/images/buttons/whiteGoldMarble.jpg');
+}
+
+.black__marble__bg {
+  background-image: url('../assets/images/buttons/black_marble.jpg');
+}
+
+.pink__marble__bg {
+  background-image: url('../assets/images/buttons/pink_marble.jpg');
+}
+
 .wood__bg {
   background-color: #594000;
   background-image: url('https://www.transparenttextures.com/patterns/tileable-wood-colored.png');

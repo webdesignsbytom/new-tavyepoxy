@@ -12,6 +12,7 @@ import WorkshopImage6 from '../../assets/images/epoxy/black_marble.jpg';
 // Context
 import { ToggleContext } from '../../context/ToggleContext';
 import { useNavigate } from 'react-router-dom';
+import CtaAboutLinks from '../../components/about/CtaAboutLinks';
 
 function AboutPage() {
   const { setActiveNav } = useContext(ToggleContext);
@@ -165,37 +166,7 @@ function AboutPage() {
             </section>
           </section>
           {/* CTA */}
-          <section className='grid px-4 lg:px-0 lg:w-1/2 gap-4 mx-auto mt-10'>
-            <div className='grid grid-cols-3 gap-4 w-full mx-auto'>
-              <div className='grid w-full'>
-                <button
-                  id='/gallery'
-                  onClick={navigateToPage}
-                  className='outline outline-2 font-semibold outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 '
-                >
-                  Gallery
-                </button>
-              </div>
-              <div className='grid w-full'>
-                <button
-                  id='/materials'
-                  onClick={navigateToPage}
-                  className='outline outline-2 font-semibold outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 '
-                >
-                  Materials
-                </button>
-              </div>
-              <div className='grid w-full'>
-                <button
-                  id='/contact'
-                  onClick={navigateToPage}
-                  className='outline outline-2 font-semibold outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 '
-                >
-                  Contact
-                </button>
-              </div>
-            </div>
-          </section>
+          <CtaAboutLinks navigateToPage={navigateToPage} />
         </main>
       </section>
       <FooterComponent />

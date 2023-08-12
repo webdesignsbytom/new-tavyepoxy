@@ -9,6 +9,7 @@ import TableLegsImage from '../../assets/images/legs/leg3.jpg';
 import StyleImage from '../../assets/images/epoxy/4x.png';
 import FooterComponent from '../../components/footer/FooterComponent';
 import { useNavigate } from 'react-router-dom';
+import CtaMaterialsLinks from '../../components/materials/CtaMaterialsLinks';
 
 function MaterialsPage() {
   const { setActiveNav } = useContext(ToggleContext);
@@ -33,9 +34,7 @@ function MaterialsPage() {
         <div className='grid w-full px-4 lg:px-0 lg:w-1/2 mx-auto'>
           <section>
             <article className='mt-8'>
-              <div
-                className='pb-6 border-b-2 border-solid border-black'
-              >
+              <div className='pb-6 border-b-2 border-solid border-black'>
                 <h2 className='text-2xl font-corgs font-medium'>Materials</h2>
                 <h3 className='italic text-xl'>Customise your dream piece</h3>
               </div>
@@ -57,12 +56,12 @@ function MaterialsPage() {
                   </div>
                   <div className='my-2'>
                     <p>
-                      Pick from a large collection of pre-made styles. We cant recreate them
-                      exactly. Thats the beauty of purely unique furniture.
-                      However you can find a style you like and change the
-                      colours and suggest flow directions for the patterns. You
-                      can choose from splashes, striations, wavey, spirical and
-                      what ever you can think of.
+                      Pick from a large collection of pre-made styles. We cant
+                      recreate them exactly. Thats the beauty of purely unique
+                      furniture. However you can find a style you like and
+                      change the colours and suggest flow directions for the
+                      patterns. You can choose from splashes, striations, wavey,
+                      spirical and what ever you can think of.
                     </p>
                   </div>
                   <div className='my-2'>
@@ -102,19 +101,13 @@ function MaterialsPage() {
               </div>
             </article>
           </section>
-          <section className='grid mt-8 mb-4'>
-            <div className='text-center'>
-              <h4 className='text-xl font-semibold'>Contact Me Now</h4>
-              <div className='grid justify-center'>
-                <button
-                  id='/contact'
-                  onClick={navigateToPage}
-                  className='outline outline-2 font-semibold outline-black rounded-xl py-2 px-4 bg-yellow-400 active:scale-95 no__highlights hover:bg-yellow-200 my-6'
-                >
-                  CONTACT TAVY EPOXY
-                </button>
+          <section className='grid w-full mt-6 mb-4'>
+            <div className='grid w-full'>
+              <div className='text-center'>
+                <h4 className='text-xl font-semibold'>Contact Me Now</h4>
               </div>
-              <div className=''>
+              <CtaMaterialsLinks navigateToPage={navigateToPage} />
+              <div className='text-center mt-4'>
                 <p className=''>
                   Feel free to discuss anything you need to with me. Happy to
                   help and to find a way to bring your project to life.
