@@ -60,7 +60,7 @@ function CanvasDesignTool({ tableDimensionsAndData }) {
   const drawRectangleLines = () => {
     const canvas = canvasRef.current;
     const context = contextRef.current;
-  
+  console.log('draw');
     // Calculate the width and height of the rectangle
     let width = tableDimensionsAndData.width;
     let height = tableDimensionsAndData.length;

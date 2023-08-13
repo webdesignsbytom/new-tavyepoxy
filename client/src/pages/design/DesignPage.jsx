@@ -18,7 +18,7 @@ function DesignPage() {
     thickness: 25,
     material: 'MDF',
     finish: 'marble',
-    colours: ['Black', 'Bronze', 'Silver', 'Parchment', 'Brown'],
+    colours: [],
     legs: 'Standard fit 30cm high 2 prong hairpin legs',
     quote: 220,
     protection: false,
@@ -27,7 +27,7 @@ function DesignPage() {
   });
 
   console.log('tableDimensionsAndData', tableDimensionsAndData);
-  
+
   const [toggleCustomThickness, setToggleCustomThickness] = useState(false);
   const [toggleLegOptions, setToggleLegOptions] = useState(false);
   const [toggleFinishOptions, setToggleFinishOptions] = useState(false);
@@ -99,7 +99,7 @@ function DesignPage() {
       [name]: value,
     });
   };
-
+  console.log('tableDimensionsAndData.colours', tableDimensionsAndData.colours);
   console.log('colourAddedByUser', colourAddedByUser);
   return (
     <div className='grid bg-gray-100 h-screen grid-rows-reg lg:overflow-hidden lg:max-h-screen'>
@@ -189,7 +189,7 @@ function DesignPage() {
                 </section>
 
                 {/* Materials */}
-                <section className='grid grid-flow-col outline gap-2 outline-black outline-2 rounded p-1'>
+                <section className='grid grid-cols-aaa outline gap-2 outline-black outline-2 rounded p-1'>
                   <div>
                     <h4>Materials:</h4>
                   </div>
@@ -273,12 +273,19 @@ function DesignPage() {
                   <div>
                     <p>Customise Colours</p>
                   </div>
-                  <div className='mb-2'>
-                    <p>Selected:</p>
+                  <div className='grid grid-flow-col mb-2'>
+                    <div>
+                      <p>Selected:</p>
+                    </div>
                     <section className='grid grid-flow-col w-full'>
                       {tableDimensionsAndData.colours.forEach(
                         (colour, index) => {
                           console.log('colour 1', colour);
+                          return (
+                            <div key={index}>
+                              <p className=''>{colour.toString}</p>
+                            </div>
+                          );
                         }
                       )}
                     </section>
