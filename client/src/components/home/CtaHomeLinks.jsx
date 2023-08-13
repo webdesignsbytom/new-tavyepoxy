@@ -2,8 +2,8 @@ import React from 'react';
 
 function CtaHomeLinks({ navigateToPage }) {
   return (
-    <section className='grid md:grid-cols-2 gap-4 text-xl'>
-      <div className='mt-6 md:mt-2 w-full'>
+    <section className='grid md:grid-cols-2 gap-4 text-xl mt-6 md:mt-2'>
+      <div className='w-full'>
         <button
           id='/gallery'
           onClick={navigateToPage}
@@ -12,7 +12,7 @@ function CtaHomeLinks({ navigateToPage }) {
           Gallery
         </button>
       </div>
-      <div className='mt-6 md:mt-2'>
+      <div className='w-full'>
         <button
           id='/sales'
           onClick={navigateToPage}

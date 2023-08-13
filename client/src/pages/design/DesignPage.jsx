@@ -7,7 +7,6 @@ import { ToggleContext } from '../../context/ToggleContext';
 import CanvasDesignTool from '../../components/design/CanvasDesignTool';
 import LegOptionsModal from '../../components/design/LegOptionsModal';
 import EpoxyFinishOptions from '../../components/design/EpoxyFinishOptions';
-import ColourTag from '../../components/design/ColourTag';
 // Images
 
 function DesignPage() {
@@ -24,16 +23,11 @@ function DesignPage() {
     quote: 220,
   });
 
-  const [testf, setTestf] = useState(['one', 'two', 'three', 'four'])
-
   const [toggleCustomThickness, setToggleCustomThickness] = useState(false);
   const [toggleLegOptions, setToggleLegOptions] = useState(false);
   const [toggleFinishOptions, setToggleFinishOptions] = useState(false);
 
   const [colourAddedByUser, setColourAddedByUser] = useState('');
-
-  console.log('tableDimensionsAndData', tableDimensionsAndData);
-  console.log('toggleCustomThickness', toggleCustomThickness);
 
   const navigate = useNavigate();
 
@@ -108,7 +102,7 @@ function DesignPage() {
             </div>
           </div>
         </section>
-        <section className='lg:w-3/4 mx-auto mt-2 mb-2'>
+        <section className='lg:w-3/4 mx-auto mt-2 mb-2 px-4 lg:px-0'>
           <section className='grid relative h-full md:grid-cols-2 gap-2'>
             {toggleLegOptions && (
               <LegOptionsModal closeLegOptionsModal={closeLegOptionsModal} />
@@ -128,10 +122,10 @@ function DesignPage() {
                 <article className='text-center font-semibold'>
                   <h3>Choose your material and style</h3>
                 </article>
-                <section className='grid grid-cols-3 gap-6 w-full outline outline-black outline-2 rounded my-2 p-1'>
+                <section className='grid grid-cols-aaa gap-6 w-full outline outline-black outline-2 rounded my-2 p-1'>
                   <section className='grid'>
                     <div>
-                      <p>Width</p>
+                      <p>Length</p>
                     </div>
                     <div className='w-min grid'>
                       <input
@@ -146,7 +140,7 @@ function DesignPage() {
                   </section>
                   <section className='grid'>
                     <div>
-                      <p>Length</p>
+                      <p>Width</p>
                     </div>
                     <div className='w-full'>
                       <input
@@ -185,26 +179,36 @@ function DesignPage() {
                   <div>
                     <h4>Materials:</h4>
                   </div>
-               
-                    <div>
-                      <select
-                        id='material'
-                        name='material'
-                        onChange={handleChange}
-                        value={tableDimensionsAndData.material} // Corrected this line
-                        required
-                      >
-                        <option value='MDF'>MDF (Standard)</option>
-                        <option value='Oak'>Oak</option>
-                        <option value='Walnut'>Walnut</option>
-                        <option value='Pine'>Pine</option>
-                        <option value='Cherry'>Cherry</option>
-                      </select>
-                    </div>
-                <div>
-                  <input type='text' placeholder='Custom...' />
-                  <button type='submit' value='colour'>+</button>
-                </div>
+
+                  <div>
+                    <select
+                      id='material'
+                      name='material'
+                      onChange={handleChange}
+                      value={tableDimensionsAndData.material} // Corrected this line
+                      required
+                    >
+                      <option value='MDF'>MDF (Standard)</option>
+                      <option value='Oak'>Oak</option>
+                      <option value='Walnut'>Walnut</option>
+                      <option value='Pine'>Pine</option>
+                      <option value='Cherry'>Cherry</option>
+                    </select>
+                  </div>
+                  <div className='grid grid-cols-rev'>
+                    <input
+                      className='pl-1'
+                      type='text'
+                      placeholder='Custom...'
+                    />
+                    <button
+                      className='text-xl active:scale-95 font-bold bg-slate-400 text-white px-2'
+                      type='submit'
+                      value='colour'
+                    >
+                      ⏎
+                    </button>
+                  </div>
                 </section>
 
                 {/* Row of selections */}
@@ -258,14 +262,14 @@ function DesignPage() {
                   <div className='mb-2'>
                     <p>Selected:</p>
                     <section className='grid grid-flow-col w-full'>
-                      {tableDimensionsAndData.colours.forEach((colour, index) => {
+                      {tableDimensionsAndData.colours.forEach(
+                        (colour, index) => {
                           console.log('colour 1', colour);
-                          return <ColourTag key={index} colour={colour} />;
                         }
                       )}
                     </section>
                   </div>
-                  <div className='grid grid-cols-rev w-full gap-4'>
+                  <div className='grid grid-cols-rev w-full h-full gap-4'>
                     <div className='w-full'>
                       <input
                         type='text'
@@ -278,12 +282,41 @@ function DesignPage() {
                     <div className='w-min'>
                       <button
                         onClick={addNewColourToList}
-                        className='outline outline-2 outline-black px-2'
+                        className='bg-slate-400 rounded w-full px-2'
                       >
                         Enter
                       </button>
                     </div>
                   </div>
+                </section>
+
+                <section className='outline gap-2 outline-black outline-2 rounded p-1 my-2'>
+                  <section className='grid grid-cols-aaa justify-between px-1'>
+                    <div className='w-fit'>
+                      <div className='text-center'>
+                        <p>Protective Layer</p>
+                      </div>
+                      <div className='grid justify-center'>
+                        <input id='protection' name='protection' type="checkbox" />
+                      </div>
+                    </div>
+                    <div className='w-fit'>
+                      <div className='text-center'>
+                        <p>Rough Stone</p>
+                      </div>
+                      <div className='grid justify-center'>
+                        <input id='stone_edge' name='stone_edge' type="checkbox" />
+                      </div>
+                    </div>
+                    <div className='w-fit'>
+                      <div className='text-center'>
+                        <p>Matching Coasters x4</p>
+                      </div>
+                      <div className='grid justify-center'>
+                        <input id='coasters' defaultValue='75' name='coasters' type="checkbox" />
+                      </div>
+                    </div>
+                  </section>
                 </section>
 
                 <section className='outline gap-2 outline-black outline-2 rounded p-1 my-2'>

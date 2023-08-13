@@ -7,7 +7,7 @@ function CtaSalesLinks({ navigateToPage }) {
         <button
           id='/contact'
           onClick={navigateToPage}
-          className='py-2 px-6 font-bold outline-2 w-full no__highlights hover:opacity-70 white__marble__bg active:scale-95 outline-black outline rounded-xl'
+          className='py-2 font-bold outline-2 w-full no__highlights hover:opacity-70 white__marble__bg active:scale-95 outline-black outline rounded-xl text-center'
         >
           Contact
         </button>
