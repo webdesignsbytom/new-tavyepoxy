@@ -21,8 +21,13 @@ function DesignPage() {
     colours: ['Black', 'Bronze', 'Silver', 'Parchment', 'Brown'],
     legs: 'Standard fit 30cm high 2 prong hairpin legs',
     quote: 220,
+    protection: false,
+    stone_edge: false,
+    coasters: false,
   });
 
+  console.log('tableDimensionsAndData', tableDimensionsAndData);
+  
   const [toggleCustomThickness, setToggleCustomThickness] = useState(false);
   const [toggleLegOptions, setToggleLegOptions] = useState(false);
   const [toggleFinishOptions, setToggleFinishOptions] = useState(false);
@@ -45,6 +50,15 @@ function DesignPage() {
     });
 
     setColourAddedByUser('');
+  };
+
+  // Event handler for checkbox changes
+  const handleCheckboxChange = (event) => {
+    const { name, checked } = event.target;
+    setTableDimensionsAndData((prevData) => ({
+      ...prevData,
+      [name]: checked,
+    }));
   };
 
   const openLegOptionsModal = () => {
@@ -289,8 +303,54 @@ function DesignPage() {
                     </div>
                   </div>
                 </section>
-
                 <section className='outline gap-2 outline-black outline-2 rounded p-1 my-2'>
+                  <section className='grid grid-cols-aaa justify-between px-1'>
+                    <div className='w-fit'>
+                      <div className='text-center'>
+                        <p>Protective Layer</p>
+                      </div>
+                      <div className='grid justify-center'>
+                        <input
+                          id='protection'
+                          name='protection'
+                          type='checkbox'
+                          checked={tableDimensionsAndData.protection}
+                          onChange={handleCheckboxChange}
+                        />
+                      </div>
+                    </div>
+                    <div className='w-fit'>
+                      <div className='text-center'>
+                        <p>Rough Stone</p>
+                      </div>
+                      <div className='grid justify-center'>
+                        <input
+                          id='stone_edge'
+                          name='stone_edge'
+                          type='checkbox'
+                          checked={tableDimensionsAndData.stone_edge}
+                          onChange={handleCheckboxChange}
+                        />
+                      </div>
+                    </div>
+                    <div className='w-fit'>
+                      <div className='text-center'>
+                        <p>Matching Coasters x4</p>
+                      </div>
+                      <div className='grid justify-center'>
+                        <input
+                          id='coasters'
+                          name='coasters'
+                          type='checkbox'
+                          checked={tableDimensionsAndData.coasters}
+                          onChange={handleCheckboxChange}
+                        />
+                      </div>
+                    </div>
+                  </section>
+                </section>
+
+                {/* <section className='outline gap-2 outline-black outline-2 rounded p-1 my-2'>
                   <section className='grid grid-cols-aaa justify-between px-1'>
                     <div className='w-fit'>
                       <div className='text-center'>
@@ -317,7 +377,7 @@ function DesignPage() {
                       </div>
                     </div>
                   </section>
-                </section>
+                </section> */}
 
                 <section className='outline gap-2 outline-black outline-2 rounded p-1 my-2'>
                   <div>
