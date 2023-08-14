@@ -7,24 +7,14 @@ import { ToggleContext } from '../../context/ToggleContext';
 import CanvasDesignTool from '../../components/design/CanvasDesignTool';
 import LegOptionsModal from '../../components/design/LegOptionsModal';
 import EpoxyFinishOptions from '../../components/design/EpoxyFinishOptions';
+import { BasicTableDesign } from '../../utils/PricingData';
+import { PriceData } from '../../utils/PricingData';
 // Images
 
 function DesignPage() {
   const { setActiveNav } = useContext(ToggleContext);
 
-  const [tableDimensionsAndData, setTableDimensionsAndData] = useState({
-    length: 856,
-    width: 555,
-    thickness: 25,
-    material: 'MDF',
-    finish: 'marble',
-    colours: [],
-    legs: 'Standard fit 30cm high 2 prong hairpin legs',
-    quote: 220,
-    protection: false,
-    stone_edge: false,
-    coasters: false,
-  });
+  const [tableDimensionsAndData, setTableDimensionsAndData] = useState(BasicTableDesign);
 
   console.log('tableDimensionsAndData', tableDimensionsAndData);
 
@@ -33,8 +23,6 @@ function DesignPage() {
   const [toggleFinishOptions, setToggleFinishOptions] = useState(false);
 
   const [colourAddedByUser, setColourAddedByUser] = useState('');
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     setActiveNav('/design');
@@ -99,8 +87,7 @@ function DesignPage() {
       [name]: value,
     });
   };
-  console.log('tableDimensionsAndData.colours', tableDimensionsAndData.colours);
-  console.log('colourAddedByUser', colourAddedByUser);
+
   return (
     <div className='grid bg-gray-100 h-screen grid-rows-reg lg:overflow-hidden lg:max-h-screen'>
       <Navbar />
@@ -356,35 +343,6 @@ function DesignPage() {
                     </div>
                   </section>
                 </section>
-
-                {/* <section className='outline gap-2 outline-black outline-2 rounded p-1 my-2'>
-                  <section className='grid grid-cols-aaa justify-between px-1'>
-                    <div className='w-fit'>
-                      <div className='text-center'>
-                        <p>Protective Layer</p>
-                      </div>
-                      <div className='grid justify-center'>
-                        <input id='protection' name='protection' type="checkbox" />
-                      </div>
-                    </div>
-                    <div className='w-fit'>
-                      <div className='text-center'>
-                        <p>Rough Stone</p>
-                      </div>
-                      <div className='grid justify-center'>
-                        <input id='stone_edge' name='stone_edge' type="checkbox" />
-                      </div>
-                    </div>
-                    <div className='w-fit'>
-                      <div className='text-center'>
-                        <p>Matching Coasters x4</p>
-                      </div>
-                      <div className='grid justify-center'>
-                        <input id='coasters' defaultValue='75' name='coasters' type="checkbox" />
-                      </div>
-                    </div>
-                  </section>
-                </section> */}
 
                 <section className='outline gap-2 outline-black outline-2 rounded p-1 my-2'>
                   <div>
