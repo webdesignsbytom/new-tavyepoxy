@@ -7,7 +7,7 @@ function FooterComponent() {
   return (
     <footer className='h-full wood__bg grid border-t-2 border-solid border-black mt-16'>
       <section className='grid lg:grid-cols-3 px-6 my-2'>
-        <section className='text-center mb-2'>
+        <section className='text-center mb-2 lg:hidden '>
           <p className='mt-2 md:my-0 font-extrabold text-6xl font-poppins marble-text'>
             TAVY EPOXY
           </p>

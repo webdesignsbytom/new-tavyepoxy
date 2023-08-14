@@ -30,7 +30,7 @@ export const galleryDataArray = [
     id: 1,
     url: 'table_1',
     name: 'Wood Striation coffee table',
-    data: 'This is my personal coffee table, using a beautiful style of blending thin lines to mimic the appearance of wood striations. Using naturally found colours and a blend of metallics to bring the colours to life. The stripes can be shaped to anything thickness to suit taste.',
+    data: 'This is my personal favorite, using a beautiful style of blending thin lines to mimic the appearance of wood striations. Using naturally found colours and a blend of metallics to bring the colours to life. The stripes can be shaped to anything thickness to suit taste. This styles comes in several versions of line thickness and can be made using any colour.',
     imageUrl: GalleryImage1,
     colours:
       'Metallic black base, earth brown, silver, ivory white, copper metallic',
@@ -40,8 +40,8 @@ export const galleryDataArray = [
       timber: 'MDF',
       legs: 'Metal pin legs',
       productionTime: '2 weeks',
-      dimensions: '3 foot x 1.8 foot',
-      price: '£300',
+      dimensions: '85x55cm',
+      price: '£250',
       images: [Table1Image1, Table1Image2, Table1Image3],
     },
   },
@@ -60,7 +60,7 @@ export const galleryDataArray = [
       productionTime: '2 weeks',
       dimensions: '5 foot buy 1.8 feet',
       price: '£450',
-      images: [GalleryImage2, Table2Image1],
+      images: [GalleryImage2, Table2Image1, Table7Image1, GalleryImage8, GalleryImage3],
     },
   },
   {
