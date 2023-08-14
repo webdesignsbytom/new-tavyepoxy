@@ -11,13 +11,13 @@ function GalleryItem({ item }) {
   return (
     <section
       onClick={navigateToPage}
-      className='w-full lg:w-fit cursor-pointer lg:hover:scale-125 duration-300 mx-auto h-fit px-4 py-8 grid justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]'
+      className='w-full lg:mx-4 cursor-pointer rounded-xl h-fit px-4 py-8 grid justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]'
     >
       <div className='mb-2'>
         <h6 className='font-semibold'>{item.name}</h6>
       </div>
-      <div className='grid justify-center mt-2 w-[200px] leading-5'>
-        <img className='max-h-[500px]' src={item.imageUrl} alt='design' />
+      <div className='grid justify-center mt-2 leading-5'>
+        <img className='max-h-[300px] w-full object-cover' src={item.imageUrl} alt='design' />
         <div className='mt-1'>
           <p className=' mb-2'>{item.data}</p>
         </div>
