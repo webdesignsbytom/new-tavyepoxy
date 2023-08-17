@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-function CanvasDesignTool({ tableDimensionsAndData }) {
+function CanvasDesignTool({ designDimensionsAndData }) {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
 
@@ -40,7 +40,7 @@ function CanvasDesignTool({ tableDimensionsAndData }) {
     drawBorder();
     // Redraw the rectangle whenever the table dimensions change
     drawRectangleLines();
-  }, [tableDimensionsAndData]);
+  }, [designDimensionsAndData]);
 
   const clearCanvas = () => {
     const canvas = canvasRef.current;
@@ -62,8 +62,8 @@ function CanvasDesignTool({ tableDimensionsAndData }) {
     const context = contextRef.current;
   console.log('draw');
     // Calculate the width and height of the rectangle
-    let width = tableDimensionsAndData.width;
-    let height = tableDimensionsAndData.length;
+    let width = designDimensionsAndData.width;
+    let height = designDimensionsAndData.length;
   
     if (width > canvas.width && width < canvas.width * 2) {
       width = width / 2;

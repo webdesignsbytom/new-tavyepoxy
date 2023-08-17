@@ -3,9 +3,11 @@ export const PriceData = {
   protection: 55,
   stone_edge: 50,
   coasters: 50,
+  colour: 3,
+  pricePerMillimeter: 1,
 };
 
-export const BasicTableDesign = {
+export const InitialDesignData = {
     length: 856,
     width: 555,
     thickness: 25,

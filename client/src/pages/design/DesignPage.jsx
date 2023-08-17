@@ -1,24 +1,37 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 // Components
 import Navbar from '../../components/nav/Navbar';
-// Context
-import { ToggleContext } from '../../context/ToggleContext';
+import DimensionsData from '../../components/design/DimensionsData';
 import CanvasDesignTool from '../../components/design/CanvasDesignTool';
 import LegOptionsModal from '../../components/design/LegOptionsModal';
 import EpoxyFinishOptions from '../../components/design/EpoxyFinishOptions';
-import { BasicTableDesign } from '../../utils/PricingData';
+// Context
+import { ToggleContext } from '../../context/ToggleContext';
+// Data
+import { InitialDesignData } from '../../utils/PricingData';
 import { PriceData } from '../../utils/PricingData';
+import MaterialsData from '../../components/design/MaterialsData';
+import SelectionRow from '../../components/design/SelectionRow';
+import ColourData from '../../components/design/ColourData';
+import CheckboxSelectionData from '../../components/design/CheckboxSelectionData';
+import QuoteData from '../../components/design/QuoteData';
+import QuoteAndSaveRow from '../../components/design/QuoteAndSaveRow';
+import ColourAndEdgeRow from '../../components/design/ColourAndEdgeRow';
 // Images
 
 function DesignPage() {
   const { setActiveNav } = useContext(ToggleContext);
 
-  const [tableDimensionsAndData, setTableDimensionsAndData] = useState(BasicTableDesign);
+  const [designDimensionsAndData, setDesignDimensionsAndData] =
+    useState(InitialDesignData);
+  const [designQuoteData, setDesignQuoteData] = useState({
+    finalQuote: 0,
+    startingQuote: designDimensionsAndData.quote,
+  });
 
-  console.log('tableDimensionsAndData', tableDimensionsAndData);
+  console.log('designDimensionsAndData', designDimensionsAndData);
+  console.log('designQuoteData', designQuoteData);
 
-  const [toggleCustomThickness, setToggleCustomThickness] = useState(false);
   const [toggleLegOptions, setToggleLegOptions] = useState(false);
   const [toggleFinishOptions, setToggleFinishOptions] = useState(false);
 
@@ -28,12 +41,31 @@ function DesignPage() {
     setActiveNav('/design');
   }, []);
 
+  useEffect(() => {
+    let total = designQuoteData.startingQuote;
+
+    if (designDimensionsAndData.stone_edge) {
+      total += PriceData.stone_edge;
+    }
+    if (designDimensionsAndData.coasters) {
+      total += PriceData.coasters;
+    }
+    if (designDimensionsAndData.protection) {
+      total += PriceData.protection;
+    }
+
+    setDesignQuoteData({
+      ...designQuoteData,
+      finalQuote: total,
+    });
+  }, [designDimensionsAndData]);
+
   const addNewColourToList = () => {
-    let newList = tableDimensionsAndData.colours;
+    let newList = designDimensionsAndData.colours;
     newList.push(colourAddedByUser);
 
-    setTableDimensionsAndData({
-      ...tableDimensionsAndData,
+    setDesignDimensionsAndData({
+      ...designDimensionsAndData,
       colours: newList,
     });
 
@@ -43,7 +75,7 @@ function DesignPage() {
   // Event handler for checkbox changes
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
-    setTableDimensionsAndData((prevData) => ({
+    setDesignDimensionsAndData((prevData) => ({
       ...prevData,
       [name]: checked,
     }));
@@ -68,14 +100,10 @@ function DesignPage() {
   const handleChange = (event) => {
     event.preventDefault();
     const { name, value } = event.target;
-    setTableDimensionsAndData({
-      ...tableDimensionsAndData,
+    setDesignDimensionsAndData({
+      ...designDimensionsAndData,
       [name]: value,
     });
-
-    if (value === 'custom') {
-      setToggleCustomThickness(true);
-    }
   };
 
   const handleColourAddChange = (event) => {
@@ -86,6 +114,16 @@ function DesignPage() {
       ...colourAddedByUser,
       [name]: value,
     });
+  };
+
+  const handleEdgeTypeChange = (event) => {
+    event.preventDefault();
+    const { name, value } = event.target;
+
+    // setColourAddedByUser({
+    //   ...colourAddedByUser,
+    //   [name]: value,
+    // });
   };
 
   return (
@@ -115,7 +153,7 @@ function DesignPage() {
             )}
             <div className='grid overflow-hidden bg-black h-full'>
               <CanvasDesignTool
-                tableDimensionsAndData={tableDimensionsAndData}
+                designDimensionsAndData={designDimensionsAndData}
               />
             </div>
             <div>
@@ -123,235 +161,41 @@ function DesignPage() {
                 <article className='text-center font-semibold'>
                   <h3>Choose your material and style</h3>
                 </article>
-                <section className='grid grid-cols-aaa gap-6 w-full outline outline-black outline-2 rounded my-2 p-1'>
-                  <section className='grid'>
-                    <div>
-                      <p>Length</p>
-                    </div>
-                    <div className='w-min grid'>
-                      <input
-                        type='number'
-                        className='w-[100px]'
-                        value={tableDimensionsAndData.length}
-                        onChange={handleChange}
-                        name='length'
-                        id='length'
-                      />
-                    </div>
-                  </section>
-                  <section className='grid'>
-                    <div>
-                      <p>Width</p>
-                    </div>
-                    <div className='w-full'>
-                      <input
-                        type='number'
-                        className='w-[100px]'
-                        value={tableDimensionsAndData.width}
-                        onChange={handleChange}
-                        name='width'
-                        id='width'
-                      />
-                    </div>
-                  </section>
-                  <section className='grid'>
-                    <div>
-                      <p>Thickness</p>
-                    </div>
-                    <div className='w-full'>
-                      <select
-                        id='thickness'
-                        name='thickness'
-                        onChange={handleChange}
-                        value={tableDimensionsAndData.thickness} // Corrected this line
-                        required
-                      >
-                        <option value='25'>25mm (Standard)</option>
-                        <option value='18'>18mm</option>
-                        <option value='35'>35mm</option>
-                        <option value='custom'>Custom</option>
-                      </select>
-                    </div>
-                  </section>
-                </section>
+                {/* Dimensions */}
+                <DimensionsData
+                  designDimensionsAndData={designDimensionsAndData}
+                  handleChange={handleChange}
+                />
 
                 {/* Materials */}
-                <section className='grid grid-cols-aaa outline gap-2 outline-black outline-2 rounded p-1'>
-                  <div>
-                    <h4>Materials:</h4>
-                  </div>
-
-                  <div>
-                    <select
-                      id='material'
-                      name='material'
-                      onChange={handleChange}
-                      value={tableDimensionsAndData.material} // Corrected this line
-                      required
-                    >
-                      <option value='MDF'>MDF (Standard)</option>
-                      <option value='Oak'>Oak</option>
-                      <option value='Walnut'>Walnut</option>
-                      <option value='Pine'>Pine</option>
-                      <option value='Cherry'>Cherry</option>
-                    </select>
-                  </div>
-                  <div className='grid grid-cols-rev'>
-                    <input
-                      className='pl-1'
-                      type='text'
-                      placeholder='Custom...'
-                    />
-                    <button
-                      className='text-xl active:scale-95 font-bold bg-slate-400 text-white px-2'
-                      type='submit'
-                      value='colour'
-                    >
-                      ⏎
-                    </button>
-                  </div>
-                </section>
+                <MaterialsData
+                  designDimensionsAndData={designDimensionsAndData}
+                  handleChange={handleChange}
+                />
 
                 {/* Row of selections */}
-                <section className='grid grid-cols-2 outline gap-2 outline-black outline-2 rounded p-1 my-2'>
-                  {/* Finish */}
-                  <section className='grid'>
-                    <div>
-                      <h5 className='font-semibold'>Epoxy Finish</h5>
-                    </div>
-
-                    <div className='text-sm leading-5 h-full capitalize'>
-                      <p>{tableDimensionsAndData.finish}</p>
-                    </div>
-
-                    <div className='w-full grid items-end'>
-                      <button
-                        onClick={openFinishOptionsModal}
-                        className='py-2 px-4 w-full bg-slate-400 rounded h-fit font-semibold'
-                      >
-                        View Finish Options
-                      </button>
-                    </div>
-                  </section>
-                  {/* Legs */}
-                  <section className='grid'>
-                    <div>
-                      <h5 className='font-semibold'>Leg style</h5>
-                    </div>
-
-                    <div className='text-sm leading-5 h-full capitalize'>
-                      <p>{tableDimensionsAndData.legs}</p>
-                    </div>
-
-                    <div className='w-full grid items-end'>
-                      <button
-                        onClick={openLegOptionsModal}
-                        className='py-2 px-4 w-full bg-slate-400 rounded h-fit font-semibold'
-                      >
-                        View Leg Options
-                      </button>
-                    </div>
-                  </section>
-                </section>
+                {/* Epoxy and legs */}
+                <SelectionRow
+                  designDimensionsAndData={designDimensionsAndData}
+                  openFinishOptionsModal={openFinishOptionsModal}
+                  openLegOptionsModal={openLegOptionsModal}
+                />
 
                 {/* New row */}
                 {/* Colours */}
-                <section className='outline gap-2 outline-black outline-2 rounded p-1 my-2'>
-                  <div>
-                    <p>Customise Colours</p>
-                  </div>
-                  <div className='grid grid-flow-col mb-2'>
-                    <div>
-                      <p>Selected:</p>
-                    </div>
-                    <section className='grid grid-flow-col w-full'>
-                      {tableDimensionsAndData.colours.forEach(
-                        (colour, index) => {
-                          console.log('colour 1', colour);
-                          return (
-                            <div key={index}>
-                              <p className=''>{colour.toString}</p>
-                            </div>
-                          );
-                        }
-                      )}
-                    </section>
-                  </div>
-                  <div className='grid grid-cols-rev w-full h-full gap-4'>
-                    <div className='w-full'>
-                      <input
-                        type='text'
-                        className='w-full'
-                        name='colourAddedByUser'
-                        id='colourAddedByUser'
-                        onChange={handleColourAddChange}
-                      />
-                    </div>
-                    <div className='w-min'>
-                      <button
-                        onClick={addNewColourToList}
-                        className='bg-slate-400 rounded w-full px-2'
-                      >
-                        Enter
-                      </button>
-                    </div>
-                  </div>
-                </section>
-                <section className='outline gap-2 outline-black outline-2 rounded p-1 my-2'>
-                  <section className='grid grid-cols-aaa justify-between px-1'>
-                    <div className='w-fit'>
-                      <div className='text-center'>
-                        <p>Protective Layer</p>
-                      </div>
-                      <div className='grid justify-center'>
-                        <input
-                          id='protection'
-                          name='protection'
-                          type='checkbox'
-                          checked={tableDimensionsAndData.protection}
-                          onChange={handleCheckboxChange}
-                        />
-                      </div>
-                    </div>
-                    <div className='w-fit'>
-                      <div className='text-center'>
-                        <p>Rough Stone</p>
-                      </div>
-                      <div className='grid justify-center'>
-                        <input
-                          id='stone_edge'
-                          name='stone_edge'
-                          type='checkbox'
-                          checked={tableDimensionsAndData.stone_edge}
-                          onChange={handleCheckboxChange}
-                        />
-                      </div>
-                    </div>
-                    <div className='w-fit'>
-                      <div className='text-center'>
-                        <p>Matching Coasters x4</p>
-                      </div>
-                      <div className='grid justify-center'>
-                        <input
-                          id='coasters'
-                          name='coasters'
-                          type='checkbox'
-                          checked={tableDimensionsAndData.coasters}
-                          onChange={handleCheckboxChange}
-                        />
-                      </div>
-                    </div>
-                  </section>
-                </section>
+                <ColourAndEdgeRow
+                  designDimensionsAndData={designDimensionsAndData}
+                  handleColourAddChange={handleColourAddChange}
+                  addNewColourToList={addNewColourToList}
+                  handleEdgeTypeChange={handleEdgeTypeChange}
+                />
 
-                <section className='outline gap-2 outline-black outline-2 rounded p-1 my-2'>
-                  <div>
-                    <h6>Quoted Price</h6>
-                  </div>
-                  <div className='bg-white outline outline-black outline-2 rounded p-2'>
-                    <span>£{tableDimensionsAndData.quote}</span>
-                  </div>
-                </section>
+                <CheckboxSelectionData
+                  designDimensionsAndData={designDimensionsAndData}
+                  handleCheckboxChange={handleCheckboxChange}
+                />
+
+                <QuoteAndSaveRow designQuoteData={designQuoteData} />
               </section>
             </div>
           </section>
