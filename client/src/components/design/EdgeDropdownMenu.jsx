@@ -15,22 +15,13 @@ function EdgeDropdownMenu({ handleEdgeTypeChange }) {
 
   const [toggleEdgeTypeMenu, setToggleEdgeTypeMenu] = useState(false);
 
-  const handleChange = (event) => {
-    // const newValue = event.target.value;
-    // setSelectedValue(newValue);
-    // handleEdgeTypeChange(newValue);
-  };
-
   const toggleMenuOpenClosed = () => {
     setToggleEdgeTypeMenu(!toggleEdgeTypeMenu);
   };
 
   return (
-    <section>
-      <div>
-        <p>hell</p>
-      </div>
-      <article onClick={toggleMenuOpenClosed}>
+    <section className='relative'>
+      <article className='grid grid-cols-aaa' onClick={toggleMenuOpenClosed}>
         <div>
           <p>{selectedEdgeType.label}</p>
         </div>
@@ -41,13 +32,21 @@ function EdgeDropdownMenu({ handleEdgeTypeChange }) {
             alt={selectedEdgeType.label}
           />
         </div>
+        <div>
+          <span className='no__highlights'>⮟</span>
+        </div>
       </article>
-      <section>
-        {toggleEdgeTypeMenu &&
-          edgeTypeOptions.map((option, index) => {
+      {toggleEdgeTypeMenu && (
+        <section className='outline outline-2 outline-black rounded-xl p-1 absolute bg-white w-full'>
+          {edgeTypeOptions.map((option, index) => {
             console.log('option', option);
             return (
-              <div key={index}>
+              <article
+                key={index}
+                id={option.value}
+                name={option.value}
+                className='bg-white grid grid-cols-rev'
+              >
                 <div>
                   <p>{option.label}</p>
                 </div>
@@ -58,10 +57,11 @@ function EdgeDropdownMenu({ handleEdgeTypeChange }) {
                     alt={option.label}
                   />
                 </div>
-              </div>
+              </article>
             );
           })}
-      </section>
+        </section>
+      )}
     </section>
   );
 }
