@@ -8,8 +8,13 @@ import LogoImage from '../../assets/images/logos/logo.jpg';
 
 function Navbar() {
   const { user, setUser } = useContext(UserContext);
-  const { toggleNavbarOpenClosed, toggleNavigation, setToggleNavigation, activeNav, setActiveNav } =
-    useContext(ToggleContext);
+  const {
+    toggleNavbarOpenClosed,
+    toggleNavigation,
+    setToggleNavigation,
+    activeNav,
+    setActiveNav,
+  } = useContext(ToggleContext);
 
   let navigate = useNavigate();
 
@@ -23,13 +28,13 @@ function Navbar() {
     navigate('/', { replace: true });
   };
 
-      const tgNav = (event) => {
-        setToggleNavigation(false)
-      }
+  const tgNav = (event) => {
+    setToggleNavigation(false);
+  };
 
   return (
     <nav className='h-full wood__bg relative z-30 grid py-4 border-b-2 border-solid border-black '>
-      <div className='grid grid-cols-reg w-full lg:w-1/2 mx-auto'>
+      <div className='grid grid-cols-reg w-full lg:w-2/3 mx-auto'>
         <section className='grid items-center justify-center pl-4'>
           <Link className='no__highlights' to='/'>
             <img
@@ -101,6 +106,17 @@ function Navbar() {
               >
                 <Link className='w-full' to='/gallery'>
                   Gallery
+                </Link>
+              </li>
+              <li
+                className={
+                  activeNav === '/gallery'
+                    ? 'text-indigo-500 hover:text-indigo-700 active:scale-95'
+                    : 'hover:text-indigo-700 text-indigo-500 active:scale-95'
+                }
+              >
+                <Link className='w-full' to='/design'>
+                  Design
                 </Link>
               </li>
               <li
@@ -195,6 +211,17 @@ function Navbar() {
                 >
                   <Link className='w-full' onClick={tgNav} to='/gallery'>
                     Gallery
+                  </Link>
+                </li>
+                <li
+                  className={
+                    activeNav === '/materials'
+                      ? 'w-full no__highlights nav__bg active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
+                      : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-nav-colour text-gray-800 font-semibold'
+                  }
+                >
+                  <Link className='w-full' to='/design'>
+                    Design
                   </Link>
                 </li>
                 <li
