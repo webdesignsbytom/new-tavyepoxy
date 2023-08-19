@@ -1,19 +1,34 @@
 import React, { useState } from 'react';
-import LogoImage from '../../assets/images/logos/logo.jpg';
+// Images
+import SquareEdge from '../../assets/images/design/sq_edge.jpg';
+import RoundedEdge from '../../assets/images/design/rounded_edge.jpg';
+import AngledEdge from '../../assets/images/design/angled_edge.jpg';
 
 function EdgeDropdownMenu({ handleEdgeTypeChange }) {
-  const [edgeTypeOptions, setEdgeTypeOptions] = useState([
-    { value: 'square_edge', label: 'Square edge', image: LogoImage },
-    { value: 'rounded_edge', label: 'Rounded edge', image: LogoImage },
-    { value: 'angled_edge', label: 'Angled edge', image: LogoImage },
+  const [edgeTypeOptions] = useState([
+    { id: 0, value: 'square_edge', label: 'Square edge', image: SquareEdge },
+    { id: 1, value: 'rounded_edge', label: 'Rounded edge', image: RoundedEdge },
+    { id: 2, value: 'angled_edge', label: 'Angled edge', image: AngledEdge },
   ]);
+
   const [selectedEdgeType, setSelectedEdgeType] = useState({
+    id: 0,
     value: 'square_edge',
     label: 'Square edge',
-    image: LogoImage,
+    image: SquareEdge,
   });
 
   const [toggleEdgeTypeMenu, setToggleEdgeTypeMenu] = useState(false);
+
+  const selectEdgeType = (id) => {
+    console.log('id', id);
+
+    let selection = edgeTypeOptions[id];
+
+    setSelectedEdgeType(selection);
+
+    setToggleEdgeTypeMenu(false)
+  };
 
   const toggleMenuOpenClosed = () => {
     setToggleEdgeTypeMenu(!toggleEdgeTypeMenu);
@@ -21,23 +36,28 @@ function EdgeDropdownMenu({ handleEdgeTypeChange }) {
 
   return (
     <section className='relative'>
-      <article className='grid grid-cols-aaa' onClick={toggleMenuOpenClosed}>
-        <div>
-          <p>{selectedEdgeType.label}</p>
+      <article
+        className='grid grid-cols-aaa outline outline-2 outline-black rounded bg-gray-100'
+        onClick={toggleMenuOpenClosed}
+      >
+        <div className='grid items-center'>
+          <p className='text-sm font-medium pl-2'>{selectedEdgeType.label}</p>
         </div>
-        <div>
+        <div className='grid items-center'>
           <img
-            className='w-[25px]'
+            className='w-[60px]'
             src={selectedEdgeType.image}
             alt={selectedEdgeType.label}
           />
         </div>
-        <div>
-          <span className='no__highlights'>⮟</span>
-        </div>
+        <section className='grid justify-end'>
+          <div className='bg-gray-500 w-[40px] grid items-center justify-center'>
+            <span className='no__highlights text-xl'>⮟</span>
+          </div>
+        </section>
       </article>
       {toggleEdgeTypeMenu && (
-        <section className='outline outline-2 outline-black rounded-xl p-1 absolute bg-white w-full'>
+        <section className='outline outline-2 outline-black rounded-xl absolute bg-white w-full mt-1 overflow-hidden'>
           {edgeTypeOptions.map((option, index) => {
             console.log('option', option);
             return (
@@ -45,14 +65,15 @@ function EdgeDropdownMenu({ handleEdgeTypeChange }) {
                 key={index}
                 id={option.value}
                 name={option.value}
-                className='bg-white grid grid-cols-rev'
+                onClick={() => selectEdgeType(option.id)}
+                className='bg-white p-1 grid grid-cols-rev hover:bg-blue-500 cursor-pointer'
               >
                 <div>
                   <p>{option.label}</p>
                 </div>
-                <div>
+                <div className='pr-2'>
                   <img
-                    className='w-[25px]'
+                    className='w-[50px]'
                     src={option.image}
                     alt={option.label}
                   />

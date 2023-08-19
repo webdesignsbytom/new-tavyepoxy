@@ -3,7 +3,7 @@ import EdgeDropdownMenu from './EdgeDropdownMenu';
 
 function EdgeTypeData({ handleEdgeTypeChange }) {
   return (
-    <section>
+    <section className='grid grid-rows-rev'>
       <div>
         <p>Edges and routing</p>
       </div>
