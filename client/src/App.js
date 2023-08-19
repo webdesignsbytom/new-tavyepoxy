@@ -12,6 +12,7 @@ import MaterialsPage from './pages/materials/MaterialsPage';
 import ForSalePage from './pages/sales/ForSalePage';
 import GalleryItemPage from './pages/gallery/GalleryItemPage';
 import DesignPage from './pages/design/DesignPage';
+import SaleItemPage from './pages/sales/SaleItemPage';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Route path='/contact' element={<ContactPage />} />
       <Route path='/materials' element={<MaterialsPage />} />
       <Route path='/sales' element={<ForSalePage />} />
+      <Route path='/sales/salesItem/:item' element={<SaleItemPage />} />
       <Route path='/login' element={<LoginPage />} />
       <Route path='/sign-up' element={<RegisterPage />} />
       <Route path='/test' element={<TestPage />} />

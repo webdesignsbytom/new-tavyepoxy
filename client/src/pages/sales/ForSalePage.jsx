@@ -1,10 +1,12 @@
 import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 // Components
+import SalesLinks from '../../components/sales/SalesLinks';
+import AvailableItemsSection from '../../components/sales/AvailableItemsSection';
 import Navbar from '../../components/nav/Navbar';
+import FooterComponent from '../../components/footer/FooterComponent'
 // Context
 import { ToggleContext } from '../../context/ToggleContext';
-import SalesLinks from '../../components/sales/SalesLinks';
 
 function ForSalePage() {
   const { setActiveNav } = useContext(ToggleContext);
@@ -48,14 +50,13 @@ function ForSalePage() {
               </div>
             </article>
           </section>
+
           <SalesLinks />
-          <section className='grid'>
-            <div className='mt-6'>
-              <h3 className='text-xl font-semibold border-b-2 border-solid border-black pb-4'>Tables and Furniture For Sale</h3>
-            </div>
-          </section>
+
+          <AvailableItemsSection />
         </div>
       </main>
+      <FooterComponent />
     </div>
   );
 }
