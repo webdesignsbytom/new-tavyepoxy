@@ -1,7 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+// Components
 import Navbar from '../../components/nav/Navbar';
+// Context
 import { ToggleContext } from '../../context/ToggleContext';
-import { useLocation, useNavigate } from 'react-router-dom';
 
 function SaleItemPage() {
   const { setActiveNav } = useContext(ToggleContext);
@@ -10,8 +12,8 @@ function SaleItemPage() {
 
   const [images, setImages] = useState([]);
   const [imagesNum, setImagesNum] = useState(0);
-
-  const navigate = useNavigate();
+  
+  console.log('llllllllllllll');
 
   useEffect(() => {
     console.log('item.pageData.images', item.pageData.images);
@@ -32,12 +34,6 @@ function SaleItemPage() {
     } else {
       setImagesNum((imagesNum) => imagesNum - 1);
     }
-  };
-
-  const navigateToPage = (event) => {
-    const { id } = event.target;
-    setActiveNav(id);
-    navigate(`${id}`);
   };
 
   console.log('images', images);
@@ -71,25 +67,14 @@ function SaleItemPage() {
                       <span>Undercoat: {item.pageData.undercoat}</span>
                     </div>
                     <div>
-                      <span>Colours used: {item.colours}</span>
-                    </div>
-                    <div>
                       <span>Dimensions: {item.pageData.dimensions}</span>
                     </div>
                     <div>
                       <span>Legs: {item.pageData.legs}</span>
                     </div>
                     <div>
-                      <span>
-                        Production Time: {item.pageData.productionTime}
-                      </span>
+                      <span>Price: {item.price}</span>
                     </div>
-                    <div>
-                      <span>Price: {item.pageData.price}</span>
-                    </div>
-                  </div>
-                  <div className='mt-4'>
-                    <span>Data: {item.data}</span>
                   </div>
                 </div>
               </article>
@@ -126,20 +111,9 @@ function SaleItemPage() {
             </section>
           </section>
         </div>
-        <section className='lg:hidden px-2'>
-          <div>
-            <button
-              id='/gallery'
-              onClick={navigateToPage}
-              className='outline outline-2 w-full font-semibold text-xl outline-black rounded-xl py-2 px-4 white__marble__bg active:scale-95 no__highlights hover:opacity-70'
-            >
-              Gallery
-            </button>
-          </div>
-        </section>
       </main>
     </div>
   );
 }
 
-export default SaleItemPage
+export default SaleItemPage;

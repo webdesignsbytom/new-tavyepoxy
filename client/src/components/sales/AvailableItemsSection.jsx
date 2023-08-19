@@ -6,10 +6,8 @@ import SoldoutDisplay from '../../components/sales/SoldoutDisplay';
 import SaleItem from './SaleItem';
 
 function AvailableItemsSection() {
-  const [availableProducts, setAvailableProducts] =
+  const [availableProducts] =
     useState(AvailableItemsArray);
-  console.log('availableProducts', availableProducts);
-  console.log('availableProducts', availableProducts.length);
 
   return (
     <section className='grid'>
@@ -21,17 +19,18 @@ function AvailableItemsSection() {
 
       <section className='p-2 my-2'>
         {availableProducts.length > 0 ? (
-          <div>
+          <section className='grid md:grid-cols-2 gap-4'>
             {availableProducts.map((item, index) => {
               return <SaleItem item={item} key={index} />;
             })}
-          </div>
+          </section>
         ) : (
-          <div>
+          <section>
             <SoldoutDisplay />
-          </div>
+          </section>
         )}
       </section>
+
     </section>
   );
 }
