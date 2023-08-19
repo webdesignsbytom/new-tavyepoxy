@@ -1,29 +1,29 @@
 // Table 1
-import GalleryImage1 from '../assets/images/gallery/table1/striation1.jpg';
-import Table1Image1 from '../assets/images/gallery/table1/striation1.jpg';
-import Table1Image2 from '../assets/images/gallery/table1/striation2.png';
-import Table1Image3 from '../assets/images/gallery/table1/striation3.jpg';
+import GalleryImage1 from '../../assets/images/gallery/table1/striation1.jpg';
+import Table1Image1 from '../../assets/images/gallery/table1/striation1.jpg';
+import Table1Image2 from '../../assets/images/gallery/table1/striation2.png';
+import Table1Image3 from '../../assets/images/gallery/table1/striation3.jpg';
 // Table 2
-import GalleryImage2 from '../assets/images/gallery/table2/longBlue5.png';
-import Table2Image1 from '../assets/images/gallery/table2/longBlue5.png';
+import GalleryImage2 from '../../assets/images/gallery/table2/longBlue5.png';
+import Table2Image1 from '../../assets/images/gallery/table2/longBlue5.png';
 // Table 3
-import GalleryImage3 from '../assets/images/gallery/table3/stone1.jpg';
-import Table3Image1 from '../assets/images/gallery/table3/stone1.jpg';
+import GalleryImage3 from '../../assets/images/gallery/table3/stone1.jpg';
+import Table3Image1 from '../../assets/images/gallery/table3/stone1.jpg';
 // Table 4
-import GalleryImage4 from '../assets/images/gallery/table4/lights1.jpg';
-import Table4Image1 from '../assets/images/gallery/table4/lights1.jpg';
+import GalleryImage4 from '../../assets/images/gallery/table4/lights1.jpg';
+import Table4Image1 from '../../assets/images/gallery/table4/lights1.jpg';
 // Table 5
-import GalleryImage5 from '../assets/images/gallery/table5/counter1.jpg';
-import Table5Image1 from '../assets/images/gallery/table5/counter1.jpg';
+import GalleryImage5 from '../../assets/images/gallery/table5/counter1.jpg';
+import Table5Image1 from '../../assets/images/gallery/table5/counter1.jpg';
 // Table 6
-import GalleryImage6 from '../assets/images/gallery/table6/red1.jpg';
-import Table6Image1 from '../assets/images/gallery/table6/red1.jpg';
+import GalleryImage6 from '../../assets/images/gallery/table6/red1.jpg';
+import Table6Image1 from '../../assets/images/gallery/table6/red1.jpg';
 // Table 7
-import GalleryImage7 from '../assets/images/gallery/table7/desk1.jpg';
-import Table7Image1 from '../assets/images/gallery/table7/desk1.jpg';
+import GalleryImage7 from '../../assets/images/gallery/table7/desk1.jpg';
+import Table7Image1 from '../../assets/images/gallery/table7/desk1.jpg';
 // Table 8
-import GalleryImage8 from '../assets/images/gallery/table8/orange1.png';
-import Table8Image1 from '../assets/images/gallery/table8/orange1.png';
+import GalleryImage8 from '../../assets/images/gallery/table8/orange1.png';
+import Table8Image1 from '../../assets/images/gallery/table8/orange1.png';
 
 export const galleryDataArray = [
   {

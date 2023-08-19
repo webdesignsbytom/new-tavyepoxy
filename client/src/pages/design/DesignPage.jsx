@@ -5,11 +5,6 @@ import DimensionsData from '../../components/design/DimensionsData';
 import CanvasDesignTool from '../../components/design/CanvasDesignTool';
 import LegOptionsModal from '../../components/design/LegOptionsModal';
 import EpoxyFinishOptions from '../../components/design/EpoxyFinishOptions';
-// Context
-import { ToggleContext } from '../../context/ToggleContext';
-// Data
-import { InitialDesignData } from '../../utils/PricingData';
-import { PriceData } from '../../utils/PricingData';
 import MaterialsData from '../../components/design/MaterialsData';
 import SelectionRow from '../../components/design/SelectionRow';
 import ColourData from '../../components/design/ColourData';
@@ -17,6 +12,11 @@ import CheckboxSelectionData from '../../components/design/CheckboxSelectionData
 import QuoteData from '../../components/design/QuoteData';
 import QuoteAndSaveRow from '../../components/design/QuoteAndSaveRow';
 import ColourAndEdgeRow from '../../components/design/ColourAndEdgeRow';
+// Context
+import { ToggleContext } from '../../context/ToggleContext';
+// Data
+import { InitialDesignData } from '../../utils/data/PricingData';
+import { PriceData } from '../../utils/data/PricingData';
 // Images
 
 function DesignPage() {

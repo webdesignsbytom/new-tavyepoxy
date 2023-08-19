@@ -51,7 +51,7 @@ function EdgeDropdownMenu({ handleEdgeTypeChange }) {
           />
         </div>
         <section className='grid justify-end'>
-          <div className='bg-gray-500 w-[40px] grid items-center justify-center'>
+          <div className='bg-slate-400 w-[40px] grid items-center justify-center'>
             <span className='no__highlights text-xl'>⮟</span>
           </div>
         </section>

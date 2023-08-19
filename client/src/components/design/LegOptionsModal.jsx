@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 // Data
-import { LegData } from '../../utils/LegOptionsData';
+import { LegData } from '../../utils/data/LegOptionsData';
+// Components
 import LegItem from './LegItem';
 
 function LegOptionsModal({ closeLegOptionsModal }) {
   const [legDataArray, setLegDataArray] = useState(LegData);
 
   return (
-    <section className='grid absolute h-full w-full bg-white outline outline-2 outline-black p-4'>
+    <section className='grid absolute z-40 h-full w-full bg-white outline outline-2 outline-black p-4'>
       <article className='grid grid-rows-a1a'>
         <section>
           <div className='text-center'>

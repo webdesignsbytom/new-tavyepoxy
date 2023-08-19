@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // Data
-import { AvailableItemsArray } from '../../utils/AvailableItemsData';
+import { AvailableItemsArray } from '../../utils/data/AvailableItemsData';
 // Components
 import SoldoutDisplay from '../../components/sales/SoldoutDisplay';
 import SaleItem from './SaleItem';

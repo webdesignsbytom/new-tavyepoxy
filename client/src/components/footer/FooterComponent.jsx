@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // images
 import LogoImage from '../../assets/images/logos/logo.jpg';
+import SocialMediaLinks from '../social/SocialMediaLinks';
 
 function FooterComponent() {
   return (
@@ -17,7 +18,7 @@ function FooterComponent() {
           <div className='grid'>
             <img className='w-[70px] lg:w-[100px]' src={LogoImage} alt='Tavy Epoxy Logo' />
           </div>
-          <div className='grid grid-cols-5 justify-end text-sm h-fit font-bold text-center'>
+          <div className='grid grid-cols-6 justify-end text-sm h-fit font-bold text-center'>
             <Link className='text-hyperlink-blue' to='/'>
               Home
             </Link>

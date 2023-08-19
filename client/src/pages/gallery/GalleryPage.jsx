@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import Navbar from '../../components/nav/Navbar';
 // Context
 import { ToggleContext } from '../../context/ToggleContext';
-import { galleryDataArray } from '../../utils/GalleryData';
+import { galleryDataArray } from '../../utils/data/GalleryData';
 import GalleryItem from '../../components/gallery/GalleryItem';
 
 function GalleryPage() {

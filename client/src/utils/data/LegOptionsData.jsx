@@ -1,8 +1,8 @@
-import StandardHairpin from '../assets/images/legs/standard_hairpin.jpg';
-import Hairpin from '../assets/images/legs/hairpin_three_prong.jpg';
-import SquareFrame from '../assets/images/legs/square_frame.jpg';
-import AFrame from '../assets/images/legs/a_frame.jpg';
-import XFrame from '../assets/images/legs/x_frame.jpg';
+import StandardHairpin from '../../assets/images/legs/standard_hairpin.jpg';
+import Hairpin from '../../assets/images/legs/hairpin_three_prong.jpg';
+import SquareFrame from '../../assets/images/legs/square_frame.jpg';
+import AFrame from '../../assets/images/legs/a_frame.jpg';
+import XFrame from '../../assets/images/legs/x_frame.jpg';
 
 export const LegData = [
   {
