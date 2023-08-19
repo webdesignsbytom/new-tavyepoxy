@@ -25,7 +25,7 @@ function SaleItem({ item }) {
       <div className='grid justify-center mt-2 leading-5'>
         <img
           className='max-h-[300px] w-full object-cover'
-          src={item.images[0]}
+          src={item.pageData.images[0]}
           alt='design'
         />
         <div className='mt-1'>
