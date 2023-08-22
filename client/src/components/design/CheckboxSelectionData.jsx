@@ -9,7 +9,7 @@ function CheckboxSelectionData({
       <section className='grid grid-cols-aaa justify-between px-1'>
         <div className='w-fit'>
           <div className='text-center'>
-            <p>Protective Layer</p>
+            <p className='text-sm'>Protective Layer</p>
           </div>
           <div className='grid justify-center'>
             <input
@@ -23,7 +23,7 @@ function CheckboxSelectionData({
         </div>
         <div className='w-fit'>
           <div className='text-center'>
-            <p>Rough Stone</p>
+            <p className='text-sm'>Rough Stone</p>
           </div>
           <div className='grid justify-center'>
             <input
@@ -37,7 +37,7 @@ function CheckboxSelectionData({
         </div>
         <div className='w-fit'>
           <div className='text-center'>
-            <p>Matching Coasters x4</p>
+            <p className='text-sm'>Matching Coasters x4</p>
           </div>
           <div className='grid justify-center'>
             <input

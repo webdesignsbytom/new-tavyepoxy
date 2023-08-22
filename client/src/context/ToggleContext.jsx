@@ -5,6 +5,7 @@ export const ToggleContext = React.createContext();
 
 const ToggleContextProvider = ({ children }) => {
   const [toggleNavigation, setToggleNavigation] = useState(false);
+  const [toggleColourPicker, setToggleColourPicker] = useState(false);
   const [activeNav, setActiveNav] = useState('/');
 
   console.log('QQQQQQQQQQQQQQQQQQQQQQQQQQ ', toggleNavigation);
@@ -14,6 +15,11 @@ const ToggleContextProvider = ({ children }) => {
     setToggleNavigation(!toggleNavigation);
   };
 
+  const toggleColourPickerOpenClosed = () => {
+    console.log('Toggling XXXXXXXXXXXXXXXXXXXXXxxx');
+    setToggleColourPicker(!toggleColourPicker);
+  };
+  console.log('toggleColourPicker', toggleColourPicker);
   return (
     <ToggleContext.Provider
       value={{
@@ -22,6 +28,9 @@ const ToggleContextProvider = ({ children }) => {
         activeNav,
         setToggleNavigation,
         setActiveNav,
+        toggleColourPicker,
+        setToggleColourPicker,
+        toggleColourPickerOpenClosed,
       }}
     >
       {children}

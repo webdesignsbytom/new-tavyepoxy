@@ -5,7 +5,7 @@ function EdgeTypeData({ handleEdgeTypeChange }) {
   return (
     <section className='grid grid-rows-rev'>
       <div>
-        <p>Edges and routing</p>
+        <p className='text-sm'>Edges and routing</p>
       </div>
 
       <div>

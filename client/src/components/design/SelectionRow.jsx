@@ -6,15 +6,15 @@ function SelectionRow({
   openLegOptionsModal,
 }) {
   return (
-    <section className='grid grid-cols-2 outline gap-2 outline-black outline-2 rounded p-1 my-2'>
+    <section className='grid grid-cols-2 outline gap-2 outline-black outline-2 rounded p-1 my-2 '>
       {/* Finish */}
       <section className='grid'>
         <div>
-          <h5 className='font-semibold'>Epoxy Finish</h5>
+          <h5 className='font-semibold text-sm'>Epoxy Finish</h5>
         </div>
 
         <div className='text-sm leading-5 h-full capitalize'>
-          <p>{designDimensionsAndData.finish}</p>
+          <p className='text-sm'>{designDimensionsAndData.finish}</p>
         </div>
 
         <div className='w-full grid items-end'>
@@ -29,11 +29,11 @@ function SelectionRow({
       {/* Legs */}
       <section className='grid'>
         <div>
-          <h5 className='font-semibold'>Leg style</h5>
+          <h5 className='font-semibold text-sm'>Leg style</h5>
         </div>
 
         <div className='text-sm leading-5 h-full capitalize'>
-          <p>{designDimensionsAndData.legs}</p>
+          <p className='text-sm'>{designDimensionsAndData.legs}</p>
         </div>
 
         <div className='w-full grid items-end'>

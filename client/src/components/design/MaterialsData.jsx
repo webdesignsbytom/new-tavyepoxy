@@ -3,14 +3,15 @@ import React from 'react';
 function MaterialsData({ designDimensionsAndData, handleChange }) {
   return (
     <section className='grid grid-cols-aaa outline gap-2 outline-black outline-2 rounded p-1'>
-      <div>
-        <h4>Materials:</h4>
+      <div className='grid items-center'>
+        <h4 className='text-sm'>Materials:</h4>
       </div>
 
-      <div>
+      <div className='grid h-full'>
         <select
           id='material'
           name='material'
+          className='grid h-full'
           onChange={handleChange}
           value={designDimensionsAndData.material} // Corrected this line
           required

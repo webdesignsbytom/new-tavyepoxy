@@ -4,13 +4,13 @@ export const PriceData = {
   stone_edge: 50,
   coasters: 50,
   colour: 3,
-  pricePerMillimeter: 1,
+  pricePerCentimeter: 1,
 };
 
 export const InitialDesignData = {
-    length: 856,
-    width: 555,
-    thickness: 25,
+    length: 85,
+    width: 55,
+    thickness: 2.5,
     material: 'MDF',
     finish: 'marble',
     colours: [],

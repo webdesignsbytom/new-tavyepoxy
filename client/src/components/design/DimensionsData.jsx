@@ -5,7 +5,7 @@ function DimensionsData({ designDimensionsAndData, handleChange }) {
     <section className='grid grid-cols-aaa gap-6 w-full outline outline-black outline-2 rounded my-2 p-1'>
       <section className='grid'>
         <div>
-          <p>Length</p>
+          <p className='text-sm'>Length</p>
         </div>
         <div className='w-min grid'>
           <input
@@ -20,7 +20,7 @@ function DimensionsData({ designDimensionsAndData, handleChange }) {
       </section>
       <section className='grid'>
         <div>
-          <p>Width</p>
+          <p className='text-sm'>Width</p>
         </div>
         <div className='w-full'>
           <input
@@ -35,7 +35,7 @@ function DimensionsData({ designDimensionsAndData, handleChange }) {
       </section>
       <section className='grid'>
         <div>
-          <p>Thickness</p>
+          <p className='text-sm'>Thickness</p>
         </div>
         <div className='w-full'>
           <select

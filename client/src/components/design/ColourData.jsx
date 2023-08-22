@@ -1,46 +1,45 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { ToggleContext } from '../../context/ToggleContext';
+import ColoursDropdownMenu from './ColoursDropdownMenu';
+import ColourPicker from '../utils/ColourPicker';
 
 function ColourData({
   designDimensionsAndData,
-  handleColourAddChange,
-  addNewColourToList,
+  designColourList,
+  setDesignColourList,
 }) {
+  const { toggleColourPickerOpenClosed, toggleColourPicker } = useContext(ToggleContext);
+
+  const [selectedColoursArr, setSelectedColoursArr] = useState([])
+
+  const ClearAllColours = () => {
+    console.log('clearing all colours');
+  };
+
   return (
-    <section className=''>
+    <section className='relative'>
+      {toggleColourPicker && <ColourPicker selectedColoursArr={selectedColoursArr} setSelectedColoursArr={setSelectedColoursArr} />}
       <div>
-        <p>Customise Colours</p>
+        <p className='text-sm mb-1'>Customise Colours</p>
       </div>
-      <div className='grid grid-flow-col mb-2'>
-        <div>
-          <p>Selected:</p>
-        </div>
-        <section className='grid grid-flow-col w-full'>
-          {designDimensionsAndData.colours.forEach((colour, index) => {
-            console.log('colour 1', colour);
-            return (
-              <div key={index}>
-                <p className=''>{colour.toString}</p>
-              </div>
-            );
-          })}
-        </section>
-      </div>
-      <div className='grid grid-cols-rev w-full h-full gap-4'>
+      <section className='grid'>
+        <ColoursDropdownMenu selectedColoursArr={selectedColoursArr} />
+      </section>
+      <div className='grid grid-cols-2 w-full h-full gap-4 mt-1'>
         <div className='w-full'>
-          <input
-            type='text'
-            className='w-full'
-            name='colourAddedByUser'
-            id='colourAddedByUser'
-            onChange={handleColourAddChange}
-          />
-        </div>
-        <div className='w-min'>
           <button
-            onClick={addNewColourToList}
+            onClick={toggleColourPickerOpenClosed}
             className='bg-slate-400 rounded w-full px-2'
           >
-            Enter
+            Picker
+          </button>
+        </div>
+        <div className='w-full'>
+          <button
+            onClick={ClearAllColours}
+            className='bg-slate-400 rounded w-full px-2'
+          >
+            Clear
           </button>
         </div>
       </div>

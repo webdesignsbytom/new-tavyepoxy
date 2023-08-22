@@ -7,9 +7,7 @@ import LegOptionsModal from '../../components/design/LegOptionsModal';
 import EpoxyFinishOptions from '../../components/design/EpoxyFinishOptions';
 import MaterialsData from '../../components/design/MaterialsData';
 import SelectionRow from '../../components/design/SelectionRow';
-import ColourData from '../../components/design/ColourData';
 import CheckboxSelectionData from '../../components/design/CheckboxSelectionData';
-import QuoteData from '../../components/design/QuoteData';
 import QuoteAndSaveRow from '../../components/design/QuoteAndSaveRow';
 import ColourAndEdgeRow from '../../components/design/ColourAndEdgeRow';
 // Context
@@ -24,6 +22,9 @@ function DesignPage() {
 
   const [designDimensionsAndData, setDesignDimensionsAndData] =
     useState(InitialDesignData);
+
+  const [designColourList, setDesignColourList] = useState([]);
+
   const [designQuoteData, setDesignQuoteData] = useState({
     finalQuote: 0,
     startingQuote: designDimensionsAndData.quote,
@@ -185,9 +186,9 @@ function DesignPage() {
                 {/* Colours */}
                 <ColourAndEdgeRow
                   designDimensionsAndData={designDimensionsAndData}
-                  handleColourAddChange={handleColourAddChange}
-                  addNewColourToList={addNewColourToList}
                   handleEdgeTypeChange={handleEdgeTypeChange}
+                  designColourList={designColourList}
+                  setDesignColourList={setDesignColourList}
                 />
 
                 <CheckboxSelectionData
