@@ -2,9 +2,14 @@
 
 # dependencies
 /node_modules
+\node_modules\@icons\material
+\node_modules\icons\material
+/node_modules/icons/material
+/node_modules/@icons/material
 /.pnp
 .pnp.js
-
+.node_modules
+.node_modules/@icons/material
 # testing
 /coverage
 
