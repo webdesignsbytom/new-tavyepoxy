@@ -3,13 +3,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import Navbar from '../../components/nav/Navbar';
 import DimensionsData from '../../components/design/DimensionsData';
 import CanvasDesignTool from '../../components/design/CanvasDesignTool';
-import LegOptionsModal from '../../components/design/LegOptionsModal';
-import EpoxyFinishOptions from '../../components/design/EpoxyFinishOptions';
+import LegOptionsModal from '../../components/design/modal/LegOptionsModal';
+import EpoxyFinishOptions from '../../components/design/modal/EpoxyFinishOptions';
 import MaterialsData from '../../components/design/MaterialsData';
-import SelectionRow from '../../components/design/SelectionRow';
+import SelectionRow from '../../components/design/rows/SelectionRow';
 import CheckboxSelectionData from '../../components/design/CheckboxSelectionData';
-import QuoteAndSaveRow from '../../components/design/QuoteAndSaveRow';
-import ColourAndEdgeRow from '../../components/design/ColourAndEdgeRow';
+import QuoteAndSaveRow from '../../components/design/rows/QuoteAndSaveRow';
+import ColourAndEdgeRow from '../../components/design/rows/ColourAndEdgeRow';
 // Context
 import { ToggleContext } from '../../context/ToggleContext';
 // Data

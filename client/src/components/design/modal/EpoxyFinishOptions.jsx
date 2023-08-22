@@ -1,8 +1,8 @@
 import React from 'react';
 // Data
-import { epoxyFinishData } from '../../utils/data/EpoxyFinishOptionsData';
+import { epoxyFinishData } from '../../../utils/data/EpoxyFinishOptionsData';
 // Components
-import FinishItem from './FinishItem';
+import FinishItem from '../FinishItem';
 
 function EpoxyFinishOptions({ closeFinishOptionsModal }) {
   return (

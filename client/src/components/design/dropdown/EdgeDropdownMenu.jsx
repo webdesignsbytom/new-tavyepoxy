@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 // Images
-import SquareEdge from '../../assets/images/design/sq_edge.jpg';
-import RoundedEdge from '../../assets/images/design/rounded_edge.jpg';
-import AngledEdge from '../../assets/images/design/angled_edge.jpg';
+import SquareEdge from '../../../assets/images/design/sq_edge.jpg';
+import RoundedEdge from '../../../assets/images/design/rounded_edge.jpg';
+import AngledEdge from '../../../assets/images/design/angled_edge.jpg';
 
 function EdgeDropdownMenu({ handleEdgeTypeChange }) {
   const [edgeTypeOptions] = useState([

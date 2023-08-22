@@ -1,8 +1,8 @@
 import React from 'react';
 // Components
-import QuoteData from './QuoteData';
-import SaveDesignButton from './SaveDesignButton';
-import ShippingQuote from './ShippingQuote';
+import QuoteData from '../QuoteData';
+import SaveDesignButton from '../SaveDesignButton';
+import ShippingQuote from '../ShippingQuote';
 
 function QuoteAndSaveRow({ designQuoteData }) {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import EdgeDropdownMenu from './EdgeDropdownMenu';
+import EdgeDropdownMenu from './dropdown/EdgeDropdownMenu';
 
 function EdgeTypeData({ handleEdgeTypeChange }) {
   return (

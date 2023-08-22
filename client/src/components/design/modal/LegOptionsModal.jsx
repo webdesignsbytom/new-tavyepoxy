@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 // Data
-import { LegData } from '../../utils/data/LegOptionsData';
+import { LegData } from '../../../utils/data/LegOptionsData';
 // Components
-import LegItem from './LegItem';
+import LegItem from '../LegItem';
 
 function LegOptionsModal({ closeLegOptionsModal }) {
   const [legDataArray, setLegDataArray] = useState(LegData);

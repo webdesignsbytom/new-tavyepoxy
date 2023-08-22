@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { ToggleContext } from '../../context/ToggleContext';
-import ColoursDropdownMenu from './ColoursDropdownMenu';
+import ColoursDropdownMenu from './dropdown/ColoursDropdownMenu';
 import ColourPicker from '../utils/ColourPicker';
 
 function ColourData({

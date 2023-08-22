@@ -1,6 +1,6 @@
 import React from 'react';
-import ColourData from './ColourData';
-import EdgeTypeData from './EdgeTypeData';
+import ColourData from '../ColourData';
+import EdgeTypeData from '../EdgeTypeData';
 
 function ColourAndEdgeRow({
   designDimensionsAndData,
