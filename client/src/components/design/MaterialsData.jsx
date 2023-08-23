@@ -1,4 +1,5 @@
 import React from 'react';
+import MaterialDropdownMenu from './dropdown/MaterialDropdownMenu';
 
 function MaterialsData({ designDimensionsAndData, handleChange }) {
   return (
@@ -8,20 +9,7 @@ function MaterialsData({ designDimensionsAndData, handleChange }) {
       </div>
 
       <div className='grid h-full'>
-        <select
-          id='material'
-          name='material'
-          className='grid h-full'
-          onChange={handleChange}
-          value={designDimensionsAndData.material} // Corrected this line
-          required
-        >
-          <option value='MDF'>MDF (Standard)</option>
-          <option value='Oak'>Oak</option>
-          <option value='Walnut'>Walnut</option>
-          <option value='Pine'>Pine</option>
-          <option value='Cherry'>Cherry</option>
-        </select>
+        <MaterialDropdownMenu />
       </div>
       <div className='grid grid-cols-rev'>
         <input className='pl-1' type='text' placeholder='Custom...' />
