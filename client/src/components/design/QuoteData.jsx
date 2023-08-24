@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DesignContext } from '../../context/DesignContext';
 
-function QuoteData({ designQuoteData }) {
+function QuoteData() {
+  const { designQuoteData } = useContext(DesignContext);
   return (
-    <section >
+    <section>
       <div>
         <h6>Quoted Price</h6>
       </div>

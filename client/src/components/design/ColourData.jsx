@@ -3,11 +3,7 @@ import { ToggleContext } from '../../context/ToggleContext';
 import ColoursDropdownMenu from './dropdown/ColoursDropdownMenu';
 import ColourPicker from '../utils/ColourPicker';
 
-function ColourData({
-  designDimensionsAndData,
-  designColourList,
-  setDesignColourList,
-}) {
+function ColourData() {
   const { toggleColourPickerOpenClosed, toggleColourPicker } = useContext(ToggleContext);
 
   const [selectedColoursArr, setSelectedColoursArr] = useState([])

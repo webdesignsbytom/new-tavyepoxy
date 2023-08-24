@@ -13,22 +13,18 @@ import ColourAndEdgeRow from '../../components/design/rows/ColourAndEdgeRow';
 // Context
 import { ToggleContext } from '../../context/ToggleContext';
 // Data
-import { InitialDesignData } from '../../utils/data/PricingData';
 import { PriceData } from '../../utils/data/PricingData';
+import { DesignContext } from '../../context/DesignContext';
 // Images
 
 function DesignPage() {
   const { setActiveNav } = useContext(ToggleContext);
-
-  const [designDimensionsAndData, setDesignDimensionsAndData] =
-    useState(InitialDesignData);
-
-  const [designColourList, setDesignColourList] = useState([]);
-
-  const [designQuoteData, setDesignQuoteData] = useState({
-    finalQuote: 0,
-    startingQuote: designDimensionsAndData.quote,
-  });
+  const {
+    designDimensionsAndData,
+    setDesignDimensionsAndData,
+    designQuoteData,
+    setDesignQuoteData,
+  } = useContext(DesignContext);
 
   console.log('designDimensionsAndData', designDimensionsAndData);
   console.log('designQuoteData', designQuoteData);
@@ -164,20 +160,17 @@ function DesignPage() {
                 </article>
                 {/* Dimensions */}
                 <DimensionsData
-                  designDimensionsAndData={designDimensionsAndData}
                   handleChange={handleChange}
                 />
 
                 {/* Materials */}
                 <MaterialsData
-                  designDimensionsAndData={designDimensionsAndData}
                   handleChange={handleChange}
                 />
 
                 {/* Row of selections */}
                 {/* Epoxy and legs */}
                 <SelectionRow
-                  designDimensionsAndData={designDimensionsAndData}
                   openFinishOptionsModal={openFinishOptionsModal}
                   openLegOptionsModal={openLegOptionsModal}
                 />
@@ -185,14 +178,10 @@ function DesignPage() {
                 {/* New row */}
                 {/* Colours */}
                 <ColourAndEdgeRow
-                  designDimensionsAndData={designDimensionsAndData}
                   handleEdgeTypeChange={handleEdgeTypeChange}
-                  designColourList={designColourList}
-                  setDesignColourList={setDesignColourList}
                 />
 
                 <CheckboxSelectionData
-                  designDimensionsAndData={designDimensionsAndData}
                   handleCheckboxChange={handleCheckboxChange}
                 />
 

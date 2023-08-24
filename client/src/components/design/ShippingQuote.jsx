@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+// Context
+import { DesignContext } from '../../context/DesignContext';
 
 function ShippingQuote() {
+  const { designQuoteData } = useContext(DesignContext);
+
   return (
     <section>
       <div>

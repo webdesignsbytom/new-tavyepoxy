@@ -1,7 +1,7 @@
 import React from 'react';
 import MaterialDropdownMenu from './dropdown/MaterialDropdownMenu';
 
-function MaterialsData({ designDimensionsAndData, handleChange }) {
+function MaterialsData() {
   return (
     <section className='grid grid-cols-reg outline gap-2 outline-black outline-2 rounded p-1'>
       <div className='grid items-center'>

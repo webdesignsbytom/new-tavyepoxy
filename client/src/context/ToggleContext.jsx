@@ -19,6 +19,7 @@ const ToggleContextProvider = ({ children }) => {
     console.log('Toggling XXXXXXXXXXXXXXXXXXXXXxxx');
     setToggleColourPicker(!toggleColourPicker);
   };
+  
   console.log('toggleColourPicker', toggleColourPicker);
   return (
     <ToggleContext.Provider

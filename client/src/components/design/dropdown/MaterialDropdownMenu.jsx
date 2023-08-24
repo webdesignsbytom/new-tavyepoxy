@@ -11,6 +11,7 @@ function MaterialDropdownMenu() {
   const [materialOptions, setMaterialOptions] = useState(MaterialsAvailable);
 
   const [toggleMaterialOptions, setToggleMaterialOptions] = useState(false);
+  const [enterCustomMaterialData, setEnterCustomMaterialData] = useState('');
 
   const toggleMenuOpenClosed = () => {
     setToggleMaterialOptions(!toggleMaterialOptions);
@@ -24,6 +25,16 @@ function MaterialDropdownMenu() {
     setSelectedMaterial(selection);
 
     setToggleMaterialOptions(false);
+  };
+
+  const submitCustomMaterial = () => {
+    console.log('enterCustomMaterialData', enterCustomMaterialData);
+  };
+
+  const handleCustomChange = (event) => {
+    const { value } = event.target;
+    console.log('value', value);
+    setEnterCustomMaterialData(value);
   };
 
   return (
@@ -42,7 +53,7 @@ function MaterialDropdownMenu() {
         </section>
       </article>
       {toggleMaterialOptions && (
-        <section className='outline outline-2 outline-black rounded absolute bg-white w-full mt-1 overflow-hidden'>
+        <section className='outline outline-2 outline-black rounded absolute z-10 bg-white w-full mt-1 overflow-hidden'>
           {materialOptions.map((option, index) => {
             console.log('option', option);
             return (
@@ -59,6 +70,30 @@ function MaterialDropdownMenu() {
               </article>
             );
           })}
+          <article
+            id='custom_material'
+            name='custom_material'
+            className='bg-white p-1 grid grid-cols-rev hover:bg-blue-500 cursor-pointer'
+          >
+            <section className='grid relative'>
+              <div className='w-full'>
+                <input
+                  type='text'
+                  onChange={handleCustomChange}
+                  placeholder='Enter custom...'
+                  className='outline-1 outline outline-black rounded w-full p-1'
+                />
+              </div>
+              <div className='grid absolute right-0 h-full p-[2px]'>
+                <button
+                  onClick={submitCustomMaterial}
+                  className='bg-slate-400 text-sm px-2 outline outline-black outline-1 rounded active:scale-95 active:duration-200'
+                >
+                  Submit
+                </button>
+              </div>
+            </section>
+          </article>
         </section>
       )}
     </section>
