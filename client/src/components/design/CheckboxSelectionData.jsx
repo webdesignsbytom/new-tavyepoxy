@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DesignContext } from '../../context/DesignContext';
 
 function CheckboxSelectionData({
-  designDimensionsAndData,
   handleCheckboxChange,
 }) {
+  const { designDimensionsAndData } = useContext(DesignContext)
+
   return (
     <section className='outline gap-2 outline-black outline-2 rounded p-1 my-2'>
       <section className='grid grid-cols-aaa justify-between px-1'>

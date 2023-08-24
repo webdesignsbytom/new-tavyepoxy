@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+// Context
+import { DesignContext } from '../../context/DesignContext';
+import ThicknessDropdownMenu from './dropdown/ThicknessDropdownMenu';
 
-function DimensionsData({ designDimensionsAndData, handleChange }) {
+function DimensionsData({ handleChange }) {
+  const { designDimensionsAndData } = useContext(DesignContext)
+  
   return (
     <section className='grid grid-cols-aaa gap-6 w-full outline outline-black outline-2 rounded my-2 p-1'>
       <section className='grid'>
@@ -10,7 +15,7 @@ function DimensionsData({ designDimensionsAndData, handleChange }) {
         <div className='w-min grid'>
           <input
             type='number'
-            className='w-[100px]'
+            className='w-[100px] outline outline-1 outline-black rounded pl-2 py-[2px] pr-1'
             value={designDimensionsAndData.length}
             onChange={handleChange}
             name='length'
@@ -25,7 +30,7 @@ function DimensionsData({ designDimensionsAndData, handleChange }) {
         <div className='w-full'>
           <input
             type='number'
-            className='w-[100px]'
+            className='w-[100px] outline outline-1 outline-black rounded pl-2 py-[2px] pr-1'
             value={designDimensionsAndData.width}
             onChange={handleChange}
             name='width'
@@ -38,18 +43,7 @@ function DimensionsData({ designDimensionsAndData, handleChange }) {
           <p className='text-sm'>Thickness</p>
         </div>
         <div className='w-full'>
-          <select
-            id='thickness'
-            name='thickness'
-            onChange={handleChange}
-            value={designDimensionsAndData.thickness} // Corrected this line
-            required
-          >
-            <option value='25'>25mm (Standard)</option>
-            <option value='18'>18mm</option>
-            <option value='35'>35mm</option>
-            <option value='custom'>Custom</option>
-          </select>
+          <ThicknessDropdownMenu />
         </div>
       </section>
     </section>

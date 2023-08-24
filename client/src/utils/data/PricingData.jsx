@@ -10,7 +10,7 @@ export const PriceData = {
 export const InitialDesignData = {
     length: 85,
     width: 55,
-    thickness: 2.5,
+    thickness: 25,
     material: 'MDF',
     finish: 'marble',
     colours: [],

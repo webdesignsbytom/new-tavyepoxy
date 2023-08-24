@@ -1,67 +1,62 @@
 import React, { useContext, useState } from 'react';
 // Data
-import { MaterialsAvailable } from '../../../utils/data/MaterialData';
+import { ThicknessOptions } from '../../../utils/data/MaterialData';
 // Context
 import { DesignContext } from '../../../context/DesignContext';
 
-function MaterialDropdownMenu() {
+function ThicknessDropdownMenu() {
   const { setDesignDimensionsAndData, designDimensionsAndData } =
     useContext(DesignContext);
-  const [selectedMaterial, setSelectedMaterial] = useState({
-    id: 0,
-    value: 'mdf',
-    label: 'MDF',
+
+  const [availableThicknesses] = useState(ThicknessOptions);
+  const [selectedThickness, setSelectedThickness] = useState({
+    label: designDimensionsAndData.thickness,
   });
-  const [materialOptions] = useState(MaterialsAvailable);
-  const [toggleMaterialOptions, setToggleMaterialOptions] = useState(false);
-  const [enterCustomMaterialData, setEnterCustomMaterialData] = useState('');
+  const [toggleThicknessDropdownMenu, setToggleThicknessDropdownMenu] =
+    useState(false);
+  const [enterCustomThicknessData, setEnterCustomThicknessData] = useState('');
 
   const toggleMenuOpenClosed = () => {
-    setToggleMaterialOptions(!toggleMaterialOptions);
+    setToggleThicknessDropdownMenu(!toggleThicknessDropdownMenu);
   };
 
-  const selectMaterialType = (id) => {
-    console.log('id', id);
-
-    let selection = materialOptions[id];
-
-    setSelectedMaterial(selection);
-
-    setToggleMaterialOptions(false);
-  };
-
-  const submitCustomMaterial = () => {
-    if (enterCustomMaterialData === '') {
+  const submitCustomThickness = () => {
+    if (enterCustomThicknessData === '') {
       return;
     } else {
-      setSelectedMaterial({
+      setSelectedThickness({
         id: 'custom',
-        value: enterCustomMaterialData,
-        label: enterCustomMaterialData,
+        value: enterCustomThicknessData,
+        label: enterCustomThicknessData,
       });
     }
 
-    setToggleMaterialOptions(false);
+    setToggleThicknessDropdownMenu(false);
     setDesignDimensionsAndData({
       ...designDimensionsAndData,
-      material: enterCustomMaterialData,
+      thickness: enterCustomThicknessData,
     });
   };
 
   const handleCustomChange = (event) => {
     const { value } = event.target;
 
-    setEnterCustomMaterialData(value);
+    setEnterCustomThicknessData(value);
   };
+
+  const handleSelectThicknessOption = (option) => {
+    console.log('option selected', option);
+  };
+
   console.log('designDimensionsAndData', designDimensionsAndData);
   return (
     <section className='relative'>
       <article
-        className='grid grid-cols-rev outline outline-2 outline-black rounded bg-gray-100'
+        className='grid grid-cols-rev outline outline-1 outline-black rounded bg-gray-100'
         onClick={toggleMenuOpenClosed}
       >
-        <div className='grid items-center text-sm pl-2'>
-          <span>{selectedMaterial.label} </span>
+        <div className='grid items-center text-sm pl-2 grid-flow-col'>
+          <span>{selectedThickness.label} </span><span>mm</span>
         </div>
         <section className='grid justify-end'>
           <div className='bg-slate-400 cursor-pointer w-[40px] grid items-center justify-center'>
@@ -69,16 +64,16 @@ function MaterialDropdownMenu() {
           </div>
         </section>
       </article>
-      {toggleMaterialOptions && (
-        <section className='outline outline-2 outline-black rounded absolute z-10 bg-white w-full mt-1 overflow-hidden'>
-          {materialOptions.map((option, index) => {
+      {toggleThicknessDropdownMenu && (
+        <section className='outline outline-1 outline-black rounded absolute z-10 bg-white w-full mt-1 overflow-hidden'>
+          {availableThicknesses.map((option, index) => {
             console.log('option', option);
             return (
               <article
                 key={index}
                 id={option.value}
                 name={option.value}
-                onClick={() => selectMaterialType(option.id)}
+                onClick={() => handleSelectThicknessOption(option)}
                 className='bg-white p-1 grid grid-cols-rev hover:bg-blue-500 cursor-pointer'
               >
                 <div className='grid items-center pl-2'>
@@ -97,16 +92,16 @@ function MaterialDropdownMenu() {
                 <input
                   type='text'
                   onChange={handleCustomChange}
-                  placeholder='Enter custom...'
+                  placeholder='Custom...'
                   className='outline-1 outline outline-black rounded w-full p-1'
                 />
               </div>
               <div className='grid absolute right-0 h-full p-[2px]'>
                 <button
-                  onClick={submitCustomMaterial}
-                  className='bg-slate-400 text-sm px-2 outline outline-black outline-1 rounded active:scale-95 active:duration-200'
+                  onClick={submitCustomThickness}
+                  className='bg-slate-400 text-sm px-1 outline outline-black outline-1 rounded active:scale-95 active:duration-200'
                 >
-                  Submit
+                  @
                 </button>
               </div>
             </section>
@@ -117,4 +112,4 @@ function MaterialDropdownMenu() {
   );
 }
 
-export default MaterialDropdownMenu;
+export default ThicknessDropdownMenu;
