@@ -15,22 +15,28 @@ import { ToggleContext } from '../../context/ToggleContext';
 // Data
 import { PriceData } from '../../utils/data/PricingData';
 import { DesignContext } from '../../context/DesignContext';
+import ConfirmColourClear from '../../components/design/modal/ConfirmColourClear';
+import ConfirmReset from '../../components/design/modal/ConfirmReset';
 // Images
 
 function DesignPage() {
-  const { setActiveNav } = useContext(ToggleContext);
+  const {
+    setActiveNav,
+    toggleColourModal,
+    toggleResetModal,
+    openLegOptionsModal,
+    closeLegOptionsModal,
+    openFinishOptionsModal,
+    closeFinishOptionsModal,
+    toggleLegOptions,
+    toggleFinishOptions,
+  } = useContext(ToggleContext);
   const {
     designDimensionsAndData,
     setDesignDimensionsAndData,
     designQuoteData,
     setDesignQuoteData,
   } = useContext(DesignContext);
-
-  console.log('designDimensionsAndData', designDimensionsAndData);
-  console.log('designQuoteData', designQuoteData);
-
-  const [toggleLegOptions, setToggleLegOptions] = useState(false);
-  const [toggleFinishOptions, setToggleFinishOptions] = useState(false);
 
   const [colourAddedByUser, setColourAddedByUser] = useState('');
 
@@ -76,22 +82,6 @@ function DesignPage() {
       ...prevData,
       [name]: checked,
     }));
-  };
-
-  const openLegOptionsModal = () => {
-    setToggleLegOptions(true);
-  };
-
-  const closeLegOptionsModal = () => {
-    setToggleLegOptions(false);
-  };
-
-  const openFinishOptionsModal = () => {
-    setToggleFinishOptions(true);
-  };
-
-  const closeFinishOptionsModal = () => {
-    setToggleFinishOptions(false);
   };
 
   const handleChange = (event) => {
@@ -140,9 +130,13 @@ function DesignPage() {
         </section>
         <section className='lg:w-3/4 mx-auto mt-2 mb-2 px-4 lg:px-0'>
           <section className='grid relative h-full md:grid-cols-2 gap-2'>
+            {toggleColourModal && <ConfirmColourClear />}
+            {toggleResetModal && <ConfirmReset />}
+
             {toggleLegOptions && (
               <LegOptionsModal closeLegOptionsModal={closeLegOptionsModal} />
             )}
+
             {toggleFinishOptions && (
               <EpoxyFinishOptions
                 closeFinishOptionsModal={closeFinishOptionsModal}
@@ -159,14 +153,10 @@ function DesignPage() {
                   <h3>Choose your material and style</h3>
                 </article>
                 {/* Dimensions */}
-                <DimensionsData
-                  handleChange={handleChange}
-                />
+                <DimensionsData handleChange={handleChange} />
 
                 {/* Materials */}
-                <MaterialsData
-                  handleChange={handleChange}
-                />
+                <MaterialsData handleChange={handleChange} />
 
                 {/* Row of selections */}
                 {/* Epoxy and legs */}
@@ -177,9 +167,7 @@ function DesignPage() {
 
                 {/* New row */}
                 {/* Colours */}
-                <ColourAndEdgeRow
-                  handleEdgeTypeChange={handleEdgeTypeChange}
-                />
+                <ColourAndEdgeRow handleEdgeTypeChange={handleEdgeTypeChange} />
 
                 <CheckboxSelectionData
                   handleCheckboxChange={handleCheckboxChange}
