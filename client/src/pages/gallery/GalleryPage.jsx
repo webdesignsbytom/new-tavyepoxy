@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 // Components
 import Navbar from '../../components/nav/Navbar';
+import GalleryItem from '../../components/gallery/GalleryItem';
 // Context
 import { ToggleContext } from '../../context/ToggleContext';
 import { galleryDataArray } from '../../utils/data/GalleryData';
-import GalleryItem from '../../components/gallery/GalleryItem';
 
 function GalleryPage() {
   const { setActiveNav } = useContext(ToggleContext);

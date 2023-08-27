@@ -13,10 +13,8 @@ function SaleItemPage() {
   const [images, setImages] = useState([]);
   const [imagesNum, setImagesNum] = useState(0);
   
-  console.log('llllllllllllll');
 
   useEffect(() => {
-    console.log('item.pageData.images', item.pageData.images);
     setImages(item.pageData.images);
   }, []);
 

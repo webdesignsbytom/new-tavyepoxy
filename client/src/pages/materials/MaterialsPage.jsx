@@ -1,15 +1,15 @@
 import React, { useContext, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 // Components
 import Navbar from '../../components/nav/Navbar';
+import FooterComponent from '../../components/footer/FooterComponent';
+import CtaMaterialsLinks from '../../components/materials/CtaMaterialsLinks';
 // Context
 import { ToggleContext } from '../../context/ToggleContext';
 // Images
+import StyleImage from '../../assets/images/epoxy/4x.png';
 import MaterialsImage1 from '../../assets/images/materials/materials1.jpg';
 import TableLegsImage from '../../assets/images/legs/leg3.jpg';
-import StyleImage from '../../assets/images/epoxy/4x.png';
-import FooterComponent from '../../components/footer/FooterComponent';
-import { useNavigate } from 'react-router-dom';
-import CtaMaterialsLinks from '../../components/materials/CtaMaterialsLinks';
 
 function MaterialsPage() {
   const { setActiveNav } = useContext(ToggleContext);

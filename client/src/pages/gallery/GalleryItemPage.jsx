@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 // Components
 import Navbar from '../../components/nav/Navbar';
+// Context
 import { ToggleContext } from '../../context/ToggleContext';
 
 function GalleryItemPage() {
@@ -15,7 +16,6 @@ function GalleryItemPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log('item.pageData.images', item.pageData.images);
     setImages(item.pageData.images);
   }, []);
 
