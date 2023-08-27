@@ -1,13 +1,22 @@
 import React, { useContext } from 'react';
 // Context
 import { ToggleContext } from '../../../context/ToggleContext';
+import { DesignContext } from '../../../context/DesignContext';
+// Data
+import { InitialDesignData } from '../../../utils/data/PricingData';
+import { InitialMaterialSelection } from '../../../utils/data/MaterialData';
 
 function ConfirmReset() {
   const { toggleResetAllClosed } = useContext(ToggleContext);
+  const { setDesignDimensionsAndData, setSelectedMaterial, setSelectedThickness } = useContext(DesignContext)
 
   const resetAllDesignParameters = () => {
-    console.log('resetAllDesignParameters CONFIRMED XX');
+    setDesignDimensionsAndData(InitialDesignData)
+    setSelectedMaterial(InitialMaterialSelection)
+    setSelectedThickness({ label: 25 })
+    toggleResetAllClosed()
   };
+
   return (
     <section className='grid absolute z-40 p-2 outline outline-2 outline-black rounded bg-slate-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
       <article className='text-center'>

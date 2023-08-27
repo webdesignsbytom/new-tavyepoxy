@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
+// Context
 import { DesignContext } from '../../context/DesignContext';
 
-function CheckboxSelectionData({
-  handleCheckboxChange,
-}) {
-  const { designDimensionsAndData } = useContext(DesignContext)
+function CheckboxSelectionData({ handleCheckboxChange }) {
+  const { designDimensionsAndData } = useContext(DesignContext);
 
   return (
     <section className='outline gap-2 outline-black outline-2 rounded p-1 my-2'>

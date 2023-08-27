@@ -2,11 +2,8 @@ import React, { useContext } from 'react';
 // Context
 import { DesignContext } from '../../../context/DesignContext';
 
-function SelectionRow({
-  openFinishOptionsModal,
-  openLegOptionsModal,
-}) {
-  const { designDimensionsAndData } = useContext(DesignContext)
+function SelectionRow({ openFinishOptionsModal, openLegOptionsModal }) {
+  const { designDimensionsAndData } = useContext(DesignContext);
 
   return (
     <section className='grid grid-cols-2 outline gap-2 outline-black outline-2 rounded p-1 my-2 '>

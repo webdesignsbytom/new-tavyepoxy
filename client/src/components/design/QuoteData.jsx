@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+// Context
 import { DesignContext } from '../../context/DesignContext';
 
 function QuoteData() {

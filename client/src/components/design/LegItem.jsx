@@ -1,7 +1,6 @@
 import React from 'react'
 
 function LegItem({ data }) {
-  console.log('Data', data);
   return (
     <article>
       <div>

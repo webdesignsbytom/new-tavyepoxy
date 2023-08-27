@@ -7,7 +7,7 @@ const ToggleContextProvider = ({ children }) => {
   const [toggleNavigation, setToggleNavigation] = useState(false);
   const [toggleColourPicker, setToggleColourPicker] = useState(false);
   const [toggleColourModal, setToggleColourModal] = useState(false);
-  const [toggleResetModal, setToggleResetModal] = useState(true);
+  const [toggleResetModal, setToggleResetModal] = useState(false);
   const [toggleLegOptions, setToggleLegOptions] = useState(false);
   const [toggleFinishOptions, setToggleFinishOptions] = useState(false);
   const [activeNav, setActiveNav] = useState('/');

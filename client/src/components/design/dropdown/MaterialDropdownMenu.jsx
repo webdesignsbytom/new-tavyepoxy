@@ -1,17 +1,13 @@
 import React, { useContext, useState } from 'react';
 // Data
-import { MaterialsAvailable } from '../../../utils/data/MaterialData';
+import { InitialMaterialSelection, MaterialsAvailable } from '../../../utils/data/MaterialData';
 // Context
 import { DesignContext } from '../../../context/DesignContext';
 
 function MaterialDropdownMenu() {
-  const { setDesignDimensionsAndData, designDimensionsAndData } =
+  const { setDesignDimensionsAndData, designDimensionsAndData, selectedMaterial, setSelectedMaterial } =
     useContext(DesignContext);
-  const [selectedMaterial, setSelectedMaterial] = useState({
-    id: 0,
-    value: 'mdf',
-    label: 'MDF',
-  });
+
   const [materialOptions] = useState(MaterialsAvailable);
   const [toggleMaterialOptions, setToggleMaterialOptions] = useState(false);
   const [enterCustomMaterialData, setEnterCustomMaterialData] = useState('');

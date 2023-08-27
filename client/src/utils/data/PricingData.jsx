@@ -8,15 +8,21 @@ export const PriceData = {
 };
 
 export const InitialDesignData = {
-    length: 85,
-    width: 55,
-    thickness: 25,
-    material: 'MDF',
-    finish: 'marble',
-    colours: [],
-    legs: 'Standard fit 30cm high 2 prong hairpin legs',
-    quote: 220,
-    protection: false,
-    stone_edge: false,
-    coasters: false,
+  length: 85,
+  width: 55,
+  thickness: 25,
+  material: 'MDF',
+  finish: 'marble',
+  colours: [
+    { id: 0, value: 'black', label: 'black' },
+    { id: 1, value: 'white', label: 'white' },
+    { id: 2, value: 'silver', label: 'silver' },
+    { id: 3, value: 'brown', label: 'brown' },
+    { id: 4, value: 'lightbrown', label: 'lightbrown' },
+  ],
+  legs: 'Standard fit 30cm high 2 prong hairpin legs',
+  quote: 220,
+  protection: false,
+  stone_edge: false,
+  coasters: false,
 };

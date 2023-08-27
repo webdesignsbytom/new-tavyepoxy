@@ -5,7 +5,7 @@ import { LegData } from '../../../utils/data/LegOptionsData';
 import LegItem from '../LegItem';
 
 function LegOptionsModal({ closeLegOptionsModal }) {
-  const [legDataArray, setLegDataArray] = useState(LegData);
+  const [legDataArray] = useState(LegData);
 
   return (
     <section className='grid absolute z-40 h-full w-full bg-white outline outline-2 outline-black p-4'>

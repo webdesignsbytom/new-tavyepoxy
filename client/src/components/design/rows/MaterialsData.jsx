@@ -1,5 +1,6 @@
 import React from 'react';
-import MaterialDropdownMenu from './dropdown/MaterialDropdownMenu';
+// Components
+import MaterialDropdownMenu from '../dropdown/MaterialDropdownMenu';
 
 function MaterialsData() {
   return (

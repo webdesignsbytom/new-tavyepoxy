@@ -11,3 +11,9 @@ export const ThicknessOptions = [
   { id: 1, value: 25, label: '25mm' },
   { id: 2, value: 60, label: '60mm' },
 ];
+
+export const InitialMaterialSelection = {
+  id: 0,
+  value: 'mdf',
+  label: 'MDF',
+};

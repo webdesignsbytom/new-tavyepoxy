@@ -1,11 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 // Components
 import Navbar from '../../components/nav/Navbar';
-import DimensionsData from '../../components/design/DimensionsData';
+import DimensionsData from '../../components/design/rows/DimensionsData';
 import CanvasDesignTool from '../../components/design/CanvasDesignTool';
-import LegOptionsModal from '../../components/design/modal/LegOptionsModal';
-import EpoxyFinishOptions from '../../components/design/modal/EpoxyFinishOptions';
-import MaterialsData from '../../components/design/MaterialsData';
+import MaterialsData from '../../components/design/rows/MaterialsData';
 import SelectionRow from '../../components/design/rows/SelectionRow';
 import CheckboxSelectionData from '../../components/design/CheckboxSelectionData';
 import QuoteAndSaveRow from '../../components/design/rows/QuoteAndSaveRow';
@@ -15,9 +13,11 @@ import { ToggleContext } from '../../context/ToggleContext';
 // Data
 import { PriceData } from '../../utils/data/PricingData';
 import { DesignContext } from '../../context/DesignContext';
+// Modal
 import ConfirmColourClear from '../../components/design/modal/ConfirmColourClear';
 import ConfirmReset from '../../components/design/modal/ConfirmReset';
-// Images
+import LegOptionsModal from '../../components/design/modal/LegOptionsModal';
+import EpoxyFinishOptions from '../../components/design/modal/EpoxyFinishOptions';
 
 function DesignPage() {
   const {

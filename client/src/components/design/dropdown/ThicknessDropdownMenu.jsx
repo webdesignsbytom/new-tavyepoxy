@@ -5,13 +5,15 @@ import { ThicknessOptions } from '../../../utils/data/MaterialData';
 import { DesignContext } from '../../../context/DesignContext';
 
 function ThicknessDropdownMenu() {
-  const { setDesignDimensionsAndData, designDimensionsAndData } =
-    useContext(DesignContext);
+  const {
+    setDesignDimensionsAndData,
+    designDimensionsAndData,
+    selectedThickness,
+    setSelectedThickness,
+  } = useContext(DesignContext);
 
   const [availableThicknesses] = useState(ThicknessOptions);
-  const [selectedThickness, setSelectedThickness] = useState({
-    label: designDimensionsAndData.thickness,
-  });
+
   const [toggleThicknessDropdownMenu, setToggleThicknessDropdownMenu] =
     useState(false);
   const [enterCustomThicknessData, setEnterCustomThicknessData] = useState('');
@@ -46,6 +48,14 @@ function ThicknessDropdownMenu() {
 
   const handleSelectThicknessOption = (option) => {
     console.log('option selected', option);
+    setSelectedThickness({ label: option.value });
+
+    setToggleThicknessDropdownMenu(false);
+
+    setDesignDimensionsAndData({
+      ...designDimensionsAndData,
+      thickness: option.value,
+    });
   };
 
   console.log('designDimensionsAndData', designDimensionsAndData);
@@ -56,7 +66,8 @@ function ThicknessDropdownMenu() {
         onClick={toggleMenuOpenClosed}
       >
         <div className='grid items-center text-sm pl-2 grid-flow-col'>
-          <span>{selectedThickness.label} </span><span>mm</span>
+          <span>{selectedThickness.label} </span>
+          <span>mm</span>
         </div>
         <section className='grid justify-end'>
           <div className='bg-slate-400 cursor-pointer w-[40px] grid items-center justify-center'>

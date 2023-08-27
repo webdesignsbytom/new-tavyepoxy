@@ -1,7 +1,6 @@
 import React from 'react'
 
 function FinishItem({ data }) {
-  console.log('Data', data);
   return (
     <article>
       <div>

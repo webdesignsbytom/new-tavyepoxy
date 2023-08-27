@@ -1,12 +1,23 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+// Context
+import { DesignContext } from '../../../context/DesignContext';
+// Icons
+import { RxCross2 } from 'react-icons/rx';
 
-function ColoursDropdownMenu({ selectedColoursArr }) {
-  const [selectedColours] = useState(selectedColoursArr);
+function ColoursDropdownMenu() {
+  const { selectedColoursArr, designDimensionsAndData, setDesignDimensionsAndData, setSelectedColoursArr } = useContext(DesignContext);
 
-  const [toggleEdgeTypeMenu, setToggleEdgeTypeMenu] = useState(false);
+  const [toggleColoursList, setToggleColoursList] = useState(false);
 
   const toggleMenuOpenClosed = () => {
-    setToggleEdgeTypeMenu(!toggleEdgeTypeMenu);
+    setToggleColoursList(!toggleColoursList);
+  };
+
+  const removeColourFromList = (option) => {
+    console.log('option', option);
+    const designColourArray = designDimensionsAndData.ColoursDropdownMenu
+    console.log('designColourArray', designColourArray);
+    designColourArray.find(e => e.id === option.id)
   };
 
   return (
@@ -24,9 +35,9 @@ function ColoursDropdownMenu({ selectedColoursArr }) {
           </div>
         </section>
       </article>
-      {toggleEdgeTypeMenu && (
-        <section className='outline outline-2 outline-black rounded absolute bg-white w-full mt-1 overflow-hidden'>
-          {selectedColours.map((option, index) => {
+      {toggleColoursList && (
+        <section className='outline outline-2 outline-black rounded absolute bg-white w-full mt-1 overflow-hidden max-h-[200px] overflow-y-scroll'>
+          {selectedColoursArr.map((option, index) => {
             console.log('option', option);
             return (
               <article
@@ -38,9 +49,17 @@ function ColoursDropdownMenu({ selectedColoursArr }) {
                 <div className='grid items-center pl-2'>
                   <p className='text-xs'>{option.label}</p>
                 </div>
-                <div className='pr-2'>
-                  <div style={{ backgroundColor: option.hex }} className={`h-[18px] w-[18px] outline outline-1 outline-black`}></div>
-                </div>
+                <section className='grid grid-cols-2'>
+                  <div className='pr-2'>
+                    <div
+                      style={{ backgroundColor: option.hex || option.value }}
+                      className={`h-[18px] w-[18px] outline outline-1 outline-black`}
+                    ></div>
+                  </div>
+                  <div>
+                    <RxCross2 onClick={() => removeColourFromList(option)} />
+                  </div>
+                </section>
               </article>
             );
           })}

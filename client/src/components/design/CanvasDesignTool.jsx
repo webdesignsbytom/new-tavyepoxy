@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from 'react';
 function CanvasDesignTool({ designDimensionsAndData }) {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
-  const algaeRef = useRef([]);
 
   const [divisionInt, setDivisionInt] = useState(5);
 
@@ -12,13 +11,10 @@ function CanvasDesignTool({ designDimensionsAndData }) {
     yAxis: 0,
   });
 
-  console.log('canvasStartingPoints', canvasStartingPoints);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     var rect = canvas.parentNode.getBoundingClientRect();
 
-    console.log('RECT', rect);
     // set canvas to visible colour
     canvas.style.backgroundColor = '#bee0ec';
 
@@ -63,13 +59,13 @@ function CanvasDesignTool({ designDimensionsAndData }) {
     const canvas = canvasRef.current;
     const context = contextRef.current;
 
-    let canvasWidth = canvas.width
-    let canvasHeight = canvas.height
+    let canvasWidth = canvas.width;
+    let canvasHeight = canvas.height;
     console.log('canvasWidth', canvasWidth, canvasHeight);
     // Calculate the width and height of the rectangle
     let width = designDimensionsAndData.width;
     let length = designDimensionsAndData.length;
-  console.log('width: ' + width + ' length: ' + length);
+    console.log('width: ' + width + ' length: ' + length);
 
     if (width > canvasWidth || length > canvasHeight) {
       console.log('XXXXXXXXXXXXXXXx');
@@ -78,24 +74,23 @@ function CanvasDesignTool({ designDimensionsAndData }) {
       console.log('width d: ' + widthDiff + ' height d: ' + lengthDiff);
 
       // width = widthDiff - 100
-      length = lengthDiff - 100
+      length = lengthDiff - 100;
     }
     // if (width > canvas.width && width < canvas.width * 2) {
     //   width = width / 2;
     //   height = height / 2;
     // }
 
-    
     // if (height > canvas.height && height < canvas.height * 2) {
     //   width = width / 2;
     //   height = height / 2;
     // }
-    
+
     // if (height > canvas.height * 2 && height < canvas.height * 3) {
     //   width = width / 2.2;
     //   height = height / 2.2;
     // }
-    
+
     // if (width > canvas.width * 2 && width < canvas.width * 3) {
     //   width = width / 2.2;
     //   height = height / 2.2;
@@ -104,7 +99,7 @@ function CanvasDesignTool({ designDimensionsAndData }) {
     // Calculate the starting position for the rectangle to center it
     const x = (canvas.width - width) / 2;
     const y = (canvas.height - length) / 2;
-    
+
     // Draw the inner rectangle
     context.strokeStyle = 'blue'; // Set the color for the inner rectangle
     context.lineWidth = 1; // Set the width for the inner rectangle border
