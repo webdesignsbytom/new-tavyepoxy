@@ -3,6 +3,9 @@ import React, { useContext, useEffect } from 'react';
 import Navbar from '../../components/nav/Navbar';
 // Context
 import { ToggleContext } from '../../context/ToggleContext';
+import { Link } from 'react-router-dom';
+// Icons
+import { AiFillInstagram } from 'react-icons/ai';
 
 function ContactPage() {
   const { setActiveNav } = useContext(ToggleContext);
@@ -29,20 +32,38 @@ function ContactPage() {
                     <p>I am happy to answer any questions.</p>
                     <p>Bespoke and custom jobs on request.</p>
                     <div className='mt-2 text-center'>
-                      <strong>By Email @</strong> <span>email@gmail.com</span>
+                      <strong>By Email @</strong>{' '}
+                      <span>josh@tavy-epoxy.co.uk</span>
                     </div>
-                    <div className='text-center'>
-                      <strong>By Phone @</strong> <span>0463347755</span>
-                    </div>
-
+                    {/* <div className='text-center'>
+                      <strong>By Phone @</strong> <span></span>
+                    </div> */}
                     <div className='text-center mt-4'>
                       <p>
                         You can also <br />
-                        <span className='text-hyperlink-blue'><a href="https://folksy.com/shops/NicHarman">Click Here</a> </span> and be taken to one of my{' '}
-                        <br />
+                        <span className='text-hyperlink-blue'>
+                          <Link to='/sales'>Click Here</Link>
+                        </span>{' '}
+                        and be taken to one of my <br />
                         shopping portals instantly!
                       </p>
                     </div>
+                  </div>
+                  <div className='text-center mt-2'>
+                    <span>
+                      See more images and videos on{' '}
+                      <span className='text-hyperlink-blue'><br />
+                        <a href='https://www.instagram.com/tavyepoxy/' className='text-center'>
+                          <div className='grid grid-flow-col justify-center'>
+
+                          Instagram{' '}
+                          <div className='grid items-center pl-2'>
+                            <AiFillInstagram />
+                          </div>
+                          </div>
+                        </a>
+                      </span>
+                    </span>
                   </div>
                 </section>
               </div>

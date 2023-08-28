@@ -45,7 +45,7 @@ function GalleryPage() {
             </section>
             {/* GALLERY */}
             <section className='mt-16 px-2 lg:px-12'>
-              <div className='grid justify-center md:grid-cols-2 lg:grid-cols-aaa gap-4 text-center'>
+              <div className='grid justify-center md:grid-cols-2 lg:grid-cols-aaa gap-6 text-center'>
                 {galleryItems?.map((item, index) => {
                   return <GalleryItem key={index} item={item} />;
                 })}

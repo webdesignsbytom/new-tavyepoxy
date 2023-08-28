@@ -46,7 +46,7 @@ function HomePage() {
               </div>
               <div className='relative shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]'>
                 <img
-                  className='w-full my-4 md:my-0'
+                  className='w-full my-4 md:my-0 rounded'
                   src={BannerImage}
                   alt='Banner'
                 />
@@ -64,7 +64,8 @@ function HomePage() {
               </div>
               <div className='text-sm'>
                 <h5 className='my-4 md:my-0'>
-                  Custom Designs available within 4 weeks
+                  Custom Designs available within 4 weeks - 
+                  <span>{' '}Starting at <span className='font-bold'>£220!</span></span>
                 </h5>
                 <h6>World Wide Shipping available</h6>
               </div>

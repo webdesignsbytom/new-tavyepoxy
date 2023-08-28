@@ -13,11 +13,16 @@ function ColoursDropdownMenu() {
     setToggleColoursList(!toggleColoursList);
   };
 
+  // const removeColourFromList = (option) => {
+  //   console.log('option', option);
+  //   const designColourArray = designDimensionsAndData.ColoursDropdownMenu
+  //   console.log('designColourArray', designColourArray);
+  //   designColourArray.find(e => e.id === option.id)
+  // };
+
   const removeColourFromList = (option) => {
-    console.log('option', option);
-    const designColourArray = designDimensionsAndData.ColoursDropdownMenu
-    console.log('designColourArray', designColourArray);
-    designColourArray.find(e => e.id === option.id)
+    const updatedSelectedColoursArr = selectedColoursArr.filter(color => color.id !== option.id);
+    setSelectedColoursArr(updatedSelectedColoursArr);
   };
 
   return (

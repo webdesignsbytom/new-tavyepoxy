@@ -67,6 +67,9 @@ function CanvasDesignTool({ designDimensionsAndData }) {
     let length = designDimensionsAndData.length;
     console.log('width: ' + width + ' length: ' + length);
 
+    width *= 2
+    length *= 2
+
     if (width > canvasWidth || length > canvasHeight) {
       console.log('XXXXXXXXXXXXXXXx');
       let widthDiff = width - canvasWidth;
