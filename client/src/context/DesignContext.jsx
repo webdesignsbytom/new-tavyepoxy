@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useEffect, useState } from 'react';
 // Data
 import { InitialDesignData } from '../utils/data/PricingData';
 import { InitialMaterialSelection } from '../utils/data/MaterialData';
@@ -10,6 +10,8 @@ const DesignContextProvider = ({ children }) => {
     useState(InitialDesignData);
 
   const [designColourList, setDesignColourList] = useState([]);
+
+  const [squareMeterOfDesignList, setSquareMeterOfDesignList] = useState('');
 
   const [selectedColoursArr, setSelectedColoursArr] = useState(
     InitialDesignData.colours
@@ -26,7 +28,7 @@ const DesignContextProvider = ({ children }) => {
   const [selectedThickness, setSelectedThickness] = useState({
     label: designDimensionsAndData.thickness,
   });
-
+  
   return (
     <DesignContext.Provider
       value={{
@@ -42,6 +44,8 @@ const DesignContextProvider = ({ children }) => {
         setSelectedMaterial,
         selectedThickness,
         setSelectedThickness,
+        squareMeterOfDesignList,
+        setSquareMeterOfDesignList,
       }}
     >
       {children}

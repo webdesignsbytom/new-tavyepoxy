@@ -8,12 +8,13 @@ import { InitialMaterialSelection } from '../../../utils/data/MaterialData';
 
 function ConfirmReset() {
   const { toggleResetAllClosed } = useContext(ToggleContext);
-  const { setDesignDimensionsAndData, setSelectedMaterial, setSelectedThickness } = useContext(DesignContext)
+  const { setDesignDimensionsAndData, setSelectedMaterial, setSelectedThickness, setSelectedColoursArr } = useContext(DesignContext)
 
   const resetAllDesignParameters = () => {
     setDesignDimensionsAndData(InitialDesignData)
     setSelectedMaterial(InitialMaterialSelection)
     setSelectedThickness({ label: 25 })
+    setSelectedColoursArr(InitialDesignData.colours)
     toggleResetAllClosed()
   };
 

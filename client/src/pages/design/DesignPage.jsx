@@ -36,6 +36,7 @@ function DesignPage() {
     setDesignDimensionsAndData,
     designQuoteData,
     setDesignQuoteData,
+    setSquareMeterOfDesignList
   } = useContext(DesignContext);
 
   const [colourAddedByUser, setColourAddedByUser] = useState('');
@@ -62,6 +63,35 @@ function DesignPage() {
       finalQuote: total,
     });
   }, [designDimensionsAndData]);
+
+  useEffect(() => {
+    let sqMeter =
+      designDimensionsAndData.length * designDimensionsAndData.width;
+
+    let newString = `0.${sqMeter}`;
+
+    if (sqMeter < 10000) {
+      setSquareMeterOfDesignList(newString);
+    } else if (sqMeter >= 10000 && sqMeter < 20000) {
+      newString = `1.${sqMeter}`;
+      setSquareMeterOfDesignList(newString);
+    } else if (sqMeter >= 20000 && sqMeter < 30000) {
+      newString = `2.${sqMeter}`;
+      setSquareMeterOfDesignList(newString);
+    } else if (sqMeter >= 30000 && sqMeter < 40000) {
+      newString = `3.${sqMeter}`;
+      setSquareMeterOfDesignList(newString);
+    } else if (sqMeter >= 40000 && sqMeter < 50000) {
+      newString = `4.${sqMeter}`;
+      setSquareMeterOfDesignList(newString);
+    } else if (sqMeter >= 50000 && sqMeter < 60000) {
+      newString = `5.${sqMeter}`;
+      setSquareMeterOfDesignList(newString);
+    } else if (sqMeter >= 60000 && sqMeter < 70000) {
+      newString = `6.${sqMeter}`;
+      setSquareMeterOfDesignList(newString);
+    }
+  }, [designDimensionsAndData.length, designDimensionsAndData.width]);
 
   const addNewColourToList = () => {
     let newList = designDimensionsAndData.colours;
@@ -107,10 +137,10 @@ function DesignPage() {
     event.preventDefault();
     const { name, value } = event.target;
 
-    // setColourAddedByUser({
-    //   ...colourAddedByUser,
-    //   [name]: value,
-    // });
+    setColourAddedByUser({
+      ...colourAddedByUser,
+      [name]: value,
+    });
   };
 
   return (
