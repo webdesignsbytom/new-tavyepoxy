@@ -15,7 +15,7 @@
 /* If your CSS file is directly in the 'styles' directory */
 .marble-text {
   font-size: 48px;
-  background-image: url('../assets/images/epoxy/black_marble.jpg');
+  background-image: url('../assets/images/buttons/black_marble.jpg');
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
