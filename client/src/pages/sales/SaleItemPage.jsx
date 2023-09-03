@@ -68,10 +68,19 @@ function SaleItemPage() {
                       <span>Dimensions: {item.pageData.dimensions}</span>
                     </div>
                     <div>
+                      <span>Height: {item.pageData.height}</span>
+                    </div>
+                    <div>
                       <span>Legs: {item.pageData.legs}</span>
                     </div>
                     <div>
-                      <span>Price: {item.price}</span>
+                      <span>Price: £{item.price}</span>
+                    </div>
+                    <div>
+                      <span>Shipping: £{item.shipping}</span>
+                    </div>
+                    <div className='mt-4'>
+                      <span>{item.desc}</span>
                     </div>
                   </div>
                 </div>
