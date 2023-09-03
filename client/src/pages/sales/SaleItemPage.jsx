@@ -12,7 +12,6 @@ function SaleItemPage() {
 
   const [images, setImages] = useState([]);
   const [imagesNum, setImagesNum] = useState(0);
-  
 
   useEffect(() => {
     setImages(item.pageData.images);
@@ -89,6 +88,10 @@ function SaleItemPage() {
             {/* Right */}
             <section className='grid grid-rows-rev lg:overflow-hidden shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] p-4 rounded-xl outline outline-1 outline-black'>
               <div className='outline outline-black outline-2 lg:overflow-hidden'>
+                <video id='{index}' className='max-h-[180px] w-fit' controls>
+                  <source src={item.pageData.videoLink} type='video/mp4' />
+                  Your browser does not support the video tag.
+                </video>
                 <img
                   className='lg:overflow-hidden h-full object-fill w-full'
                   src={item.pageData.images[imagesNum]}
