@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../../components/nav/Navbar';
 // Context
 import { ToggleContext } from '../../context/ToggleContext';
+import GalleryItemData from '../../components/gallery/GalleryItemData';
 
 function GalleryItemPage() {
   const { setActiveNav } = useContext(ToggleContext);
@@ -46,8 +47,8 @@ function GalleryItemPage() {
     <div className='grid bg-gray-100 lg:h-screen grid-rows-reg lg:overflow-hidden lg:max-h-screen'>
       <Navbar />
       {/* Main */}
-      <main className='grid h-full mb-2 lg:overflow-hidden px-2'>
-        <div className='grid w-full lg:w-3/4 mx-auto grid-rows-reg lg:overflow-hidden'>
+      <main className='grid grid-rows-rev h-full mb-2 lg:overflow-hidden'>
+        <div className='grid w-full lg:w-3/4 mx-auto grid-rows-reg lg:overflow-hidden px-2'>
           <section className='my-4'>
             <div className='text-center border-b-2 border-black border-solid pb-2 mx-4'>
               <h1 className='text-2xl font-corgs'>{item.name}</h1>
@@ -55,46 +56,7 @@ function GalleryItemPage() {
           </section>
           <section className='grid w-full lg:grid-cols-2 gap-4 mb-2 lg:overflow-hidden p-1'>
             {/* Left */}
-            <section className='shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] rounded-xl outline outline-1 outline-black'>
-              <article className='p-4'>
-                <div className='mb-4 '>
-                  <h2 className='text-xl'>{item.pageData.subtitle}</h2>
-                </div>
-                <div>
-                  <div className='mb-2'>
-                    <h3 className='underline'>Design information</h3>
-                  </div>
-                  <div>
-                    <div>
-                      <span>Timber: {item.pageData.timber}</span>
-                    </div>
-                    <div>
-                      <span>Undercoat: {item.pageData.undercoat}</span>
-                    </div>
-                    <div>
-                      <span>Colours used: {item.colours}</span>
-                    </div>
-                    <div>
-                      <span>Dimensions: {item.pageData.dimensions}</span>
-                    </div>
-                    <div>
-                      <span>Legs: {item.pageData.legs}</span>
-                    </div>
-                    <div>
-                      <span>
-                        Production Time: {item.pageData.productionTime}
-                      </span>
-                    </div>
-                    <div>
-                      <span>Price: {item.pageData.price}</span>
-                    </div>
-                  </div>
-                  <div className='mt-4'>
-                    <span>Data: {item.data}</span>
-                  </div>
-                </div>
-              </article>
-            </section>
+            <GalleryItemData item={item} />
             {/* Right */}
             <section className='grid grid-rows-rev lg:overflow-hidden shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] p-4 rounded-xl outline outline-1 outline-black'>
               <div className='outline outline-black outline-2 lg:overflow-hidden'>
@@ -127,15 +89,24 @@ function GalleryItemPage() {
             </section>
           </section>
         </div>
-        <section className='lg:hidden px-2'>
-          <div>
-            <button
-              id='/gallery'
-              onClick={navigateToPage}
-              className='outline outline-2 w-full font-semibold text-xl outline-black rounded-xl py-2 px-4 white__marble__bg active:scale-95 no__highlights hover:opacity-70'
-            >
-              Gallery
-            </button>
+
+        {/* Gallery items */}
+        <section className='grid mb-2 border-t-2 border-solid border-black'>
+          <div className='grid grid-flow-col px-2'>
+            {images.map((image, index) => {
+              return (
+                <div
+                  key={index}
+                  className='w-1/2 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]rounded '
+                >
+                  <img
+                    className='lg:overflow-hidden h-full object-fill w-full'
+                    src={image}
+                    alt='design'
+                  />
+                </div>
+              );
+            })}
           </div>
         </section>
       </main>
