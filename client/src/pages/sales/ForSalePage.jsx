@@ -48,10 +48,11 @@ function ForSalePage() {
           </section>
 
           <section className='grid lg:w-3/4 mx-auto'>
-
-          <AvailableItemsSection />
+            <AvailableItemsSection />
           </section>
+
           <SalesLinks />
+          
           <section>
             <p>
               We are not happy that due to the massive increase in materials in

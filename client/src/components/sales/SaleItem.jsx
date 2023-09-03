@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+// Images
+import SaleImage from '../../assets/images/sales/onsale.png'
 
 function SaleItem({ item }) {
   const navigate = useNavigate();
@@ -22,7 +24,12 @@ function SaleItem({ item }) {
           <p>£ {item.price}</p>
         </div>
       </section>
-      <section>
+      <section className='relative'>
+        {item.onSale && (
+          <div className='absolute top-0 left-0'>
+            <img src={SaleImage} alt='Sale' className='w-[120px]' />
+          </div>
+        )}
         <div className='grid justify-center mt-2 leading-5'>
           <img
             className='max-h-[300px] w-full object-cover'

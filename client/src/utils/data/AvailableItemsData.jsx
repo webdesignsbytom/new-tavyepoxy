@@ -71,6 +71,7 @@ export const AvailableItemsArray = [
   //     name: 'Table',
   //     price: 200,
   //     shipping: 24,
+  //     onSale: false,
   //     desc: 'Table well made'
   //     images: []
   // }
@@ -78,8 +79,9 @@ export const AvailableItemsArray = [
     id: 1,
     name: 'Striation Table',
     url: 'striation_table_one',
-    price: 200,
+    price: 240,
     shipping: 24,
+    onSale: false,
     desc: 'Beautiful wood style striations with vibrant solid and metallic colours. One of the best selling designs we have and are always unique. This table is made to be a stunning yet affordable epoxy resin coffee table. Glass smooth epoxy table top with a pattern that flows over the edges for an effect that looks like it was cut from a piece of wood. Hand made and crafted in Devon.',
     pageData: {
       subtitle: 'Natural wood vein design',
@@ -94,8 +96,9 @@ export const AvailableItemsArray = [
     id: 2,
     name: 'Striation Table',
     url: 'striation_table_two',
-    price: 200,
+    price: 240,
     shipping: 24,
+    onSale: false,
     desc: 'Beautiful wood style striations with vibrant solid and metallic colours. One of the best selling designs we have and are always unique. This table is made to be a stunning yet affordable epoxy resin coffee table. Glass smooth epoxy table top with a pattern that flows over the edges for an effect that looks like it was cut from a piece of wood. Hand made and crafted in Devon.',
     pageData: {
       subtitle: 'Natural wood vein design',
@@ -110,8 +113,9 @@ export const AvailableItemsArray = [
     id: 3,
     name: 'Striation Table',
     url: 'striation_table_three',
-    price: 200,
+    price: 240,
     shipping: 24,
+    onSale: false,
     desc: 'Beautiful wood style striations with vibrant solid and metallic colours. One of the best selling designs we have and are always unique. This table is made to be a stunning yet affordable epoxy resin coffee table. Glass smooth epoxy table top with a pattern that flows over the edges for an effect that looks like it was cut from a piece of wood. Hand made and crafted in Devon.',
     pageData: {
       subtitle: 'Natural wood vein design',
@@ -128,6 +132,7 @@ export const AvailableItemsArray = [
     url: 'stone_table_one',
     price: 200,
     shipping: 24,
+    onSale: false,
     desc: 'Stone effect with layers of detail, the colours in these are made by mixing natural metallics and earthy colours. This table is made to be a stunning yet affordable epoxy resin coffee table. Glass smooth epoxy table top with a pattern that flows over the edges for an effect that looks like it was cut from a piece of wood. Hand made and crafted in Devon.',
     pageData: {
       subtitle: 'Natural wood vein design',
@@ -144,6 +149,7 @@ export const AvailableItemsArray = [
     url: 'stone_table_two',
     price: 200,
     shipping: 24,
+    onSale: false,
     desc: 'Stone effect with layers of detail, the colours in these are made by mixing natural metallics and earthy colours. This table is made to be a stunning yet affordable epoxy resin coffee table. Glass smooth epoxy table top with a pattern that flows over the edges for an effect that looks like it was cut from a piece of wood. Hand made and crafted in Devon.',
     pageData: {
       subtitle: 'Natural wood vein design',
@@ -158,8 +164,9 @@ export const AvailableItemsArray = [
     id: 6,
     name: 'Ocean Sky Table',
     url: 'ocean_sky_one',
-    price: 200,
+    price: 150,
     shipping: 24,
+    onSale: true,
     desc: 'Blues, black, white and greys combine to make such a natural splash of colours that you can stare at for hours. This table is made to be a stunning yet affordable epoxy resin coffee table. Glass smooth epoxy table top with a pattern that flows over the edges for an effect that looks like it was cut from a piece of wood. Hand made and crafted in Devon.',
     pageData: {
       subtitle: 'Natural wood vein design',
@@ -186,8 +193,9 @@ export const AvailableItemsArray = [
     id: 7,
     name: 'Ocean Sky Table',
     url: 'ocean_sky_two',
-    price: 200,
+    price: 150,
     shipping: 24,
+    onSale: true,
     desc: 'Blues, black, white and greys combine to make such a natural splash of colours that you can stare at for hours. This table is made to be a stunning yet affordable epoxy resin coffee table. Glass smooth epoxy table top with a pattern that flows over the edges for an effect that looks like it was cut from a piece of wood. Hand made and crafted in Devon.',
     pageData: {
       subtitle: 'Natural wood vein design',
