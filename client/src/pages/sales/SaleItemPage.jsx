@@ -70,7 +70,7 @@ function SaleItemPage() {
                   <h2 className='text-xl'>{item.pageData.subtitle}</h2>
                 </div>
                 <div>
-                  <div className='mb-2'>
+                  <div className='mb-2 text-center'>
                     <h3 className='underline'>Design information</h3>
                   </div>
                   <div>

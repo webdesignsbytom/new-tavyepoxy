@@ -51,17 +51,19 @@ function ForSalePage() {
             <AvailableItemsSection />
           </section>
 
-          <SalesLinks />
-          
-          <section>
-            <p>
-              We are not happy that due to the massive increase in materials in
-              the UK we have to charge more than usual for these fine products.
-              They are worth it and we strive to make affordable products where
-              ever possible. This is a pursuit of craft and not money.
-            </p>
+          <section className='grid lg:w-3/4 mx-auto'>
+            <SalesLinks />
+            <section>
+              <p>
+                We are not happy that due to the massive increase in materials
+                in the UK we have to charge more than usual for these fine
+                products. They are worth it and we strive to make affordable
+                products where ever possible. This is a pursuit of craft and not
+                money.
+              </p>
+            </section>
+            <CtaInternalLinks />
           </section>
-          <CtaInternalLinks />
         </div>
       </main>
       <FooterComponent />
