@@ -23,9 +23,9 @@ function ForSalePage() {
       <Navbar />
       {/* Main */}
       <main className='grid h-full'>
-        <div className='grid grid-rows-aa1 w-full px-6 lg:px-0 lg:w-1/2 mx-auto'>
-          <section>
-            <article className='mt-8'>
+        <div className='grid grid-rows-aa1 w-full px-6 lg:px-0 '>
+          <section className='grid lg:w-1/2 mx-auto'>
+            <article className='mt-8 text-center'>
               <div className='mb-4'>
                 <h2 className='text-2xl pb-6 font-corgs font-medium border-b-2 border-solid border-black'>
                   Currently Available Products
@@ -47,9 +47,11 @@ function ForSalePage() {
             </article>
           </section>
 
-          <SalesLinks />
+          <section className='grid lg:w-3/4 mx-auto'>
 
           <AvailableItemsSection />
+          </section>
+          <SalesLinks />
           <section>
             <p>
               We are not happy that due to the massive increase in materials in

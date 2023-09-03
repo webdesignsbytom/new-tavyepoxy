@@ -11,7 +11,7 @@ function AvailableItemsSection() {
 
   return (
     <section className='grid'>
-      <div className='mt-6'>
+      <div className='mt-12'>
         <h3 className='text-xl font-semibold border-b-2 border-solid border-black pb-4'>
           Tables and Furniture For Sale
         </h3>
@@ -19,7 +19,7 @@ function AvailableItemsSection() {
 
       <section className='p-2 my-2'>
         {availableProducts.length > 0 ? (
-          <section className='grid md:grid-cols-2 gap-4'>
+          <section className='grid md:grid-cols-3 gap-4'>
             {availableProducts.map((item, index) => {
               return <SaleItem item={item} key={index} />;
             })}
