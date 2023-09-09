@@ -9,6 +9,7 @@ Live link to site [HERE](https://preeminent-sable-e1b5f8.netlify.app/)
   - [General info](#general-info)
   - [Technologies](#technologies)
   - [Run this project locally](#run-this-project-locally)
+  - [Product Blurbs and information](#product-blurbs-and-information)
 
 ## General info
 
@@ -28,3 +29,8 @@ Backend: Express, Prisma, JavaScript
 2. Navigate to client and server files and run
 3. `npm install`
 4. `npm start`
+
+## Product Blurbs and information
+
+Google Sheets
+[Click here](https://docs.google.com/spreadsheets/d/1YxnI5Bo5K31ElTWL0QvnnfEK4INI9qy_mXqoahAKRMM/edit?usp=sharing)
