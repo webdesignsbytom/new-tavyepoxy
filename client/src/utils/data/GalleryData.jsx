@@ -64,30 +64,42 @@ import WSz2 from '../../assets/images/tables/striation_three_2.png';
 import WSz3 from '../../assets/images/tables/striation_three_3.png';
 import WSz4 from '../../assets/images/tables/striation_three_4.png';
 import WSz5 from '../../assets/images/tables/striation_three_5.png';
-// Table 1
+// Table 1 Striation
 import GalleryImage1 from '../../assets/images/gallery/table1/striation1.jpg';
 import Table1Image1 from '../../assets/images/gallery/table1/striation1.jpg';
-// Table 2
+// Table 2 Blues
 import GalleryImage2 from '../../assets/images/gallery/table2/longBlue5.png';
-import Table2Image1 from '../../assets/images/gallery/table2/longBlue5.png';
-// Table 3
+// Table 3 StoneWash
 import GalleryImage3 from '../../assets/images/gallery/table3/stone1.jpg';
 import Table3Image1 from '../../assets/images/gallery/table3/stone1.jpg';
-// Table 4
+import Table3Image2 from '../../assets/images/gallery/table3/stone2.jpg';
+import Table3Image3 from '../../assets/images/gallery/table3/stone3.jpg';
+// Table 4 Northern Lights
 import GalleryImage4 from '../../assets/images/gallery/table4/lights1.jpg';
 import Table4Image1 from '../../assets/images/gallery/table4/lights1.jpg';
-// Table 5
+import Table4Image2 from '../../assets/images/gallery/table4/lights2.jpg';
+import Table4Image3 from '../../assets/images/gallery/table4/lights3.jpg';
+// Counters stone
 import GalleryImage5 from '../../assets/images/gallery/table5/counter1.jpg';
 import Table5Image1 from '../../assets/images/gallery/table5/counter1.jpg';
-// Table 6
+import Table5Image2 from '../../assets/images/gallery/table5/counter2.jpg';
+import Table5Image3 from '../../assets/images/gallery/table5/counter3.jpg';
+// Table 6 Red table
 import GalleryImage6 from '../../assets/images/gallery/table6/red1.jpg';
 import Table6Image1 from '../../assets/images/gallery/table6/red1.jpg';
-// Table 7
+import Table6Image2 from '../../assets/images/gallery/table6/red2.jpg';
+import Table6Image3 from '../../assets/images/gallery/table6/red3.jpg';
+// Table 7 Striation desk
 import GalleryImage7 from '../../assets/images/gallery/table7/desk1.jpg';
 import Table7Image1 from '../../assets/images/gallery/table7/desk1.jpg';
-// Table 8
+import Table7Image2 from '../../assets/images/gallery/table7/desk2.jpg';
+import Table7Image3 from '../../assets/images/gallery/table7/desk3.jpg';
+import Table7Image4 from '../../assets/images/gallery/table7/desk4.jpg';
+// Table 8 Orange table
 import GalleryImage8 from '../../assets/images/gallery/table8/orange1.png';
 import Table8Image1 from '../../assets/images/gallery/table8/orange1.png';
+import Table8Image2 from '../../assets/images/gallery/table8/orange2.png';
+import Table8Image3 from '../../assets/images/gallery/table8/orange3.png';
 
 export const galleryDataArray = [
   {
@@ -141,12 +153,10 @@ export const galleryDataArray = [
       subtitle: 'Center piece and art',
       undercoat: 'Black',
       timber: 'Oak',
-      legs: 'Oak posts',
+      legs: 'Metal hairpin legs',
       dimensions: '5 foot buy 1.8 feet',
       images: [
         GalleryImage2,
-        GalleryImage8,
-        GalleryImage3,
         OSx1,
         OSx3,
         OSx6,
@@ -171,12 +181,10 @@ export const galleryDataArray = [
     pageData: {
       subtitle: 'Stone cut table top',
       undercoat: 'Black',
-      timber: 'Oak',
-      legs: 'Cross legs made from oak',
+      timber: 'MDF',
+      legs: 'Metal hairpin legs',
       dimensions: '2x2',
       images: [
-        GalleryImage3,
-        Table3Image1,
         STx1,
         STx2,
         STx3,
@@ -206,7 +214,7 @@ export const galleryDataArray = [
       timber: 'Oak',
       legs: 'Cross legs made from oak',
       dimensions: '2x2',
-      images: [GalleryImage3, Table3Image1],
+      images: [Table3Image1, Table3Image2, Table3Image3],
     },
   },
   {
@@ -224,7 +232,7 @@ export const galleryDataArray = [
       timber: 'Oak',
       legs: 'Metal square frame',
       dimensions: '3 foot x 1.8 foot',
-      images: [GalleryImage4, Table4Image1],
+      images: [Table4Image1, Table4Image2, Table4Image3],
     },
   },
   {
@@ -235,14 +243,14 @@ export const galleryDataArray = [
       'Not a table but a series of kitchen counters made to look like a beautiful and unique stone effect. Using natural stone and metallic colours and allowed to flow together using gravity and air pressure to create a gorgeous effect.',
     desc: 'Not a table but a series of kitchen counters made to look like a beautiful and unique stone effect. Using natural stone and metallic colours and allowed to flow together using gravity and air pressure to create a gorgeous effect.',
     imageUrl: GalleryImage5,
-    colours: 'Orange, copper, brown, silver black white metallics',
+    colours:  'Bronze, copper, brown, with silver, black and white metallics',
     pageData: {
       subtitle: 'Stone counters',
       undercoat: 'White',
       timber: 'MDF',
       legs: 'None',
       dimensions: 'N/A',
-      images: [GalleryImage5, Table5Image1],
+      images: [Table5Image1, Table5Image2, Table5Image3],
     },
   },
   {
@@ -260,7 +268,7 @@ export const galleryDataArray = [
       timber: 'Oak',
       legs: 'Oak cross beam legs',
       dimensions: '1.5 foot x 3 foot',
-      images: [GalleryImage6, Table6Image1],
+      images: [Table6Image1, Table6Image2, Table6Image3],
     },
   },
   {
@@ -278,7 +286,7 @@ export const galleryDataArray = [
       timber: 'MDF',
       legs: 'Stands',
       dimensions: '2 meters x 80cm',
-      images: [GalleryImage7, Table7Image1],
+      images: [Table7Image1, Table7Image2, Table7Image3, Table7Image4],
     },
   },
   {
@@ -295,7 +303,7 @@ export const galleryDataArray = [
       timber: 'Oak',
       legs: 'N/A',
       dimensions: '2 foot x 3.5 foot',
-      images: [GalleryImage8, Table8Image1],
+      images: [Table8Image1, Table8Image2, Table8Image3],
     },
   },
 ];
