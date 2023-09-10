@@ -2,12 +2,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 // Components
 import Navbar from '../../components/nav/Navbar';
+import SaleItemInfo from '../../components/sales/SaleItemInfo';
+import SalesItemImages from '../../components/sales/SalesItemImages';
+import FullSizeImageContainer from '../../components/gallery/FullSizeImageContainer';
 // Context
 import { ToggleContext } from '../../context/ToggleContext';
 // Images
 import SaleImage from '../../assets/images/sales/onsale.png';
-import SaleItemInfo from '../../components/sales/SaleItemInfo';
-import SalesItemImages from '../../components/sales/SalesItemImages';
 
 function SaleItemPage() {
   const { setActiveNav } = useContext(ToggleContext);
@@ -18,6 +19,7 @@ function SaleItemPage() {
   const [imagesNum, setImagesNum] = useState(0);
 
   const [displayVideo, setDisplayVideo] = useState(false);
+  const [fullscreenDisplay, setFullscreenDisplay] = useState(false);
 
   useEffect(() => {
     setImages(item.pageData.images);
@@ -47,8 +49,25 @@ function SaleItemPage() {
     setDisplayVideo(true);
   };
 
+  const openFullscreenDisplay = () => {
+    setFullscreenDisplay(true);
+  };
+
+  const closeFullscreenDisplay = () => {
+    setFullscreenDisplay(false);
+  };
+
   return (
     <div className='grid bg-gray-100 grid-rows-reg '>
+      {fullscreenDisplay && (
+        <FullSizeImageContainer
+          closeFullscreenDisplay={closeFullscreenDisplay}
+          item={item}
+          imagesNum={imagesNum}
+          selectPrevImg={selectPrevImg}
+          selectNextImg={selectNextImg}
+        />
+      )}
       <Navbar />
       {/* Main */}
       <main className='grid h-full mb-2 lg:overflow-hidden px-2'>
@@ -71,6 +90,7 @@ function SaleItemPage() {
               displayVideo={displayVideo}
               imagesNum={imagesNum}
               item={item}
+              openFullscreenDisplay={openFullscreenDisplay}
               selectNextImg={selectNextImg}
               selectVideo={selectVideo}
               selectPrevImg={selectPrevImg}

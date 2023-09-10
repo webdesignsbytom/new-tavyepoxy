@@ -7,6 +7,7 @@ function SalesItemImages({
   selectNextImg,
   selectVideo,
   selectPrevImg,
+  openFullscreenDisplay
 }) {
   return (
     <section className='grid grid-rows-rev lg:overflow-hidden lg:max-h-[500px] shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] p-4 rounded-xl outline outline-1 outline-black'>
@@ -21,7 +22,7 @@ function SalesItemImages({
           </div>
         </article>
       ) : (
-        <div className='outline outline-black outline-2 lg:overflow-hidden'>
+        <div onClick={openFullscreenDisplay} className='outline outline-black outline-2 lg:overflow-hidden cursor-pointer'>
           <img
             className='lg:overflow-hidden h-full object-fill w-full'
             src={item.pageData.images[imagesNum]}

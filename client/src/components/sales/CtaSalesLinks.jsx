@@ -9,7 +9,7 @@ function CtaSalesLinks({ navigateToPage }) {
           onClick={navigateToPage}
           className='py-2 font-bold outline-2 w-full no__highlights hover:opacity-70 white__marble__bg active:scale-95 outline-black outline rounded-xl text-center'
         >
-          Contact
+          Contact Us Now
         </button>
       </div>
       <div>

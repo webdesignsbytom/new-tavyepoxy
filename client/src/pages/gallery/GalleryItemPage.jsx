@@ -64,13 +64,19 @@ function GalleryItemPage() {
   };
 
   return (
-    <div className='grid bg-gray-100 grid-rows-reg'>
+    <div className='grid relative bg-gray-100 grid-rows-reg'>
+      {fullscreenDisplay && (
+        <FullSizeImageContainer
+          closeFullscreenDisplay={closeFullscreenDisplay}
+          item={item}
+          imagesNum={imagesNum}
+          selectPrevImg={selectPrevImg}
+          selectNextImg={selectNextImg}
+        />
+      )}
       <Navbar />
       {/* Main */}
-      <main className='relative grid grid-rows-rev h-full mb-2 lg:overflow-hidden'>
-        {fullscreenDisplay && (
-          <FullSizeImageContainer closeFullscreenDisplay={closeFullscreenDisplay} />
-        )}
+      <main className='grid grid-rows-rev h-full mb-2 lg:overflow-hidden'>
         <div className='grid w-full lg:w-3/4 mx-auto grid-rows-reg lg:overflow-hidden px-2'>
           <section className='my-4'>
             <div className='text-center border-b-2 border-black border-solid pb-2 mx-4'>
