@@ -100,6 +100,14 @@ import GalleryImage8 from '../../assets/images/gallery/table8/orange1.png';
 import Table8Image1 from '../../assets/images/gallery/table8/orange1.png';
 import Table8Image2 from '../../assets/images/gallery/table8/orange2.png';
 import Table8Image3 from '../../assets/images/gallery/table8/orange3.png';
+// Videos
+import OSxVideo from '../../assets/video/OS1video.mp4';
+import OSyVideo from '../../assets/video/OS2video.mp4';
+import STxVideo from '../../assets/video/ST1video.mp4';
+// import STyVideo from '../../assets/video/ST2video.mp4';
+import WSxVideo from '../../assets/video/WS1video.mp4';
+import WSyVideo from '../../assets/video/WS2video.mp4';
+import WSzVideo from '../../assets/video/WS3video.mp4';
 
 export const galleryDataArray = [
   {
@@ -114,7 +122,7 @@ export const galleryDataArray = [
       'Metallic black base, earth brown, silver, ivory white, copper metallic',
     pageData: {
       subtitle: 'Natural wood vein design',
-      videoLinks: '',
+      videoLinks: WSxVideo,
       undercoat: 'Black',
       timber: 'MDF',
       legs: 'Metal pin legs',
@@ -122,6 +130,9 @@ export const galleryDataArray = [
       images: [
         Table1Image1,
         WSx1,
+        WSy3,
+        WSz1,
+        GalleryImage7,
         WSx2,
         WSx3,
         WSx4,
@@ -129,11 +140,9 @@ export const galleryDataArray = [
         WSx6,
         WSy1,
         WSy2,
-        WSy3,
         WSy4,
         WSy5,
         WSy6,
-        WSz1,
         WSz2,
         WSz3,
         WSz4,
@@ -152,7 +161,7 @@ export const galleryDataArray = [
     colours: 'Ocean blues, lightning blue, silver black white metallics',
     pageData: {
       subtitle: 'Center piece and art',
-      videoLinks: '',
+      videoLinks: OSxVideo,
       undercoat: 'Black',
       timber: 'Oak',
       legs: 'Metal hairpin legs',
@@ -182,7 +191,7 @@ export const galleryDataArray = [
     colours: 'Copper, bronze, black, silver, gray',
     pageData: {
       subtitle: 'Stone cut table top',
-      videoLinks: '',
+      videoLinks: STxVideo,
       undercoat: 'Black',
       timber: 'MDF',
       legs: 'Metal hairpin legs',
