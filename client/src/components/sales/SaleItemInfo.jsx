@@ -4,7 +4,7 @@ function SaleItemInfo({ item }) {
   const paragraphs = item.desc
     .split('<br /><br />')
     .map((paragraph, index) => (
-      <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
+      <p className='pt-2' key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
     ));
   return (
     <section className='shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] rounded-xl outline outline-1 outline-black'>

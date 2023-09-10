@@ -37,12 +37,6 @@ function GalleryItemData({ item }) {
             <div>
               <span>Legs: {item.pageData.legs}</span>
             </div>
-            <div>
-              <span>Production Time: {item.pageData.productionTime}</span>
-            </div>
-            <div>
-              <span>Price: {item.pageData.price}</span>
-            </div>
           </div>
           <div className='mt-4'>
             <div>{paragraphs}</div>
