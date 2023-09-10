@@ -114,6 +114,7 @@ export const galleryDataArray = [
       'Metallic black base, earth brown, silver, ivory white, copper metallic',
     pageData: {
       subtitle: 'Natural wood vein design',
+      videoLinks: '',
       undercoat: 'Black',
       timber: 'MDF',
       legs: 'Metal pin legs',
@@ -151,6 +152,7 @@ export const galleryDataArray = [
     colours: 'Ocean blues, lightning blue, silver black white metallics',
     pageData: {
       subtitle: 'Center piece and art',
+      videoLinks: '',
       undercoat: 'Black',
       timber: 'Oak',
       legs: 'Metal hairpin legs',
@@ -180,6 +182,7 @@ export const galleryDataArray = [
     colours: 'Copper, bronze, black, silver, gray',
     pageData: {
       subtitle: 'Stone cut table top',
+      videoLinks: '',
       undercoat: 'Black',
       timber: 'MDF',
       legs: 'Metal hairpin legs',
@@ -210,6 +213,7 @@ export const galleryDataArray = [
     colours: 'Ocean blues, lightning blue, silver black white metallics',
     pageData: {
       subtitle: 'Stone cut table top',
+      videoLinks: '',
       undercoat: 'Black',
       timber: 'Oak',
       legs: 'Cross legs made from oak',
@@ -228,6 +232,7 @@ export const galleryDataArray = [
     colours: 'Black, greens, purples, blues, yellows',
     pageData: {
       subtitle: 'Arctic winter nights',
+      videoLinks: '',
       undercoat: 'Black',
       timber: 'Oak',
       legs: 'Metal square frame',
@@ -246,6 +251,7 @@ export const galleryDataArray = [
     colours:  'Bronze, copper, brown, with silver, black and white metallics',
     pageData: {
       subtitle: 'Stone counters',
+      videoLinks: '',
       undercoat: 'White',
       timber: 'MDF',
       legs: 'None',
@@ -264,6 +270,7 @@ export const galleryDataArray = [
     colours: 'Red black white',
     pageData: {
       subtitle: 'Vibrant and warm',
+      videoLinks: '',
       undercoat: 'Black',
       timber: 'Oak',
       legs: 'Oak cross beam legs',
@@ -282,6 +289,7 @@ export const galleryDataArray = [
       'Metallic black base, earth brown, silver, ivory white, copper metallic',
     pageData: {
       subtitle: 'PC Table with features',
+      videoLinks: '',
       undercoat: 'Black',
       timber: 'MDF',
       legs: 'Stands',
@@ -299,6 +307,7 @@ export const galleryDataArray = [
     colours: 'Oranges, silver black white metallics',
     pageData: {
       subtitle: 'Subtitles are hard',
+      videoLinks: '',
       undercoat: 'Black',
       timber: 'Oak',
       legs: 'N/A',
