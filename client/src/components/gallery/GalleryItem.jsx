@@ -8,16 +8,20 @@ function GalleryItem({ item }) {
     navigate(`/gallery/galleryItem/${item.url}`, { state: item });
   };
 
-  const paragraphs = item.data
+  const paragraphs = item.desc
     .split('<br /><br />')
     .map((paragraph, index) => (
-      <p className='pt-2' key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
+      <p
+        className='pt-2'
+        key={index}
+        dangerouslySetInnerHTML={{ __html: paragraph }}
+      />
     ));
 
   return (
     <section
       onClick={navigateToPage}
-      className='w-full lg:mx-4 cursor-pointer rounded-xl h-fit px-4 py-8 grid justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]'
+      className='w-full lg:mx-4 cursor-pointer rounded-xl h-full px-4 py-8 grid justify-center shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]'
     >
       <div className='mb-2 -mt-4'>
         <h6 className='font-semibold'>{item.name}</h6>
@@ -31,7 +35,9 @@ function GalleryItem({ item }) {
         <section className='px-4'>
           <div className='my-4'>
             <p className=''>
-              <div >{paragraphs}</div>
+              <div>
+                <p>{item.shortDesc}</p>
+              </div>
             </p>
           </div>
           <div className='mb-4'>
@@ -40,9 +46,11 @@ function GalleryItem({ item }) {
             </p>
           </div>
         </section>
-        <div className='tooltip-text bg-black p-2 text-white text-center rounded tooltip-custom mt-2'>
-          Click to see more!
-        </div>
+        <section className='grid items-end'>
+          <div className='tooltip-text h-[50px] grid items-center bg-black p-2 text-white text-center rounded tooltip-custom mt-2'>
+            <p>Click to see more!</p>
+          </div>
+        </section>
       </div>
     </section>
   );

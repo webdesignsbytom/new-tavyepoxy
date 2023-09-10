@@ -1,8 +1,7 @@
 import React from 'react';
 
 function GalleryItemData({ item }) {
-  
-  const paragraphs = item.data
+  const paragraphs = item.desc
     .split('<br /><br />')
     .map((paragraph, index) => (
       <p
