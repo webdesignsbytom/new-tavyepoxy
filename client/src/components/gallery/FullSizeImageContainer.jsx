@@ -12,7 +12,7 @@ function FullSizeImageContainer({
   selectNextImg,
 }) {
   return (
-    <section className='absolute z-50 top-2 left-0 px-4 py-8 h-screen w-full overflow-hidden'>
+    <section className='sticky z-50 top-2 left-0 px-4 py-8 h-screen w-full overflow-hidden'>
       <div className='grid relative outline outline-2 outline-black rounded bg-blue-200 w-full h-full'>
         {/* Close btn */}
         <section
