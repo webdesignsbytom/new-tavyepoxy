@@ -2,14 +2,14 @@ import React from 'react';
 
 function CtaSalesLinks({ navigateToPage }) {
   return (
-    <section className='grid grid-cols-3 items-center h-full w-full gap-4 mb-2 mt-4 text-xl'>
+    <section className='grid grid-cols-3 items-center h-full w-full gap-4 mb-2 mt-4 text-sm lg:text-lg xl:text-xl'>
       <div>
         <button
           id='/contact'
           onClick={navigateToPage}
           className='py-2 font-bold outline-2 w-full no__highlights hover:opacity-70 white__marble__bg active:scale-95 outline-black outline rounded-xl text-center'
         >
-          Contact Us Now
+          Contact Us
         </button>
       </div>
       <div>

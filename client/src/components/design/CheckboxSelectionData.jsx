@@ -7,8 +7,8 @@ function CheckboxSelectionData({ handleCheckboxChange }) {
 
   return (
     <section className='outline gap-2 outline-black outline-2 rounded p-1 my-2'>
-      <section className='grid grid-cols-aaa justify-between px-1'>
-        <div className='w-fit'>
+      <section className='grid gap-1 md:gap-0 md:grid-cols-aaa justify-center md:justify-between px-1 py-2 md:py-0'>
+        <div className='md:w-fit'>
           <div className='text-center'>
             <p className='text-sm'>Protective Layer</p>
           </div>
@@ -22,7 +22,7 @@ function CheckboxSelectionData({ handleCheckboxChange }) {
             />
           </div>
         </div>
-        <div className='w-fit'>
+        <div className='md:w-fit'>
           <div className='text-center'>
             <p className='text-sm'>Rough Stone</p>
           </div>
@@ -36,7 +36,7 @@ function CheckboxSelectionData({ handleCheckboxChange }) {
             />
           </div>
         </div>
-        <div className='w-fit'>
+        <div className='md:w-fit'>
           <div className='text-center'>
             <p className='text-sm'>Matching Coasters x4</p>
           </div>

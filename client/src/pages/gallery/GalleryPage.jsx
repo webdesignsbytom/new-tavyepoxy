@@ -7,6 +7,7 @@ import GalleryPageTitles from '../../components/gallery/GalleryPageTitles';
 import { ToggleContext } from '../../context/ToggleContext';
 // Data
 import { galleryDataArray } from '../../utils/data/GalleryData';
+import FooterComponent from '../../components/footer/FooterComponent';
 
 function GalleryPage() {
   const { setActiveNav } = useContext(ToggleContext);
@@ -35,6 +36,9 @@ function GalleryPage() {
             </section>
           </div>
         </main>
+      </section>
+      <section className='md:hidden'>
+        <FooterComponent />
       </section>
     </div>
   );

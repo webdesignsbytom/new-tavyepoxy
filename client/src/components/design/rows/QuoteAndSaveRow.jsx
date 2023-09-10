@@ -6,7 +6,7 @@ import ShippingQuote from '../ShippingQuote';
 
 function QuoteAndSaveRow() {
   return (
-    <section className='grid grid-flow-col outline gap-2 outline-black outline-2 rounded p-1 my-2'>
+    <section className='grid md:grid-flow-col outline gap-2 outline-black outline-2 rounded p-1 my-2'>
       <QuoteData />
       <ShippingQuote />
       <SaveDesignButton />

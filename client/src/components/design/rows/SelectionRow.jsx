@@ -6,7 +6,7 @@ function SelectionRow({ openFinishOptionsModal, openLegOptionsModal }) {
   const { designDimensionsAndData } = useContext(DesignContext);
 
   return (
-    <section className='grid grid-cols-2 outline gap-2 outline-black outline-2 rounded p-1 my-2 '>
+    <section className='grid md:grid-cols-2 outline gap-2 outline-black outline-2 rounded p-1 my-2 '>
       {/* Finish */}
       <section className='grid'>
         <div>

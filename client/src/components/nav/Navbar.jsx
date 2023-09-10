@@ -220,7 +220,7 @@ function Navbar() {
                       : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-nav-colour text-gray-800 font-semibold'
                   }
                 >
-                  <Link className='w-full' to='/design'>
+                  <Link className='w-full' onClick={tgNav} to='/design'>
                     Design
                   </Link>
                 </li>

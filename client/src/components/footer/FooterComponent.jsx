@@ -16,7 +16,11 @@ function FooterComponent() {
         </section>
         <section className='grid grid-cols-reg gap-6 grid-rows-1 w-full items-center '>
           <div className='grid'>
-            <img className='w-[70px] lg:w-[100px]' src={LogoImage} alt='Tavy Epoxy Logo' />
+            <img
+              className='w-[70px] lg:w-[100px]'
+              src={LogoImage}
+              alt='Tavy Epoxy Logo'
+            />
           </div>
           <div className='grid grid-cols-6 justify-end text-sm h-fit font-bold text-center'>
             <Link className='text-hyperlink-blue' to='/'>
@@ -46,8 +50,7 @@ function FooterComponent() {
         </section>
         <section className='grid items-center font-bold'>
           <div className='text-sm text-center lg:text-right'>
-            Phone: 5453948634634 <br />
-            Email: Emrial@gmail.com <br />
+            Email: Josh@tavy-epoxy.co.uk <br />
             Hand made in Devon - United Kingdom
           </div>
         </section>

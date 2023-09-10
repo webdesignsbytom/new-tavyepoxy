@@ -19,7 +19,7 @@ function ConfirmReset() {
   };
 
   return (
-    <section className='grid absolute z-40 p-2 outline outline-2 outline-black rounded bg-slate-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+    <section className='grid absolute z-40 p-2 outline outline-2 min-w-[250px] outline-black rounded bg-slate-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
       <article className='text-center'>
         <div>
           <span className='px-1'>Confirm Reset All</span>

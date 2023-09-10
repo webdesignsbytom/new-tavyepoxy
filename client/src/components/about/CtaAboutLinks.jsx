@@ -2,8 +2,8 @@ import React from 'react';
 
 function CtaAboutLinks({ navigateToPage }) {
   return (
-    <section className='grid px-4 lg:px-0 lg:w-1/2 gap-4 mx-auto mt-10 text-xl font-bold'>
-      <div className='grid grid-cols-3 gap-4 w-full mx-auto'>
+    <section className='grid px-2 lg:px-0 lg:w-1/2 gap-4 mt-10 text-sm lg:text-lg xl:text-xl font-bold'>
+      <div className='grid grid-cols-3 gap-1 w-full'>
         <div className='grid w-full'>
           <button
             id='/gallery'

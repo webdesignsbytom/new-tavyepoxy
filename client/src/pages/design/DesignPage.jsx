@@ -144,12 +144,12 @@ function DesignPage() {
   };
 
   return (
-    <div className='grid bg-gray-100 h-screen grid-rows-reg lg:overflow-hidden lg:max-h-screen'>
+    <div className='grid bg-gray-100 min-h-screen grid-rows-reg lg:overflow-hidden lg:max-h-screen'>
       <Navbar />
       {/* Main */}
       <main className='grid h-full grid-rows-reg'>
         <section className='lg:w-3/4 mx-auto mt-8'>
-          <div className='pb-6 border-b-2 grid grid-cols-2 justify-between border-solid border-black'>
+          <div className='pb-6 border-b-2 grid md:grid-cols-2 justify-between border-solid border-black'>
             <h2 className='text-2xl font-corgs font-medium'>
               Design your furniture
             </h2>

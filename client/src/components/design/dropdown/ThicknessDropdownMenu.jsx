@@ -3,6 +3,8 @@ import React, { useContext, useState } from 'react';
 import { ThicknessOptions } from '../../../utils/data/MaterialData';
 // Context
 import { DesignContext } from '../../../context/DesignContext';
+// Icons
+import { AiOutlineEnter } from 'react-icons/ai';
 
 function ThicknessDropdownMenu() {
   const {
@@ -103,7 +105,7 @@ function ThicknessDropdownMenu() {
                 <input
                   type='text'
                   onChange={handleCustomChange}
-                  placeholder='Custom...'
+                  placeholder='Enter Custom...'
                   className='outline-1 outline outline-black rounded w-full p-1'
                 />
               </div>
@@ -112,7 +114,7 @@ function ThicknessDropdownMenu() {
                   onClick={submitCustomThickness}
                   className='bg-slate-400 text-sm px-1 outline outline-black outline-1 rounded active:scale-95 active:duration-200'
                 >
-                  @
+                  Submit
                 </button>
               </div>
             </section>
