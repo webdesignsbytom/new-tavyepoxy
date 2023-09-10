@@ -36,7 +36,7 @@ function Navbar() {
     <nav className='h-full wood__bg relative z-30 grid py-4 border-b-2 border-solid border-black '>
       <div className='grid grid-cols-reg w-full lg:w-2/3 mx-auto'>
         <section className='grid items-center justify-center pl-4'>
-          <Link className='no__highlights' to='/'>
+          <Link className='no__highlights' onClick={tgNav} to='/'>
             <img
               className='w-10 no__highlights h-10'
               src={LogoImage}
