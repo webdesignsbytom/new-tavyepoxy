@@ -2,7 +2,7 @@ import React from 'react';
 // Components
 import Navbar from '../../components/nav/Navbar';
 
-function PurchaseHistory() {
+function AfterPurchasePage() {
   return (
     <div className='grid bg-gray-100 min-h-screen grid-rows-reg'>
       <Navbar />
@@ -16,4 +16,4 @@ function PurchaseHistory() {
   );
 }
 
-export default PurchaseHistory;
+export default AfterPurchasePage;
