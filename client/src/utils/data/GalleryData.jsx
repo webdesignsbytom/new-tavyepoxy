@@ -149,8 +149,6 @@ export const galleryDataArray = [
       price: '£450',
       images: [
         GalleryImage2,
-        Table2Image1,
-        Table7Image1,
         GalleryImage8,
         GalleryImage3,
         OSx1,

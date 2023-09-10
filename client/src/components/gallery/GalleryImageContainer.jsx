@@ -1,21 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function GalleryImageContainer({
   item,
   selectPrevImg,
   imagesNum,
   selectNextImg,
+  selectVideo,
+  displayVideo
 }) {
+  
 
   return (
     <section className='grid grid-rows-rev lg:overflow-hidden lg:max-h-[500px] shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] p-4 rounded-xl outline outline-1 outline-black'>
-      <div className='outline outline-black outline-2 lg:overflow-hidden'>
-        <img
-          className='lg:overflow-hidden h-full object-fill w-full'
-          src={item.pageData.images[imagesNum]}
-          alt='design'
-        />
-      </div>
+      {displayVideo ? (
+        <article className='grid outline outline-black outline-2 overflow-hidden rounded'>
+          <div className='video-container'>
+            <video id={'index'} className='video-player' controls muted>
+              <source src={item.pageData.videoLinks} type='video/mp4' />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </article>
+      ) : (
+        <div className='outline outline-black outline-2 lg:overflow-hidden'>
+          <img
+            className='lg:overflow-hidden h-full object-fill w-full'
+            src={item.pageData.images[imagesNum]}
+            alt='design'
+          />
+        </div>
+      )}
 
       {/* Buttons */}
       <section className='grid grid-flow-col gap-4 my-4 px-2 text-xl mb-2'>
@@ -25,6 +39,14 @@ function GalleryImageContainer({
             className='outline outline-2 outline-black rounded-xl py-2 w-full px-4 active:scale-95 no__highlights white__marble__bg font-bold hover:opacity-70'
           >
             Prev Image
+          </button>
+        </div>
+        <div>
+          <button
+            onClick={selectVideo}
+            className='outline outline-2 outline-black rounded-xl py-2 w-full px-4 active:scale-95 no__highlights pink__marble__bg font-bold text-black hover:opacity-70'
+          >
+            See Video
           </button>
         </div>
         <div>

@@ -15,6 +15,7 @@ function GalleryItemPage() {
 
   const [images, setImages] = useState([]);
   const [imagesNum, setImagesNum] = useState(0);
+  const [displayVideo, setDisplayVideo] = useState(false);
 
   const navigate = useNavigate();
 
@@ -23,6 +24,8 @@ function GalleryItemPage() {
   }, []);
 
   const selectNextImg = () => {
+    setDisplayVideo(false);
+
     if (imagesNum === images.length - 1) {
       setImagesNum(0);
     } else {
@@ -31,6 +34,8 @@ function GalleryItemPage() {
   };
 
   const selectPrevImg = () => {
+    setDisplayVideo(false);
+
     if (imagesNum === 0) {
       setImagesNum(images.length - 1);
     } else {
@@ -42,6 +47,10 @@ function GalleryItemPage() {
     const { id } = event.target;
     setActiveNav(id);
     navigate(`${id}`);
+  };
+
+  const selectVideo = () => {
+    setDisplayVideo(true);
   };
 
   return (
@@ -61,8 +70,10 @@ function GalleryItemPage() {
             {/* Right */}
             <GalleryImageContainer
               item={item}
+              selectVideo={selectVideo}
               selectPrevImg={selectPrevImg}
               imagesNum={imagesNum}
+              displayVideo={displayVideo}
               selectNextImg={selectNextImg}
             />
           </section>
