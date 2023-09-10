@@ -10,7 +10,7 @@ function SalesItemImages({
   openFullscreenDisplay
 }) {
   return (
-    <section className='grid grid-rows-rev lg:overflow-hidden lg:max-h-[500px] shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] p-4 rounded-xl outline outline-1 outline-black'>
+    <section className='grid grid-rows-rev lg:overflow-hidden lg:max-h-[500px] shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] p-2 md:p-4 rounded-xl outline outline-1 outline-black'>
       {/* Images */}
       {displayVideo ? (
         <article className='grid outline outline-black outline-2 overflow-hidden rounded'>
@@ -22,7 +22,7 @@ function SalesItemImages({
           </div>
         </article>
       ) : (
-        <div onClick={openFullscreenDisplay} className='outline outline-black outline-2 lg:overflow-hidden cursor-pointer'>
+        <div onClick={openFullscreenDisplay} className='outline outline-black outline-2 lg:overflow-hidden cursor-pointer rounded'>
           <img
             className='lg:overflow-hidden h-full object-fill w-full'
             src={item.pageData.images[imagesNum]}
@@ -32,7 +32,7 @@ function SalesItemImages({
       )}
 
       {/* Buttons */}
-      <section className='grid grid-flow-col gap-4 my-4 px-2 text-xl mb-2'>
+      <section className='grid grid-flow-col gap-4 my-4 px-2 text-sm lg:text-lg xl:text-xl mb-2'>
         <div>
           <button
             onClick={selectPrevImg}
