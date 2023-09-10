@@ -7,6 +7,7 @@ import { ToggleContext } from '../../context/ToggleContext';
 import GalleryItemData from '../../components/gallery/GalleryItemData';
 import GalleryImageContainer from '../../components/gallery/GalleryImageContainer';
 import GalleryImageCarousel from '../../components/gallery/GalleryImageCarousel';
+import FullSizeImageContainer from '../../components/gallery/FullSizeImageContainer';
 
 function GalleryItemPage() {
   const { setActiveNav } = useContext(ToggleContext);
@@ -16,6 +17,7 @@ function GalleryItemPage() {
   const [images, setImages] = useState([]);
   const [imagesNum, setImagesNum] = useState(0);
   const [displayVideo, setDisplayVideo] = useState(false);
+  const [fullscreenDisplay, setFullscreenDisplay] = useState(false);
 
   const navigate = useNavigate();
 
@@ -53,11 +55,22 @@ function GalleryItemPage() {
     setDisplayVideo(true);
   };
 
+  const openFullscreenDisplay = () => {
+    setFullscreenDisplay(true);
+  };
+
+  const closeFullscreenDisplay = () => {
+    setFullscreenDisplay(false);
+  };
+
   return (
     <div className='grid bg-gray-100 grid-rows-reg'>
       <Navbar />
       {/* Main */}
-      <main className='grid grid-rows-rev h-full mb-2 lg:overflow-hidden'>
+      <main className='relative grid grid-rows-rev h-full mb-2 lg:overflow-hidden'>
+        {fullscreenDisplay && (
+          <FullSizeImageContainer closeFullscreenDisplay={closeFullscreenDisplay} />
+        )}
         <div className='grid w-full lg:w-3/4 mx-auto grid-rows-reg lg:overflow-hidden px-2'>
           <section className='my-4'>
             <div className='text-center border-b-2 border-black border-solid pb-2 mx-4'>
@@ -70,6 +83,7 @@ function GalleryItemPage() {
             {/* Right */}
             <GalleryImageContainer
               item={item}
+              openFullscreenDisplay={openFullscreenDisplay}
               selectVideo={selectVideo}
               selectPrevImg={selectPrevImg}
               imagesNum={imagesNum}
