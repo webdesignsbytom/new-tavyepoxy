@@ -2,7 +2,7 @@ import React from 'react';
 
 function GalleryImageCarousel({ images }) {
   return (
-    <section className='grid mb-2 border-t-2 border-solid border-gray-800 lg:h-[75px]'>
+    <section className='hidden md:grid mb-2 border-t-2 border-solid border-gray-800 lg:h-[75px]'>
       <div className='grid grid-flow-col px-2 gap-4 py-1'>
         {images.map((image, index) => {
           return (
