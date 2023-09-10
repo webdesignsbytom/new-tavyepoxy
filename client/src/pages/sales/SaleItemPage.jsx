@@ -45,7 +45,12 @@ function SaleItemPage() {
     setDisplayVideo(true);
   };
 
-  console.log('images', images);
+  const paragraphs = item.desc
+    .split('<br /><br />')
+    .map((paragraph, index) => (
+      <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
+    ));
+
   return (
     <div className='grid bg-gray-100 lg:h-screen grid-rows-reg lg:overflow-hidden lg:max-h-screen'>
       <Navbar />
@@ -96,7 +101,9 @@ function SaleItemPage() {
                       <span>Shipping: £{item.shipping}</span>
                     </div>
                     <div className='mt-4'>
-                      <span>{item.desc}</span>
+                      <p className=''>
+                        <div>{paragraphs}</div>
+                      </p>
                     </div>
                   </div>
                 </div>

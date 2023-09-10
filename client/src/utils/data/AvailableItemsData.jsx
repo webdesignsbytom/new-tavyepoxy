@@ -90,6 +90,7 @@ export const AvailableItemsArray = [
     price: 240,
     shipping: 24,
     onSale: false,
+    shordDesc: '',
     desc: 'Beautiful wood style striations with vibrant solid and metallic colours. One of the best selling designs we have and are always unique. This table is made to be a stunning yet affordable epoxy resin coffee table. Glass smooth epoxy table top with a pattern that flows over the edges for an effect that looks like it was cut from a piece of wood. Hand made and crafted in Devon.',
     pageData: {
       videoLinks: WSxVideo,
@@ -109,6 +110,7 @@ export const AvailableItemsArray = [
     price: 240,
     shipping: 24,
     onSale: false,
+    shordDesc: '',
     desc: 'Beautiful wood style striations with vibrant solid and metallic colours. One of the best selling designs we have and are always unique. This table is made to be a stunning yet affordable epoxy resin coffee table. Glass smooth epoxy table top with a pattern that flows over the edges for an effect that looks like it was cut from a piece of wood. Hand made and crafted in Devon.',
     pageData: {
       videoLinks: WSyVideo,
@@ -128,6 +130,7 @@ export const AvailableItemsArray = [
     price: 240,
     shipping: 24,
     onSale: false,
+    shordDesc: '',
     desc: 'Beautiful wood style striations with vibrant solid and metallic colours. One of the best selling designs we have and are always unique. This table is made to be a stunning yet affordable epoxy resin coffee table. Glass smooth epoxy table top with a pattern that flows over the edges for an effect that looks like it was cut from a piece of wood. Hand made and crafted in Devon.',
     pageData: {
       videoLinks: WSzVideo,
@@ -147,6 +150,7 @@ export const AvailableItemsArray = [
     price: 200,
     shipping: 24,
     onSale: false,
+    shordDesc: '',
     desc: 'Stone effect with layers of detail, the colours in these are made by mixing natural metallics and earthy colours. This table is made to be a stunning yet affordable epoxy resin coffee table. Glass smooth epoxy table top with a pattern that flows over the edges for an effect that looks like it was cut from a piece of wood. Hand made and crafted in Devon.',
     pageData: {
       videoLinks: STxVideo,
@@ -166,6 +170,7 @@ export const AvailableItemsArray = [
     price: 200,
     shipping: 24,
     onSale: false,
+    shordDesc: '',
     desc: 'Stone effect with layers of detail, the colours in these are made by mixing natural metallics and earthy colours. This table is made to be a stunning yet affordable epoxy resin coffee table. Glass smooth epoxy table top with a pattern that flows over the edges for an effect that looks like it was cut from a piece of wood. Hand made and crafted in Devon.',
     pageData: {
       videoLinks: '',
@@ -185,6 +190,7 @@ export const AvailableItemsArray = [
     price: 150,
     shipping: 24,
     onSale: true,
+    shordDesc: '',
     desc: 'Blues, black, white and greys combine to make such a natural splash of colours that you can stare at for hours. This table is made to be a stunning yet affordable epoxy resin coffee table. Glass smooth epoxy table top with a pattern that flows over the edges for an effect that looks like it was cut from a piece of wood. Hand made and crafted in Devon.',
     pageData: {
       videoLinks: OSxVideo,
@@ -216,6 +222,7 @@ export const AvailableItemsArray = [
     price: 150,
     shipping: 24,
     onSale: true,
+    shordDesc: '',
     desc: 'Blues, black, white and greys combine to make such a natural splash of colours that you can stare at for hours. This table is made to be a stunning yet affordable epoxy resin coffee table. Glass smooth epoxy table top with a pattern that flows over the edges for an effect that looks like it was cut from a piece of wood. Hand made and crafted in Devon.',
     pageData: {
       videoLinks: OSyVideo,

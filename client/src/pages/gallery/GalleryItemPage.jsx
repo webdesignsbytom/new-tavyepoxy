@@ -42,7 +42,6 @@ function GalleryItemPage() {
     navigate(`${id}`);
   };
 
-  console.log('images', images);
   return (
     <div className='grid bg-gray-100 lg:h-screen grid-rows-reg lg:overflow-hidden lg:max-h-screen'>
       <Navbar />

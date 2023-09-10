@@ -8,6 +8,12 @@ function GalleryItem({ item }) {
     navigate(`/gallery/galleryItem/${item.url}`, { state: item });
   };
 
+  const paragraphs = item.data
+    .split('<br /><br />')
+    .map((paragraph, index) => (
+      <p className='pt-2' key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
+    ));
+
   return (
     <section
       onClick={navigateToPage}
@@ -24,7 +30,9 @@ function GalleryItem({ item }) {
         />
         <section className='px-4'>
           <div className='my-4'>
-            <p className=''>{item.data}</p>
+            <p className=''>
+              <div >{paragraphs}</div>
+            </p>
           </div>
           <div className='mb-4'>
             <p>

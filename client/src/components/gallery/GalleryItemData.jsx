@@ -1,6 +1,17 @@
 import React from 'react';
 
 function GalleryItemData({ item }) {
+  
+  const paragraphs = item.data
+    .split('<br /><br />')
+    .map((paragraph, index) => (
+      <p
+        className='pt-2'
+        key={index}
+        dangerouslySetInnerHTML={{ __html: paragraph }}
+      />
+    ));
+
   return (
     <section className='shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] rounded-xl outline outline-1 outline-black'>
       <article className='p-4'>
@@ -35,7 +46,9 @@ function GalleryItemData({ item }) {
             </div>
           </div>
           <div className='mt-4'>
-            <span>Data: {item.data}</span>
+            <p className=''>
+              <div>{paragraphs}</div>
+            </p>
           </div>
         </div>
       </article>
