@@ -1,24 +1,19 @@
 import React from 'react';
 
-function GalleryItemData({ item }) {
+function SaleItemInfo({ item }) {
   const paragraphs = item.desc
-    .split('<br />')
+    .split('<br /><br />')
     .map((paragraph, index) => (
-      <p
-        className='pt-2'
-        key={index}
-        dangerouslySetInnerHTML={{ __html: paragraph }}
-      />
+      <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
     ));
-
   return (
     <section className='shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] rounded-xl outline outline-1 outline-black'>
       <article className='p-4'>
-        <div className='mb-4'>
+        <div className='mb-4 text-center'>
           <h2 className='text-xl'>{item.pageData.subtitle}</h2>
         </div>
         <div>
-          <div className='mb-2'>
+          <div className='mb-2 text-center'>
             <h3 className='underline'>Design information</h3>
           </div>
           <div>
@@ -29,23 +24,25 @@ function GalleryItemData({ item }) {
               <span>Undercoat: {item.pageData.undercoat}</span>
             </div>
             <div>
-              <span>Colours used: {item.colours}</span>
+              <span>Dimensions: {item.pageData.dimensions}</span>
             </div>
             <div>
-              <span>Dimensions: {item.pageData.dimensions}</span>
+              <span>Height: {item.pageData.height}</span>
             </div>
             <div>
               <span>Legs: {item.pageData.legs}</span>
             </div>
             <div>
-              <span>Production Time: {item.pageData.productionTime}</span>
+              <span>Price: £{item.price}</span>
             </div>
             <div>
-              <span>Price: {item.pageData.price}</span>
+              <span>Shipping: £{item.shipping}</span>
             </div>
-          </div>
-          <div className='mt-4'>
-            <div>{paragraphs}</div>
+            <div className='mt-4'>
+              <p className=''>
+                <div>{paragraphs}</div>
+              </p>
+            </div>
           </div>
         </div>
       </article>
@@ -53,4 +50,4 @@ function GalleryItemData({ item }) {
   );
 }
 
-export default GalleryItemData;
+export default SaleItemInfo;

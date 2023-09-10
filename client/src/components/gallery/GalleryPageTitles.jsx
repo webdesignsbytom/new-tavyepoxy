@@ -1,4 +1,6 @@
 import React from 'react';
+// Components
+import SocialMediaLinks from '../social/SocialMediaLinks';
 
 function GalleryPageTitles() {
   return (
@@ -17,6 +19,7 @@ function GalleryPageTitles() {
         <h4>These beautiful pieces are all hand crafted in Devon, UK</h4>
         <h5>All pieces come as wall art or table furniture</h5>
         <h6>Available finishes for custom orders</h6>
+        <SocialMediaLinks />
       </div>
     </article>
   );
