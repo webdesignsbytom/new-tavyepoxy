@@ -15,7 +15,7 @@ function CtaInternalLinks() {
       <div className='my-4'>
         <Link
           className='grid text-center py-2 w-full px-6 font-bold outline-2 no__highlights hover:opacity-70 text-white black__marble__bg active:scale-95 outline-black outline rounded-xl'
-          to='/gallery'
+          to='/design'
         >
           Click here to use the design tool
         </Link>
