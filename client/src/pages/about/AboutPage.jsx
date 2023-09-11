@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/nav/Navbar';
 import FooterComponent from '../../components/footer/FooterComponent';
 import CtaAboutLinks from '../../components/about/CtaAboutLinks';
+// Context
+import { ToggleContext } from '../../context/ToggleContext';
 // Images
 import WorkshopImage1 from '../../assets/images/pages/workshop1.jpg';
 import WorkshopImage2 from '../../assets/images/pages/workshop2.jpg';
@@ -11,8 +13,6 @@ import WorkshopImage3 from '../../assets/images/pages/workshop3.png';
 import WorkshopImage4 from '../../assets/images/gallery/table9/lego1.jpg';
 import WorkshopImage5 from '../../assets/images/gallery/table5/counter1.jpg';
 import WorkshopImage6 from '../../assets/images/buttons/black_marble.jpg';
-// Context
-import { ToggleContext } from '../../context/ToggleContext';
 
 function AboutPage() {
   const { setActiveNav } = useContext(ToggleContext);
