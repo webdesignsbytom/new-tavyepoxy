@@ -99,7 +99,6 @@ import Table7Image4 from '../../assets/images/gallery/table7/desk4.jpg';
 import GalleryImage8 from '../../assets/images/gallery/table8/orange1.png';
 import Table8Image1 from '../../assets/images/gallery/table8/orange1.png';
 import Table8Image2 from '../../assets/images/gallery/table8/orange2.png';
-import Table8Image3 from '../../assets/images/gallery/table8/orange3.png';
 // Videos
 import OSxVideo from '../../assets/video/OS1video.mp4';
 import OSyVideo from '../../assets/video/OS2video.mp4';
@@ -321,7 +320,7 @@ export const galleryDataArray = [
       timber: 'Oak',
       legs: 'N/A',
       dimensions: '2 foot x 3.5 foot',
-      images: [Table8Image1, Table8Image2, Table8Image3],
+      images: [Table8Image1, Table8Image2],
     },
   },
 ];

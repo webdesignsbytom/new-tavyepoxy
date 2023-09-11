@@ -166,7 +166,10 @@ function AboutPage() {
             </section>
           </section>
           {/* CTA */}
+          <div className='flex justify-center'>
+
           <CtaAboutLinks navigateToPage={navigateToPage} />
+          </div>
         </main>
       </section>
       <FooterComponent />
