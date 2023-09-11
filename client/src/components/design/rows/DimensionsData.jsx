@@ -8,7 +8,7 @@ function DimensionsData({ handleChange }) {
   const { designDimensionsAndData } = useContext(DesignContext);
 
   return (
-    <section className='grid md:grid-cols-aaa md:gap-6 w-full outline outline-black outline-2 rounded my-2 p-1'>
+    <section className='grid md:grid-cols-aaaa md:gap-6 w-full outline outline-black outline-2 rounded my-2 p-1'>
       <section className='grid'>
         <div>
           <p className='text-sm'>Length</p>
@@ -56,6 +56,15 @@ function DimensionsData({ handleChange }) {
         <div className='w-full'>
           <ThicknessDropdownMenu />
         </div>
+      </section>
+      <section>
+      <div>
+          <p className='text-sm'>Size</p>
+        </div>
+          <div className='outline outline-1 outline-black rounded pl-2 py-[2px] pr-1'>
+            {designDimensionsAndData.squareMeterString}{' '}M²
+          </div>
+        
       </section>
     </section>
   );

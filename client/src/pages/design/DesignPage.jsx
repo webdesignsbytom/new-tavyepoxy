@@ -57,7 +57,7 @@ function DesignPage() {
     if (designDimensionsAndData.protection) {
       total += PriceData.protection;
     }
-
+    
     setDesignQuoteData({
       ...designQuoteData,
       finalQuote: total,
@@ -68,7 +68,14 @@ function DesignPage() {
     let sqMeter =
       designDimensionsAndData.length * designDimensionsAndData.width;
 
-    let newString = `0.${sqMeter}`;
+      let sqMeterString = sqMeter.toString(); // Convert sqMeter to a string
+      let firstTwoDigits = sqMeterString.slice(0, 2); // Extract the first two characters
+    
+      // Convert firstTwoDigits back into a number
+      let firstTwoDigitsNumber = parseInt(firstTwoDigits);
+
+     
+    let newString = `0.${firstTwoDigitsNumber}`;
 
     if (sqMeter < 10000) {
       setSquareMeterOfDesignList(newString);
@@ -91,6 +98,14 @@ function DesignPage() {
       newString = `6.${sqMeter}`;
       setSquareMeterOfDesignList(newString);
     }
+
+    setDesignDimensionsAndData({
+      ...designDimensionsAndData,
+      squareMeter: sqMeter,
+      squareMeterString: newString
+    })
+
+
   }, [designDimensionsAndData.length, designDimensionsAndData.width]);
 
   const addNewColourToList = () => {

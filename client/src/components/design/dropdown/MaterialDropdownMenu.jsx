@@ -18,9 +18,9 @@ function MaterialDropdownMenu() {
 
   const selectMaterialType = (id) => {
     console.log('id', id);
-
+    console.log('id', id);
     let selection = materialOptions[id];
-
+console.log('section', selection);
     setSelectedMaterial(selection);
 
     setToggleMaterialOptions(false);

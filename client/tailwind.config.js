@@ -65,6 +65,7 @@ module.exports = {
         xo: '1fr 0.6fr',
         a1a: 'auto 1fr auto',
         aaa: 'auto auto auto',
+        aaaa: 'auto auto auto auto',
         '1a1': '1fr 0.4fr 1fr',
         aa: 'auto auto',
         '3x': '3fr 1fr',
