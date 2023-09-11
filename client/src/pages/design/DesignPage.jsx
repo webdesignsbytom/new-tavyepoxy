@@ -36,7 +36,7 @@ function DesignPage() {
     setDesignDimensionsAndData,
     designQuoteData,
     setDesignQuoteData,
-    setSquareMeterOfDesignList
+    setSquareMeterOfDesignList,
   } = useContext(DesignContext);
 
   const [colourAddedByUser, setColourAddedByUser] = useState('');
@@ -57,7 +57,7 @@ function DesignPage() {
     if (designDimensionsAndData.protection) {
       total += PriceData.protection;
     }
-    
+
     setDesignQuoteData({
       ...designQuoteData,
       finalQuote: total,
@@ -66,47 +66,42 @@ function DesignPage() {
 
   useEffect(() => {
     let sqMeter =
-      designDimensionsAndData.length * designDimensionsAndData.width;
+      (designDimensionsAndData.length / 100) *
+      (designDimensionsAndData.width / 100);
 
-      let sqMeterString = sqMeter.toString(); // Convert sqMeter to a string
-      let firstTwoDigits = sqMeterString.slice(0, 2); // Extract the first two characters
-    
-      // Convert firstTwoDigits back into a number
-      let firstTwoDigitsNumber = parseInt(firstTwoDigits);
+    console.log('sqMeter', sqMeter);
 
-     
-    let newString = `0.${firstTwoDigitsNumber}`;
+    let sqMeterShort = sqMeter.toFixed(2); // Convert sqMeter to a string
 
-    if (sqMeter < 10000) {
-      setSquareMeterOfDesignList(newString);
-    } else if (sqMeter >= 10000 && sqMeter < 20000) {
-      newString = `1.${sqMeter}`;
-      setSquareMeterOfDesignList(newString);
-    } else if (sqMeter >= 20000 && sqMeter < 30000) {
-      newString = `2.${sqMeter}`;
-      setSquareMeterOfDesignList(newString);
-    } else if (sqMeter >= 30000 && sqMeter < 40000) {
-      newString = `3.${sqMeter}`;
-      setSquareMeterOfDesignList(newString);
-    } else if (sqMeter >= 40000 && sqMeter < 50000) {
-      newString = `4.${sqMeter}`;
-      setSquareMeterOfDesignList(newString);
-    } else if (sqMeter >= 50000 && sqMeter < 60000) {
-      newString = `5.${sqMeter}`;
-      setSquareMeterOfDesignList(newString);
-    } else if (sqMeter >= 60000 && sqMeter < 70000) {
-      newString = `6.${sqMeter}`;
-      setSquareMeterOfDesignList(newString);
-    }
+    setSquareMeterOfDesignList(sqMeter);
 
     setDesignDimensionsAndData({
       ...designDimensionsAndData,
-      squareMeter: sqMeter,
-      squareMeterString: newString
+      squareMeter: sqMeterShort,
+    });
+
+
+    let materialPrice = 0;
+
+    if (designDimensionsAndData.material === 'mdf') {
+      materialPrice = sqMeter * PriceData.mdf
+      console.log('RRRRRRRRRRRRRRRRRRRRRRRRRRRR', materialPrice);
+    }
+    if (designDimensionsAndData.material === 'oak') {
+      materialPrice = sqMeter * PriceData.oak
+      console.log('RRRRRRRRRRRRRRRRRRRRRRRRRRRR', materialPrice);
+    }
+    if (designDimensionsAndData.material === 'pine') {
+      materialPrice = sqMeter * PriceData.pine
+      console.log('RRRRRRRRRRRRRRRRRRRRRRRRRRRR', materialPrice);
+    }
+
+    setDesignQuoteData({
+      ...designQuoteData,
+      materialsQuote: materialPrice
     })
 
-
-  }, [designDimensionsAndData.length, designDimensionsAndData.width]);
+  }, [designDimensionsAndData.length, designDimensionsAndData.width, designDimensionsAndData.material]);
 
   const addNewColourToList = () => {
     let newList = designDimensionsAndData.colours;

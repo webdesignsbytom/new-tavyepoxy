@@ -5,7 +5,7 @@ export const PriceData = {
   coasters: 50,
   colour: 3,
   pricePerCentimeter: 1,
-  oak: 120,
+  oak: 120, // per square meter
   mdf: 30,
   pine: 80,
 };
@@ -14,8 +14,7 @@ export const InitialDesignData = {
   length: 85,
   width: 55,
   thickness: 25,
-  squareMeter: 0.5,
-  squareMeterString: '0.5',
+  squareMeter: 0.46,
   material: 'mdf',
   finish: 'marble',
   colours: [

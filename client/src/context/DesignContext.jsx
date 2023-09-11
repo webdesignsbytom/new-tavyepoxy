@@ -23,6 +23,7 @@ const DesignContextProvider = ({ children }) => {
   const [designQuoteData, setDesignQuoteData] = useState({
     finalQuote: 0,
     startingQuote: designDimensionsAndData.quote,
+    materialsQuote: 0
   });
 
   const [selectedThickness, setSelectedThickness] = useState({

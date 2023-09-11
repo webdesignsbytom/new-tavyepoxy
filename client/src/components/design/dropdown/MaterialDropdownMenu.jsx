@@ -24,6 +24,11 @@ console.log('section', selection);
     setSelectedMaterial(selection);
 
     setToggleMaterialOptions(false);
+
+    setDesignDimensionsAndData({
+      ...designDimensionsAndData,
+      material: selection.value,
+    });
   };
 
   const submitCustomMaterial = () => {

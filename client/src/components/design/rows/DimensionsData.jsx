@@ -62,7 +62,7 @@ function DimensionsData({ handleChange }) {
           <p className='text-sm'>Size</p>
         </div>
           <div className='outline outline-1 outline-black rounded pl-2 py-[2px] pr-1'>
-            {designDimensionsAndData.squareMeterString}{' '}M²
+            {designDimensionsAndData.squareMeter}{' '}M²
           </div>
         
       </section>
